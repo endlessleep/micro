@@ -682,9 +682,23 @@ body {
             Show proof — Property &alpha; $\implies$ Rationalizable <span class="arrow">▾</span>
           </button>
           <div class="collapsible" id="proof-alpha-dir2">
-            <div class="key-note blue" style="margin: 4px 0;">
-              <strong>Reserved for class correction:</strong><br>
-              This direction constructs a preference relation $\succeq$ from binary choices $C(\{x, y\})$ and verifies completeness, transitivity, and consistency using Property $\alpha$. The full step-by-step demonstration will be inserted here after lecture review.
+            <p style="margin-bottom:6px;">
+              To prove that Property $\alpha$ implies rationalizability, we define the binary relation:
+            </p>
+            <div class="math-display boxed blue" style="margin:8px 0;">
+              $$\boxed{x \succeq y \iff C(\{x, y\}) = x}$$
+            </div>
+            <p style="margin-top:8px;">
+              The full formal demonstration is completed in two rigorous steps:
+            </p>
+            <ol style="margin-left:20px; margin-top:6px; display:flex; flex-direction:column; gap:4px; font-size:0.88rem; color:var(--text-2);">
+              <li><strong>Step 1:</strong> Show that $\succeq$ is a rational preference relation (complete and transitive via Property &alpha;).</li>
+              <li><strong>Step 2:</strong> Show by contradiction that $C(A)$ is the unique best alternative in every choice set $A$.</li>
+            </ol>
+            <div style="margin-top:14px;">
+              <a href="exercises.html#exercise-4" class="toggle-btn blue" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+                <span>📖 See full demonstration in <strong>Exercise 4</strong></span> &rarr;
+              </a>
             </div>
           </div>
         </div>

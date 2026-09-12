@@ -973,6 +973,212 @@ body {
       </div>
     </div>
 
+    <!-- ════════════════════════════════════════════════════
+         EXERCISE 4 · PROPERTY ALPHA
+    ════════════════════════════════════════════════════ -->
+    <div class="part-banner" id="exercise-4">
+      <span class="part-pill red">Exercise 4 · Property &alpha;</span>
+      <div class="part-line"></div>
+    </div>
+
+    <!-- GLOBAL PROBLEM STATEMENT -->
+    <div class="exercise-statement-card">
+      <div class="statement-header">
+        <div class="statement-title">Exercise 4. Property &alpha;</div>
+        <span class="statement-badge">Problem Set</span>
+      </div>
+      <p style="font-size:0.92rem; color:var(--text-2); line-height:1.6;">
+        Let $X$ be a choice set and $c$ a choice function on $X$. Show, using the following two steps, that if $c$ satisfies <strong>Property &alpha;</strong> then it can be rationalized by a rational preference relation:
+      </p>
+      <ol style="margin-left:22px; display:flex; flex-direction:column; gap:8px; font-size:0.9rem; color:var(--text-2); margin-top:6px;">
+        <li>
+          Define a binary relation $\succeq$ by:
+          <div class="math-display boxed" style="margin:6px 0; display:inline-block; padding:4px 14px;">
+            $$x \succeq y \iff c(\{x, y\}) = x$$
+          </div>
+          Show that this relation is a <strong>rational preference relation</strong>.<br>
+          <span style="font-size:0.84rem; color:var(--text-3); font-style:italic;">
+            (Note: We are defining a particular preference relation from $c$ to show that $c$ is rationalizable.)
+          </span>
+        </li>
+        <li>
+          Show that for every choice set $A$, $c(A) \succeq a$ for every $a \in A$. In other words, that the chosen alternative is the <strong>unique best alternative</strong> according to $\succeq$.
+        </li>
+      </ol>
+    </div>
+
+
+    <!-- ── QUESTION 1 ── -->
+    <div class="question-card">
+      <div class="question-header">
+        <div class="question-title">1. Show that $\succeq$ is a Rational Preference Relation</div>
+      </div>
+      <div class="question-goal">
+        <strong>Goal:</strong> Show that the relation defined by $x \succeq y \iff c(\{x, y\}) = x$ is <strong>complete</strong> and <strong>transitive</strong>.
+      </div>
+
+      <div>
+        <button class="toggle-btn" onclick="toggle(this, 'sol-exo4-q1')">
+          Show solution — Step 1 <span class="arrow">▾</span>
+        </button>
+
+        <div class="collapsible" id="sol-exo4-q1">
+          <div class="sol-block">
+            
+            <div class="sol-subbox">
+              <div class="sol-step-title">Part (a) — Completeness</div>
+              <p>Pick any $x, y \in X$. Since $c$ is a single-valued choice function on the two-element menu $\{x, y\}$:</p>
+              <div class="math-display">$$c(\{x, y\}) \in \{x, y\}$$</div>
+              <p>Therefore, either:</p>
+              <div class="math-display">
+                $$c(\{x, y\}) = x \implies x \succeq y \qquad\text{or}\qquad c(\{x, y\}) = y \implies y \succeq x$$
+              </div>
+              <p>Hence:</p>
+              <div class="math-display boxed" style="margin:6px 0;">
+                $$\boxed{\succeq \text{ is complete}}$$
+              </div>
+            </div>
+
+            <div class="sol-subbox">
+              <div class="sol-step-title">Part (b) — Transitivity</div>
+              <p>Assume $x \succeq y$ and $y \succeq z$. By definition of $\succeq$:</p>
+              <div class="math-display">$$c(\{x, y\}) = x \qquad\text{and}\qquad c(\{y, z\}) = y$$</div>
+              <p>Consider the menu $\{x, y, z\}$. Since $c$ selects an element from $\{x, y, z\}$:</p>
+              <div class="math-display">$$c(\{x, y, z\}) \in \{x, y, z\}$$</div>
+              <p>We check the three possibilities:</p>
+              <p style="margin-top:4px;">
+                • If $c(\{x, y, z\}) = y$: since $\{x, y\} \subset \{x, y, z\}$ and $y \in \{x, y\}$, <strong>Property &alpha;</strong> implies $c(\{x, y\}) = y$, which contradicts $c(\{x, y\}) = x$.
+              </p>
+              <p style="margin-top:4px;">
+                • If $c(\{x, y, z\}) = z$: since $\{y, z\} \subset \{x, y, z\}$ and $z \in \{y, z\}$, <strong>Property &alpha;</strong> implies $c(\{y, z\}) = z$, which contradicts $c(\{y, z\}) = y$.
+              </p>
+              <p style="margin-top:4px;">
+                • Therefore, we must have: <strong>$c(\{x, y, z\}) = x$</strong>.
+              </p>
+              <p style="margin-top:6px;">
+                Now consider the pair $\{x, z\} \subset \{x, y, z\}$. Since $x \in \{x, z\}$, <strong>Property &alpha;</strong> implies:
+              </p>
+              <div class="math-display">$$c(\{x, z\}) = c(\{x, y, z\}) = x$$</div>
+              <p>By definition of $\succeq$, $c(\{x, z\}) = x \implies \mathbf{x \succeq z}$.</p>
+              <p style="margin-top:6px;">Hence:</p>
+              <div class="math-display boxed" style="margin:6px 0;">
+                $$\boxed{\succeq \text{ is transitive}}$$
+              </div>
+            </div>
+
+            <div>
+              <div class="sol-step-title">Conclusion</div>
+              <p>Since $\succeq$ is both complete and transitive:</p>
+              <div class="math-display boxed green" style="margin:8px 0;">
+                $$\boxed{\succeq \text{ is a rational preference relation}}$$
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── QUESTION 2 ── -->
+    <div class="question-card">
+      <div class="question-header">
+        <div class="question-title">2. Show that $c(A)$ is the Unique Best Alternative</div>
+      </div>
+      <div class="question-goal">
+        <strong>Goal:</strong> For every choice set $A$:
+        $$\boxed{c(A) \succeq a \qquad \forall a \in A}$$
+        In other words, the alternative chosen from $A$ must be the unique best alternative according to $\succeq$.
+      </div>
+
+      <div>
+        <button class="toggle-btn" onclick="toggle(this, 'sol-exo4-q2')">
+          Show solution — Step 2 <span class="arrow">▾</span>
+        </button>
+
+        <div class="collapsible" id="sol-exo4-q2">
+          <div class="sol-block">
+            
+            <div>
+              <strong>Goal.</strong> For every choice set $A$,
+              <div class="math-display">
+                $$\boxed{c(A) \succeq a \qquad \forall a \in A.}$$
+              </div>
+              In other words, the alternative chosen from $A$ must be the unique best alternative according to $\succeq$.
+            </div>
+
+            <div class="sol-subbox">
+              <div class="sol-step-title">Proof by Contradiction</div>
+              <p>Take any choice set $A$, with:</p>
+              <div class="math-display">$$c(A) \in A.$$</div>
+              <p>Suppose by contradiction that $c(A)$ is <strong>not</strong> the best alternative in $A$.</p>
+              <p style="margin-top:4px;">Then there exists some:</p>
+              <div class="math-display">$$a \in A, \qquad a \neq c(A),$$</div>
+              <p>such that:</p>
+              <div class="math-display">$$a \succeq c(A).$$</div>
+              <p style="margin-top:6px;">By the definition of the preference relation:</p>
+              <div class="math-display">$$a \succeq c(A) \iff c(\{a, c(A)\}) = a.$$</div>
+              <p>Hence:</p>
+              <div class="math-display boxed" style="margin:6px 0;">
+                $$\boxed{c(\{a, c(A)\}) = a.}$$
+              </div>
+            </div>
+
+            <div class="sol-subbox">
+              <div class="sol-step-title">Contradiction via Property &alpha;</div>
+              <p>However,</p>
+              <div class="math-display">
+                $$\{a, c(A)\} \subseteq A \qquad\text{and}\qquad c(A) \in \{a, c(A)\}.$$
+              </div>
+              <p style="margin-top:4px;">
+                Since $c(A)$ is chosen from the larger set $A$, <strong>Property &alpha;</strong> implies that it must remain chosen in every smaller set that still contains it:
+              </p>
+              <div class="math-display boxed" style="margin:6px 0;">
+                $$\boxed{c(\{a, c(A)\}) = c(A).}$$
+              </div>
+              <p style="margin-top:6px; color:var(--red-bright); font-weight:700;">
+                This contradicts: $c(\{a, c(A)\}) = a$.
+              </p>
+              <p style="margin-top:4px;">
+                Therefore, the assumption was false: there cannot exist any $a \in A$ that is preferred to $c(A)$.
+              </p>
+              <p style="margin-top:6px;">Hence:</p>
+              <div class="math-display boxed" style="margin:6px 0;">
+                $$\boxed{c(A) \succeq a \qquad \forall a \in A.}$$
+              </div>
+            </div>
+
+            <div class="sol-subbox">
+              <div class="sol-step-title">Uniqueness & Strict Preference</div>
+              <p>
+                Moreover, for every $a \neq c(A)$, the choice function selects only one element from the pair:
+              </p>
+              <div class="math-display">$$c(\{a, c(A)\}) = c(A) \implies a \not\succeq c(A).$$</div>
+              <p>Therefore:</p>
+              <div class="math-display">
+                $$c(A) \succ a \qquad \forall a \in A, \ a \neq c(A).$$
+              </div>
+              <p style="margin-top:4px;">Thus:</p>
+              <div class="math-display boxed green" style="margin:6px 0;">
+                $$\boxed{c(A) \text{ is the unique best alternative in } A.}$$
+              </div>
+            </div>
+
+            <div>
+              <div class="sol-step-title">Conclusion</div>
+              <p>
+                Therefore, the rational preference relation $\succeq$ generates exactly the choices made by $c$, and:
+              </p>
+              <div class="math-display boxed green" style="margin-top:8px;">
+                $$\boxed{c \text{ is rationalizable.}}$$
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
