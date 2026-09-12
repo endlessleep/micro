@@ -678,9 +678,15 @@ body {
             <strong>Starting point:</strong> Suppose $C$ satisfies Property $\alpha$.<br>
             Now we do not yet have a preference relation: we construct one from pairwise choices ($x \succeq y \iff C(\{x, y\}) = x$) and prove that Property $\alpha$ guarantees completeness, transitivity, and reproduction of observed choices.
           </div>
-          <button class="toggle-btn blue" onclick="toggle(this, 'proof-alpha-dir2')">
-            Show proof — Property &alpha; $\implies$ Rationalizable <span class="arrow">▾</span>
-          </button>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:2px;">
+            <a href="exercises.html#exercise-4" class="toggle-btn blue" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+              <span>Show proof — See Exercise 4</span> <span style="font-size:0.9rem;">↗</span>
+            </a>
+            <button class="toggle-btn blue" onclick="toggle(this, 'proof-alpha-dir2')" style="opacity:0.85;">
+              <span>Quick outline</span> <span class="arrow">▾</span>
+            </button>
+          </div>
+
           <div class="collapsible" id="proof-alpha-dir2">
             <p style="margin-bottom:6px;">
               To prove that Property $\alpha$ implies rationalizability, we define the binary relation:
@@ -697,7 +703,7 @@ body {
             </ol>
             <div style="margin-top:14px;">
               <a href="exercises.html#exercise-4" class="toggle-btn blue" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
-                <span>📖 See full demonstration in <strong>Exercise 4</strong></span> &rarr;
+                <span>📖 Open full step-by-step proof in <strong>Exercise 4</strong></span> &rarr;
               </a>
             </div>
           </div>
