@@ -567,9 +567,14 @@ body {
       </div>
 
       <div>
-        <button class="toggle-btn" onclick="toggle(this, 'sol-q3')">
-          Show proof — Contradiction <span class="arrow">▾</span>
-        </button>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <button class="toggle-btn" onclick="toggle(this, 'sol-q3')">
+            Show proof — Contradiction <span class="arrow">▾</span>
+          </button>
+          <button class="toggle-btn" onclick="toggle(this, 'sol-q3-classroom')">
+            Show classroom method <span class="arrow">▾</span>
+          </button>
+        </div>
 
         <div class="collapsible" id="sol-q3">
           <div class="sol-block">
@@ -633,6 +638,65 @@ body {
               <strong>Intuition:</strong> If $x$ is at least as good as $y$, any alternative $z$ that is not weakly below $x$ must be weakly above $x$, by completeness, and therefore weakly above $y$, by transitivity. Both comparisons in the conclusion may hold when there is indifference.
             </div>
 
+          </div>
+        </div>
+
+        <div class="collapsible" id="sol-q3-classroom">
+          <div class="sol-block">
+            <div>
+              <strong>Classroom method — Contradiction through strict preference.</strong><br>
+              <strong>Starting point / Hypotheses.</strong> The relation $\succeq$ is complete and transitive, and $x\succeq y$.<br>
+              <strong>Goal.</strong> Show that every $z\in X$ satisfies $x\succeq z$ or $z\succeq y$ (or both).
+            </div>
+
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">1.</span> Assume the opposite</div>
+              <div class="step-body">
+                <p>Suppose there exists $z\in X$ for which the conclusion fails. Negating “or” means that <strong>both</strong> comparisons fail:</p>
+                <div class="math-display">
+                  $$\begin{gathered}
+                    x\not\succeq z,\\
+                    z\not\succeq y.
+                  \end{gathered}$$
+                </div>
+              </div>
+            </div>
+
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">2.</span> Translate into strict preferences</div>
+              <div class="step-body">
+                <p>Since $x\not\succeq z$, completeness gives $z\succeq x$. Together, these two statements mean that $z$ is <strong>strictly preferred</strong> to $x$:</p>
+                <div class="math-display">$$z\succ x.$$</div>
+                <p>Similarly, $z\not\succeq y$ and completeness give $y\succeq z$ but not $z\succeq y$. By the definition of strict preference:</p>
+                <div class="math-display">$$y\succ z.$$</div>
+                <p>The opposite of the desired conclusion therefore forces the strict ranking used in class:</p>
+                <div class="math-display boxed">$$y\succ z\succ x.$$</div>
+              </div>
+            </div>
+
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">3.</span> Apply transitivity</div>
+              <div class="step-body">
+                <p>Question 1 established that transitivity of $\succeq$ implies transitivity of its strict part $\succ$. Applying that result to $y\succ z$ and $z\succ x$ gives:</p>
+                <div class="math-display">$$y\succ x.$$</div>
+              </div>
+            </div>
+
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">4.</span> Contradict the initial assumption</div>
+              <div class="step-body">
+                <p>By definition, $y\succ x$ means $y\succeq x$ <strong>and</strong> $x\not\succeq y$. The latter directly contradicts our initial hypothesis $x\succeq y$.</p>
+                <p>Thus the supposition in step 1 is impossible. For every $z\in X$, we must have:</p>
+                <div class="math-display boxed green">
+                  $$x\succeq z \quad\text{or}\quad z\succeq y.$$
+                </div>
+                <p>This proves negative transitivity. $\blacksquare$</p>
+              </div>
+            </div>
+
+            <div class="key-note" style="margin-top:8px;">
+              <strong>How the two methods differ:</strong> Both are proofs by contradiction. The first derives $z\succeq y$, contradicting the assumed $z\not\succeq y$. The classroom method uses the strict chain $y\succ z\succ x$ to contradict the original hypothesis $x\succeq y$.
+            </div>
           </div>
         </div>
       </div>
