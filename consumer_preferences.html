@@ -136,23 +136,23 @@ body {
 /* ── LAYOUT ── */
 .main-wrap { margin-left: var(--sidebar-width); flex:1; display:flex; flex-direction:column; transition:margin-left .3s; min-width:0; }
 .main-wrap.expanded { margin-left:0; }
-.main-content { padding:40px 44px 70px; max-width:900px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+.main-content { padding:40px 44px 70px; max-width:920px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:44px; }
 
 /* ── PAGE TITLE ── */
 .page-title-block { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
 .page-label { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--red); margin-bottom:8px; }
-.page-title-block h1 { font-size:2rem; font-weight:800; letter-spacing:-0.5px; line-height:1.15; }
-.page-title-block p { color:var(--text-3); font-size:0.95rem; margin-top:7px; }
+.page-title-block h1 { font-size:2.1rem; font-weight:800; letter-spacing:-0.5px; line-height:1.2; }
+.page-title-block p { color:var(--text-3); font-size:0.95rem; margin-top:8px; }
 
 /* ── PART BANNER ── */
 .part-banner {
-  display: flex; align-items: center; gap: 14px; margin-top: 4px;
+  display: flex; align-items: center; gap: 14px; margin-top: 6px;
 }
 .part-pill {
-  font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
-  letter-spacing: 1px; padding: 5px 14px; border-radius: 999px; white-space: nowrap;
+  font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.8px; padding: 6px 15px; border-radius: 999px; white-space: nowrap;
 }
-.part-pill.green { background: rgba(16,185,129,0.1); color: var(--green-bright); border: 1px solid var(--green-border); }
+.part-pill.green { background: rgba(16,185,129,0.12); color: var(--green-bright); border: 1px solid var(--green-border); }
 .part-pill.blue  { background: var(--blue-muted); color: var(--blue-bright); border: 1px solid var(--blue-border); }
 .part-pill.purple{ background: var(--purple-muted); color: var(--purple-bright); border: 1px solid var(--purple-border); }
 .part-pill.amber { background: var(--amber-muted); color: var(--amber-bright); border: 1px solid var(--amber-border); }
@@ -160,13 +160,12 @@ body {
 .part-line { flex: 1; height: 1px; background: var(--border); }
 
 /* ── SUBSECTIONS ── */
-.subsection { display:flex; flex-direction:column; gap:20px; }
-.subsection-title { font-size:1.08rem; font-weight:800; color:var(--text); padding-bottom:8px; border-bottom:1px solid var(--border); }
+.subsection { display:flex; flex-direction:column; gap:22px; }
 
 /* ── KEY NOTE ── */
 .key-note {
-  font-size:0.92rem; color:var(--text-2); line-height:1.65;
-  border-left: 3px solid var(--red); padding: 12px 18px;
+  font-size:0.93rem; color:var(--text-2); line-height:1.68;
+  border-left: 3px solid var(--red); padding: 14px 18px;
   background: var(--red-muted); border-radius: 0 var(--radius) var(--radius) 0;
 }
 .key-note.green  { border-left-color: #10b981; background: var(--green-muted); }
@@ -179,7 +178,7 @@ body {
 .math-display {
   background: var(--bg-card); border:1px solid var(--border);
   border-radius:var(--radius); padding:14px 20px;
-  text-align:center; margin: 6px 0; overflow-x:auto;
+  text-align:center; margin: 8px 0; overflow-x:auto;
 }
 .math-display.boxed        { border-color:var(--red-border);    background:var(--red-muted); }
 .math-display.boxed-blue   { border-color:var(--blue-border);   background:var(--blue-muted); }
@@ -190,38 +189,107 @@ body {
 /* ── PROPERTY ITEM ── */
 .property-item {
   background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
-  padding:18px 22px; display:flex; flex-direction:column; gap:10px;
+  padding:20px 24px; display:flex; flex-direction:column; gap:10px;
 }
-.property-item.red    { border-left:3px solid var(--red); }
-.property-item.blue   { border-left:3px solid #3b82f6; }
-.property-item.green  { border-left:3px solid #10b981; }
-.property-item.purple { border-left:3px solid #a855f7; }
-.property-item.amber  { border-left:3px solid #f59e0b; }
-.property-name { font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; }
+.property-item.red    { border-left:4px solid var(--red); }
+.property-item.blue   { border-left:4px solid #3b82f6; }
+.property-item.green  { border-left:4px solid #10b981; }
+.property-item.purple { border-left:4px solid #a855f7; }
+.property-item.amber  { border-left:4px solid #f59e0b; }
+.property-name { font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.6px; }
 .property-item.red    .property-name { color:var(--red); }
 .property-item.blue   .property-name { color:#60a5fa; }
 .property-item.green  .property-name { color:#34d399; }
 .property-item.purple .property-name { color:#c084fc; }
 .property-item.amber  .property-name { color:#fbbf24; }
-.property-body { font-size:0.91rem; color:var(--text-2); line-height:1.65; }
+.property-body { font-size:0.92rem; color:var(--text-2); line-height:1.68; }
 .property-body .intuition { font-style:italic; color:var(--text-3); font-size:0.86rem; margin-top:8px; display:block; }
 
 /* ── BULLETS ── */
-.bullet-list { list-style:none; display:flex; flex-direction:column; gap:8px; padding:0; }
-.bullet-list li { font-size:0.9rem; color:var(--text-2); line-height:1.6; display:flex; gap:10px; align-items:baseline; }
+.bullet-list { list-style:none; display:flex; flex-direction:column; gap:10px; padding:0; }
+.bullet-list li { font-size:0.91rem; color:var(--text-2); line-height:1.65; display:flex; gap:10px; align-items:baseline; }
 .bullet-list li::before { content:"—"; color:var(--red); font-weight:800; flex-shrink:0; }
 .bullet-list.blue   li::before { color:#60a5fa; }
 .bullet-list.green  li::before { color:#34d399; }
 .bullet-list.purple li::before { color:#c084fc; }
 .bullet-list.amber  li::before { color:#fbbf24; }
 
+/* ── DEDICATED EXAMPLE CARD (NEW STRUCTURED DESIGN) ── */
+.example-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(245,158,11,0.04) 0%, rgba(22,25,34,1) 100%);
+}
+.example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.example-badge {
+  font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.8px; padding: 4px 10px; border-radius: 999px;
+  background: var(--amber-muted); color: var(--amber-bright);
+  border: 1px solid var(--amber-border);
+}
+.example-statement {
+  font-size: 1.05rem; font-weight: 700; color: var(--text);
+  line-height: 1.5;
+}
+.example-setup {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-top: 2px;
+}
+.setup-box {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.setup-title {
+  font-size: 0.78rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--amber-bright);
+}
+.setup-desc { font-size: 0.87rem; color: var(--text-2); line-height: 1.5; }
+
+.proof-duo-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-top: 4px;
+}
+.proof-duo-card {
+  background: rgba(10,11,16,0.65);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.proof-duo-card.pass { border-top: 3px solid #10b981; }
+.proof-duo-card.fail { border-top: 3px solid var(--red); }
+.proof-duo-head {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.proof-duo-title { font-size: 0.95rem; font-weight: 800; color: var(--text); }
+.status-tag {
+  font-size: 0.68rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.5px; padding: 2px 8px; border-radius: 4px;
+}
+.status-tag.green { background: rgba(16,185,129,0.15); color: var(--green-bright); }
+.status-tag.red   { background: rgba(225,29,72,0.15); color: var(--red-bright); }
+
 /* ── TOGGLE & COLLAPSIBLE ── */
 .toggle-btn {
   display:inline-flex; align-items:center; gap:8px;
   background:rgba(255,255,255,0.03); border:1px solid var(--border);
   color:var(--text-2); font-family:var(--font);
-  font-size:0.82rem; font-weight:700;
-  padding:8px 16px; border-radius:999px;
+  font-size:0.84rem; font-weight:700;
+  padding:8px 18px; border-radius:999px;
   cursor:pointer; transition:all .2s; width:fit-content; margin-top:4px;
 }
 .toggle-btn:hover { border-color:var(--red-border); color:var(--red); background:var(--red-muted); }
@@ -232,9 +300,9 @@ body {
 .toggle-btn.open .arrow { transform:rotate(180deg); }
 .collapsible {
   display:none; margin-top:12px;
-  background:rgba(10,11,16,0.75); border:1px solid var(--border);
-  border-radius:var(--radius); padding:20px 22px;
-  font-size:0.89rem; color:var(--text-2); line-height:1.7;
+  background:rgba(10,11,16,0.85); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:22px 24px;
+  font-size:0.9rem; color:var(--text-2); line-height:1.7;
 }
 .collapsible.open { display:block; animation: fadeDown .2s ease; }
 .collapsible strong { color:var(--text); font-weight:700; }
@@ -248,15 +316,15 @@ body {
 }
 .demo-step:last-child { border-bottom: none; }
 .step-num {
-  min-width: 26px; height: 26px; border-radius: 50%;
+  min-width: 28px; height: 28px; border-radius: 50%;
   background: var(--red-gradient); color: #fff;
-  font-size: 0.75rem; font-weight: 800;
+  font-size: 0.78rem; font-weight: 800;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .step-num.blue   { background: linear-gradient(135deg,#3b82f6,#1d4ed8); }
 .step-num.green  { background: linear-gradient(135deg,#10b981,#065f46); }
 .step-num.purple { background: linear-gradient(135deg,#a855f7,#6b21a8); }
-.step-body { font-size: 0.88rem; color: var(--text-2); line-height: 1.65; flex: 1; }
+.step-body { font-size: 0.9rem; color: var(--text-2); line-height: 1.68; flex: 1; }
 .step-body strong { color: var(--text); font-weight: 700; }
 
 /* ── IMPLICATION CHAIN ── */
@@ -268,7 +336,7 @@ body {
 .impl-box {
   background: var(--red-muted); border: 1px solid var(--red-border);
   color: var(--text); font-size: 0.85rem; font-weight: 700;
-  padding: 5px 12px; border-radius: 6px;
+  padding: 6px 14px; border-radius: 6px;
 }
 .impl-box.green  { background: var(--green-muted); border-color: var(--green-border); }
 .impl-box.blue   { background: var(--blue-muted);  border-color: var(--blue-border); }
@@ -282,102 +350,41 @@ body {
 .comparison-table tr:last-child td { border-bottom:none; }
 .comparison-table tr:hover td { background:rgba(255,255,255,0.02); }
 
-/* ── FIGURE UPLOAD ZONE ── */
-.figure-container {
+/* ── COURSE FIGURE CARD ── */
+.course-figure-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-.figure-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
-.figure-badge {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  background: var(--red-muted);
-  color: var(--red-bright);
-  border: 1px solid var(--red-border);
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-.figure-status {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-.figure-box {
-  width: 100%;
+.figure-img-frame {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
-.course-figure-img {
+.figure-img-frame img {
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: block;
 }
-.figure-dropzone-preview {
+.figure-caption-box {
   width: 100%;
-  min-height: 180px;
-  border: 2px dashed rgba(255,255,255,0.14);
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.015);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  text-align: center;
-  gap: 8px;
-}
-.dropzone-icon {
-  font-size: 1.8rem;
-  margin-bottom: 2px;
-}
-.dropzone-title {
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: var(--text);
-}
-.dropzone-sub {
-  font-size: 0.85rem;
-  color: var(--text-3);
-  max-width: 500px;
-  line-height: 1.5;
-}
-.dropzone-path {
-  font-size: 0.76rem;
-  color: var(--text-muted);
-  margin-top: 6px;
-  background: rgba(255,255,255,0.04);
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-}
-.dropzone-path code {
-  color: var(--red-bright);
-  font-family: monospace;
-}
-.figure-caption {
-  font-size: 0.85rem;
-  color: var(--text-3);
   border-top: 1px solid var(--border);
-  padding-top: 10px;
-  line-height: 1.5;
+  padding-top: 12px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.6;
 }
-.figure-caption strong {
-  color: var(--text);
-}
+.figure-caption-box strong { color: var(--text); }
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width:5px; }
@@ -390,6 +397,7 @@ body {
   .sidebar.open { transform:translateX(0); }
   .main-wrap { margin-left:0 !important; }
   .main-content { padding:24px 20px 40px; }
+  .example-setup, .proof-duo-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -459,19 +467,26 @@ body {
 
       <div class="key-note blue">
         <strong>From General Rational Choice to Consumer Theory:</strong><br>
-        We started with the most general notion of rational choice over an abstract set of alternatives $X$. Now let us specialize to <strong>consumer theory</strong>, where the setting consists of bundles of goods, market prices, and budget constraints.<br>
-        This concrete setting motivates additional assumptions on preferences and opens the door to revealed-preference analysis:
-        <ul style="margin-top:8px; margin-left:16px; display:flex; flex-direction:column; gap:6px;">
-          <li><strong>Approach 1:</strong> Make <em>reasonable assumptions</em> about preferences and derive choice behavior.</li>
-          <li><strong>Approach 2:</strong> Observe choices and <em>infer</em> underlying preference relations — the <strong>revealed-preferences approach</strong> (developed in Chapter 5).</li>
+        We started with the most general notion of rational choice over an abstract set of alternatives $X$. Now let us specialize to <strong>consumer theory</strong>, where the setting (bundles of goods, prices, budgets) motivates additional assumptions on preferences and opens the door to revealed-preference analysis.<br><br>
+        <strong>Two complementary approaches:</strong>
+        <ul style="margin-top:6px; margin-left:16px; display:flex; flex-direction:column; gap:4px;">
+          <li>• Make <strong>reasonable assumptions</strong> about preferences and derive choice behavior.</li>
+          <li>• Observe choices and <strong>infer</strong> underlying preference relations — the <strong>revealed-preferences approach</strong> (studied in Chapter 5).</li>
         </ul>
       </div>
 
       <div class="property-item blue">
-        <div class="property-name">Recall &amp; Motivation</div>
+        <div class="property-name">Recall &amp; Mathematical Setting</div>
         <div class="property-body">
-          Recall that a rational continuous preference relation $\succeq$ is representable by a continuous utility function $u$. In other words, preferences can be represented by <strong>indifference curves</strong>.
-          <span class="intuition">Yet, to make progress in economic research, it is almost always necessary to make <em>additional assumptions</em> that restrict preferences. Let us examine the most commonly used assumptions: <strong>Monotonicity</strong>, <strong>Convexity</strong>, <strong>Homotheticity</strong>, <strong>Separability</strong>, and <strong>Numéraire properties</strong>.</span>
+          Recall that a rational continuous preference relation $\succeq$ is representable by a continuous utility function $u$. In other words, preferences can be represented by <strong>indifference curves</strong>.<br><br>
+          Yet, to make progress in economic research, it is almost always necessary to make <strong>additional assumptions that restrict preferences</strong>. Let us examine the five most commonly used assumptions:
+          <ul class="bullet-list blue" style="margin-top:10px;">
+            <li><strong>Monotonicity:</strong> More consumption is better than less (or non-satiation).</li>
+            <li><strong>Convexity:</strong> Averages are preferred to extremes (diversity in consumption).</li>
+            <li><strong>Homotheticity:</strong> Preferences scale proportionally with the budget.</li>
+            <li><strong>Separability:</strong> Decisions on one set of goods can be isolated from other goods.</li>
+            <li><strong>Numéraire properties:</strong> Valuation and compensation can be measured through money.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -489,11 +504,11 @@ body {
       <div class="property-item green">
         <div class="property-name">Strict Monotonicity</div>
         <div class="property-body">
-          A preference relation $\succeq$ on $X \subseteq \mathbb{R}^n_+$ is <strong>strictly monotone</strong> if:
+          $\succeq$ is <strong>strictly monotone</strong> if:
           <div class="math-display boxed-green">
             $$x \geq y \quad\text{and}\quad x \neq y \implies x \succ y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> More is always better. If bundle $x$ contains at least as much of every good as $y$, and strictly more of at least one good, then $x$ is strictly preferred to $y$.</span>
+          <span class="intuition"><strong>Intuition:</strong> More is always better. If bundle $x$ contains at least as much of every good as bundle $y$, and strictly more of at least one good, then $x$ is strictly preferred to $y$.</span>
         </div>
       </div>
 
@@ -501,11 +516,11 @@ body {
       <div class="property-item green">
         <div class="property-name">Monotonicity (Weak Monotonicity)</div>
         <div class="property-body">
-          A preference relation $\succeq$ on $X$ is <strong>monotone</strong> if:
+          $\succeq$ is <strong>monotone</strong> if:
           <div class="math-display">
             $$x \geq y \implies x \succeq y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> More is always at least as good as less. Extra quantities never harm the consumer (free disposal).</span>
+          <span class="intuition"><strong>Intuition:</strong> More is always at least as good as less. Extra quantities of goods never reduce utility.</span>
         </div>
       </div>
 
@@ -513,17 +528,17 @@ body {
       <div class="property-item blue">
         <div class="property-name">Local Non-Satiation (LNS)</div>
         <div class="property-body">
-          A preference relation $\succeq$ on $X$ is <strong>locally non-satiated</strong> if, for all $x \in X$ and all $\varepsilon > 0$:
+          $\succeq$ is <strong>locally non-satiated</strong> if, for all $x \in X$ and all $\varepsilon > 0$:
           <div class="math-display boxed-blue">
             $$\exists y \in X \quad\text{such that}\quad \|x - y\| < \varepsilon \quad\text{and}\quad y \succ x$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> For any bundle $x$, there is another bundle $y$ at a small Euclidean distance $\varepsilon$ that is strictly preferred to $x$. This rules out a "best bundle" (bliss point) beyond which you do not want more of anything.</span>
+          <span class="intuition"><strong>Intuition:</strong> For any bundle $x$, there is another bundle $y$ at an arbitrarily small distance $\varepsilon$ that is strictly preferred to $x$. This rules out that there is a "best bundle" (bliss point) beyond which you don’t want more of anything.</span>
         </div>
       </div>
 
       <!-- Implication Hierarchy -->
       <div>
-        <p style="font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-3); margin-bottom:8px;">Hierarchy of Assumptions</p>
+        <p style="font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-3); margin-bottom:8px;">Implication Hierarchy</p>
         <div class="impl-chain">
           <span class="impl-box green">Strict Monotonicity</span>
           <span class="impl-arrow">⇒</span>
@@ -535,34 +550,94 @@ body {
 
       <!-- Economic Intuition for Implication -->
       <div class="property-item blue">
-        <div class="property-name">Intuition for: Monotonicity ⇒ Local Non-Satiation</div>
+        <div class="property-name">What's the Intuition for: Monotonicity ⇒ Local Non-Satiation?</div>
         <div class="property-body">
           <ul class="bullet-list blue">
             <li><strong>Weak monotonicity:</strong> If I give you more of at least one good and no less of any other good, the new bundle is always at least as good as the old one.</li>
-            <li><strong>Local non-satiation:</strong> It is always possible to find a nearby bundle (combination of goods) that is better. But it does not guarantee that giving you more of any good is always better.</li>
+            <li><strong>Local non-satiation:</strong> It is always possible to find a nearby bundle (combination of goods) that is better. But it does not guarantee that giving you more of any single good is always better.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Example: LNS but NOT Weakly Monotone -->
-      <div class="property-item amber">
-        <div class="property-name">Example: Locally Non-Satiated but NOT Weakly Monotone</div>
-        <div class="property-body">
-          Think of $x_1$ as money and $x_2$ as cups of coffee, with utility function:
-          <div class="math-display boxed-amber">
-            $$u(x_1, x_2) = x_1 - (x_2 - 1)^2$$
+      <!-- REDESIGNED STRUCTURED EXAMPLE CARD -->
+      <div class="example-card">
+        <div class="example-header">
+          <span class="example-badge">Course Problem · Counter-Example</span>
+          <span style="font-size:0.8rem; color:var(--text-3); font-weight:600;">Monotonicity vs. LNS</span>
+        </div>
+        <div class="example-statement">
+          Find an example of a utility function which is locally non-satiated but not weakly monotone.
+        </div>
+
+        <div class="example-setup">
+          <div class="setup-box">
+            <span class="setup-title">Economic Interpretation</span>
+            <div class="setup-desc">
+              Think of <strong>$x_1$ as money</strong> (general purchasing power, where more is always strictly better) and <strong>$x_2$ as cups of coffee</strong> (where more coffee is not always better beyond 1 cup).
+            </div>
           </div>
-          <p>Here, more coffee is not always better (ideal intake is 1 cup):</p>
-          <ul class="bullet-list amber" style="margin-top:8px;">
-            <li>
-              <strong>Locally non-satiated:</strong> From any $(x_1, x_2)$, adding an arbitrarily small amount $\frac{\varepsilon}{2} > 0$ to $x_1$ yields $u(x_1 + \frac{\varepsilon}{2}, x_2) = u(x_1, x_2) + \frac{\varepsilon}{2} > u(x_1, x_2)$, making the consumer strictly better off.
-            </li>
-            <li>
-              <strong>Not weakly monotone:</strong> Notice that $(1, 2) \geq (1, 1)$, but:
-              <div class="math-display" style="margin:4px 0;">$$u(1, 2) = 1 - (2 - 1)^2 = 0 < 1 = 1 - (1 - 1)^2 = u(1, 1)$$</div>
-              Hence $(1, 2) \succeq (1, 1)$ does not hold! More coffee reduces satisfaction.
-            </li>
-          </ul>
+          <div class="setup-box">
+            <span class="setup-title">Utility Function</span>
+            <div class="math-display boxed-amber" style="margin:2px 0; padding:8px 12px; font-size:1rem;">
+              $$u(x_1, x_2) = x_1 - (x_2 - 1)^2$$
+            </div>
+            <div class="setup-desc" style="font-size:0.8rem;">
+              The consumer reaches their peak coffee bliss at $x_2 = 1$. Additional cups cause caffeine jitters (disutility).
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-duo-grid">
+          <!-- Property 1: LNS holds -->
+          <div class="proof-duo-card pass">
+            <div class="proof-duo-head">
+              <span class="proof-duo-title">1. Locally Non-Satiated (LNS)</span>
+              <span class="status-tag green">Satisfied ✓</span>
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-2); line-height:1.6;">
+              Take any bundle $(x_1, x_2)$ and any radius $\varepsilon > 0$. Consider the bundle:
+            </p>
+            <div class="math-display" style="margin:4px 0; padding:6px 10px; font-size:0.88rem;">
+              $$y = \left(x_1 + \frac{\varepsilon}{2}, \; x_2\right)$$
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-2); line-height:1.6;">
+              Distance is $\|y - x\| = \frac{\varepsilon}{2} < \varepsilon$, and evaluating utility yields:
+            </p>
+            <div class="math-display" style="margin:4px 0; padding:6px 10px; font-size:0.88rem;">
+              $$u(y) = x_1 + \frac{\varepsilon}{2} - (x_2 - 1)^2 = u(x) + \frac{\varepsilon}{2} > u(x)$$
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-3);">
+              Adding an arbitrarily small amount to money $x_1$ makes the consumer strictly better off.
+            </p>
+          </div>
+
+          <!-- Property 2: Weak Monotonicity fails -->
+          <div class="proof-duo-card fail">
+            <div class="proof-duo-head">
+              <span class="proof-duo-title">2. Weak Monotonicity</span>
+              <span class="status-tag red">Violated ✗</span>
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-2); line-height:1.6;">
+              Compare bundle $A = (1, 1)$ and bundle $B = (1, 2)$. Clearly $B \geq A$ componentwise ($1 \geq 1$ and $2 \geq 1$).
+            </p>
+            <div class="math-display" style="margin:4px 0; padding:6px 10px; font-size:0.88rem;">
+              $$u(1, 1) = 1 - (1 - 1)^2 = 1$$
+              $$u(1, 2) = 1 - (2 - 1)^2 = 0$$
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-2); line-height:1.6;">
+              Since $u(1, 2) = 0 < 1 = u(1, 1)$, we have:
+            </p>
+            <div class="math-display boxed" style="margin:4px 0; padding:6px 10px; font-size:0.88rem;">
+              $$(1, 2) \succeq (1, 1) \quad\text{does NOT hold}$$
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-3);">
+              Giving more coffee strictly harms the consumer, so weak monotonicity is violated!
+            </p>
+          </div>
+        </div>
+
+        <div class="key-note amber" style="margin-top:4px;">
+          <strong>Conclusion:</strong> $u(x_1, x_2) = x_1 - (x_2 - 1)^2$ is <strong>locally non-satiated</strong> but <strong>not weakly monotone</strong>. This confirms that $\text{Monotonicity} \implies \text{LNS}$ is strictly a one-way implication.
         </div>
       </div>
     </div>
@@ -579,7 +654,7 @@ body {
       <div class="property-item purple">
         <div class="property-name">Convex Preferences</div>
         <div class="property-body">
-          $\succeq$ is <strong>convex</strong> if and only if, for any $t \in [0, 1]$:
+          $\succeq$ is <strong>convex</strong> iff, for any $t \in [0, 1]$:
           <div class="math-display boxed-purple">
             $$x \succeq z \quad\text{and}\quad y \succeq z \implies t x + (1 - t) y \succeq z$$
           </div>
@@ -590,21 +665,24 @@ body {
       <div class="property-item purple">
         <div class="property-name">Strict Convexity</div>
         <div class="property-body">
-          Preferences are <strong>strictly convex</strong> if and only if, for any $t \in (0, 1)$:
+          Preferences are <strong>strictly convex</strong> iff:
           <div class="math-display">
-            $$x \succeq z \quad\text{and}\quad y \succeq z \quad\text{and}\quad x \neq y \implies t x + (1 - t) y \succ z$$
+            $$x \succeq z \quad\text{and}\quad y \succeq z \quad\text{and}\quad x \neq y \implies t x + (1 - t) y \succ z \quad \forall t \in (0, 1)$$
           </div>
+          <span class="intuition">Strict convexity rules out flat linear segments on indifference curves. Any non-trivial convex combination is strictly better than the endpoints.</span>
         </div>
       </div>
 
       <!-- Implication of Convexity -->
       <div class="key-note purple">
-        <strong>An Implication of Convexity:</strong><br>
-        If the consumer strictly prefers $x$ to $y$, then for any $t \in [0, 1]$:
+        <strong>An Implication of Convexity:</strong>
         <div class="math-display boxed-purple" style="margin:8px 0;">
-          $$x \succ y \implies t x + (1 - t) y \succeq y$$
+          $$x \succ y \implies t x + (1 - t) y \succeq y \quad \forall t \in [0, 1]$$
         </div>
-        <span class="intuition"><strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of $x$ and $y$ is at least as good as the worse bundle $y$. (Proof: $x \succ y \implies x \succeq y$, and by reflexivity $y \succeq y$; setting $z = y$ in the convexity definition immediately yields the result).</span>
+        <p style="margin-top:6px;">
+          <strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of $x$ and $y$ is at least as good as the worse bundle $y$.<br>
+          <em>Formal argument:</em> Since $x \succ y \implies x \succeq y$, and by reflexivity $y \succeq y$, applying the definition of convexity with $z = y$ directly yields $t x + (1 - t) y \succeq y$.
+        </p>
       </div>
     </div>
 
@@ -624,13 +702,13 @@ body {
           <div class="math-display boxed-amber">
             $$x \succeq y \iff \lambda x \succeq \lambda y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Preferences are scalable. If you prefer 5 Olives to 7 Pretzels, you also prefer 500 Olives to 700 Pretzels. Geometrically, the marginal rate of substitution is invariant along rays originating from the origin.</span>
+          <span class="intuition"><strong>Intuition:</strong> Preferences are scalable. If you prefer 5 Olives to 7 Pretzels, you also prefer 500 Olives to 700 Pretzels. Geometrically, the marginal rate of substitution (MRS) is identical at all points along any ray originating from the origin.</span>
         </div>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         4. LINK TO THE UTILITY REPRESENTATION
+         4. LINK TO THE UTILITY REPRESENTATION & FIGURE 1
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
@@ -638,36 +716,32 @@ body {
         <div class="part-line"></div>
       </div>
 
-      <!-- FIGURE 1 UPLOAD ZONE -->
-      <div class="figure-container" id="fig-1">
-        <div class="figure-header">
-          <div class="figure-badge">📸 Figure 1 Upload Zone</div>
-          <span class="figure-status">Screenshot placeholder</span>
+      <!-- FIGURE 1 COURSE DISPLAY -->
+      <div class="course-figure-card">
+        <div class="figure-img-frame">
+          <img src="images/figure1.png" alt="Figure 1: Representation of an indifference curve">
         </div>
-        <div class="figure-box">
-          <img src="images/figure1.png" alt="Figure 1: Representation of an indifference curve" class="course-figure-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="figure-dropzone-preview">
-            <div class="dropzone-icon">📊</div>
-            <div class="dropzone-title">Figure 1: Representation of an indifference curve</div>
-            <div class="dropzone-sub">Graph illustrating how monotonicity, convexity, and homotheticity translate geometrically into the shape of indifference curves.</div>
-            <div class="dropzone-path">Target path: <code>images/figure1.png</code></div>
-          </div>
-        </div>
-        <div class="figure-caption">
-          <strong>Figure 1: Representation of an indifference curve.</strong> Explains how the monotonicity, convexity, and homotheticity assumptions translate into this graph.
+        <div class="figure-caption-box">
+          <strong>Figure 1: Representation of an indifference curve.</strong><br>
+          This figure illustrates how monotonicity, convexity, and homotheticity translate into the geometry of indifference curves:
+          <ul style="margin-top:6px; margin-left:16px; display:flex; flex-direction:column; gap:3px;">
+            <li>• <strong>Monotonicity:</strong> Indifference curves are downward-sloping; the <em>Better set</em> lies entirely above the curve, and the <em>Worse set</em> lies entirely below.</li>
+            <li>• <strong>Convexity:</strong> The curve bows inward toward the origin, meaning upper contour sets are convex.</li>
+            <li>• <strong>Homotheticity:</strong> Any radial expansion scales the entire indifference curve outward proportionately.</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Link to u Equivalences -->
+      <!-- Table of Equivalences -->
       <div class="property-item red">
-        <div class="property-name">Equivalences between Axioms and Utility Function Properties</div>
+        <div class="property-name">Translation of Axioms into Properties of Utility Function $u$</div>
         <div class="property-body">
           <table class="comparison-table">
             <thead>
               <tr>
-                <th style="width:32%;">Assumption on $\succeq$</th>
+                <th style="width:30%;">Assumption on $\succeq$</th>
                 <th style="width:34%;">Property of $u$</th>
-                <th>Geometric Meaning on Indifference Curves</th>
+                <th>Geometric Intuition</th>
               </tr>
             </thead>
             <tbody>
@@ -679,7 +753,7 @@ body {
               <tr>
                 <td><strong>Strict Monotonicity</strong></td>
                 <td>$u$ is <strong>strictly increasing</strong></td>
-                <td>Indifference curves are strictly decreasing; better sets must be entirely above indifference sets, and worse sets must be entirely below indifference sets.</td>
+                <td>Indifference curves are strictly decreasing. Better sets must be entirely above indifference sets, and worse sets must be entirely below.</td>
               </tr>
               <tr>
                 <td><strong>Convexity</strong></td>
@@ -713,32 +787,38 @@ body {
           <div class="math-display boxed-green">
             $$(x, y) \succeq (x', y) \iff (x, y') \succeq (x', y')$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Preferences over goods $X$ can be studied independently from the levels of goods on other sets. This is a key assumption in empirical research on consumer behavior. It implies that you can study consumers’ choices independently of their labor/leisure choices.</span>
+          <span class="intuition"><strong>Intuition:</strong> Preferences over goods $X$ can be studied independently from the levels of goods on other sets $Y$. This is a key assumption in empirical research on consumer behavior: it implies that you can study consumers’ choices independently of their labor/leisure choices.</span>
         </div>
       </div>
 
-      <!-- Non-separable Question from Course -->
+      <!-- Problem: Why is this preference relation non-separable? -->
       <div class="property-item amber">
         <div class="property-name">Course Problem: Why is the following preference relation non-separable?</div>
         <div class="property-body">
-          Consider the preference relation:
+          Consider the observed ranking:
           <div class="math-display">
             $$(\text{wine}; \text{cheese}) \succ (\text{wine}; \text{pretzels}) \succ (\text{beer}; \text{pretzels}) \succ (\text{beer}; \text{cheese})$$
           </div>
-          <p>Let $X = \{\text{cheese}, \text{pretzels}\}$ and $Y = \{\text{wine}, \text{beer}\}$.</p>
-          <div style="margin-top:8px; display:flex; flex-direction:column; gap:6px;">
-            <div>• With $y = \text{wine}$: $(y; \text{cheese}) \succ (y; \text{pretzels}) \implies \text{cheese} \succ \text{pretzels}$.</div>
-            <div>• With $y' = \text{beer}$: $(y'; \text{pretzels}) \succ (y'; \text{cheese}) \implies \text{pretzels} \succ \text{cheese}$.</div>
+          <p>Let $X = \{\text{cheese}, \text{pretzels}\}$ (food) and $Y = \{\text{wine}, \text{beer}\}$ (beverages):</p>
+          <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
+            <div style="background:rgba(255,255,255,0.025); padding:10px 14px; border-radius:8px; border-left:3px solid #3b82f6;">
+              <strong>1. When drinking wine ($y = \text{wine}$):</strong><br>
+              $(\text{wine}; \text{cheese}) \succ (\text{wine}; \text{pretzels}) \implies (y; \text{cheese}) \succ (y; \text{pretzels})$. The consumer prefers cheese.
+            </div>
+            <div style="background:rgba(255,255,255,0.025); padding:10px 14px; border-radius:8px; border-left:3px solid var(--red);">
+              <strong>2. When drinking beer ($y' = \text{beer}$):</strong><br>
+              $(\text{beer}; \text{pretzels}) \succ (\text{beer}; \text{cheese}) \implies (y'; \text{pretzels}) \succ (y'; \text{cheese})$. The consumer prefers pretzels!
+            </div>
           </div>
-          <p style="margin-top:8px; color:var(--text);">
-            <strong>Answer:</strong> The preference ranking over food $X$ reverses depending on the beverage $Y$ consumed. Therefore, preferences over $X$ are not independent of $Y$, which violates separability!
+          <p style="margin-top:10px; color:var(--text);">
+            <strong>Conclusion:</strong> The ranking over food $X$ reverses depending on the beverage $Y$ chosen. Preferences over $X$ cannot be studied independently of $Y$: the relation is <strong>non-separable</strong>.
           </p>
         </div>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         6. NUMÉRAIRE PROPERTIES
+         6. NUMÉRAIRE PROPERTIES & TWO SEPARATE PROOFS
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
@@ -751,10 +831,10 @@ body {
       </div>
 
       <div class="property-item blue">
-        <div class="property-name">The 3 Numéraire Properties</div>
+        <div class="property-name">The Three Numéraire Properties</div>
         <div class="property-body">
-          A preference relation $\succeq$ is said to satisfy the <strong>numéraire properties</strong> if the following hold:
-          <ol style="margin-left:20px; margin-top:8px; display:flex; flex-direction:column; gap:12px;">
+          A preference relation $\succeq$ satisfies the <strong>numéraire properties</strong> if:
+          <ol style="margin-left:20px; margin-top:10px; display:flex; flex-direction:column; gap:12px;">
             <li>
               <strong>1. The numéraire good is valuable:</strong>
               <div class="math-display" style="margin:4px 0;">$$(t, y) \succeq (t', y) \iff t \geq t'$$</div>
@@ -776,7 +856,7 @@ body {
 
       <!-- No Wealth Effect vs Separability -->
       <div class="property-item purple">
-        <div class="property-name">No Wealth Effect &amp; Separability: What is the difference?</div>
+        <div class="property-name">What is the difference between assuming No Wealth Effect and Separability?</div>
         <div class="property-body">
           <ul class="bullet-list purple">
             <li><strong>Separability:</strong> The ranking over $y$ does not depend on $t$, but the trade-off between $t$ and $y$ may depend on the level of $t$. The indifference curves do not cross but are not necessarily parallel.</li>
@@ -788,9 +868,9 @@ body {
         </div>
       </div>
 
-      <!-- Link to u: Quasi-Linear Utility -->
+      <!-- Link to Quasi-Linear Utility -->
       <div class="property-item green">
-        <div class="property-name">Link to $u$ representation: Quasi-Linear Utility</div>
+        <div class="property-name">Equivalence: Numéraire Properties ⟺ Quasi-Linear Utility</div>
         <div class="property-body">
           A preference relation $\succeq$ satisfies the numéraire properties:
           <div class="math-display boxed-green">
@@ -800,71 +880,104 @@ body {
         </div>
       </div>
 
-      <!-- Proof of Quasi-Linear Utility -->
-      <div>
-        <button class="toggle-btn" onclick="toggle(this, 'proof-quasi')">
-          Show Demonstration — Proof (⇒ and ⇐) <span class="arrow">▾</span>
+      <!-- TWO SEPARATE PROOF BUTTONS -->
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <button class="toggle-btn green" onclick="toggle(this, 'proof-quasi-forward')">
+          Show Demonstration — Proof (⇒): Numéraire Properties ⟹ Quasi-Linear Utility <span class="arrow">▾</span>
         </button>
+        <button class="toggle-btn blue" onclick="toggle(this, 'proof-quasi-backward')">
+          Show Demonstration — Proof (⇐): Quasi-Linear Utility ⟹ Numéraire Properties <span class="arrow">▾</span>
+        </button>
+      </div>
 
-        <div class="collapsible" id="proof-quasi">
-          <div style="display:flex; flex-direction:column; gap:14px;">
-            <div>
-              <strong style="color:var(--green-bright); font-size:0.95rem;">Proof ($\implies$):</strong>
+      <!-- PROOF (⇒) -->
+      <div class="collapsible" id="proof-quasi-forward">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="background:rgba(16,185,129,0.08); border-left:3px solid #10b981; padding:10px 14px; border-radius:0 8px 8px 0;">
+            <strong style="color:var(--green-bright);">Starting Point / Hypotheses:</strong><br>
+            We assume the preference relation $\succeq$ satisfies the 3 Numéraire Properties: (1) $t$ is valuable, (2) Compensation is possible, and (3) No wealth effect.<br>
+            <strong>Goal:</strong> Construct a valuation function $v: Y \to \mathbb{R}$ such that $(t, y) \succeq (t', y') \iff t + v(y) \geq t' + v(y')$.
+          </div>
+
+          <div class="demo-step">
+            <div class="step-num green">1</div>
+            <div class="step-body">
+              <strong>Step 1: Construct $v(y)$ using Compensation (Property 2).</strong><br>
+              Fix an arbitrary reference bundle $\bar{y} \in Y$. Because compensation is possible, for every $y \in Y$, there exists $v(y) \in \mathbb{R}$, the amount of numéraire that compensates the agent for getting $y$ instead of $\bar{y}$:
+              <div class="math-display">$$(0, y) \sim (v(y), \bar{y})$$</div>
+              Similarly, for any other bundle $y' \in Y$, there exists $v(y') \in \mathbb{R}$ such that:
+              <div class="math-display">$$(0, y') \sim (v(y'), \bar{y})$$</div>
             </div>
+          </div>
 
-            <div class="demo-step">
-              <div class="step-num green">1</div>
-              <div class="step-body">
-                <strong>Because compensation is possible:</strong> There exists $v(y)$, the amount of the numéraire good that compensates the agent for getting $y$ instead of a benchmark $\bar{y}$:
-                <div class="math-display">$$(0, y) \sim (v(y), \bar{y})$$</div>
-                Similarly, for any other bundle $y'$:
-                <div class="math-display">$$(0, y') \sim (v(y'), \bar{y})$$</div>
-              </div>
+          <div class="demo-step">
+            <div class="step-num green">2</div>
+            <div class="step-body">
+              <strong>Step 2: Add wealth using No Wealth Effect (Property 3).</strong><br>
+              Because there is no wealth effect, adding $t$ preserves indifference:
+              <div class="math-display">$$(t, y) \sim (t + v(y), \bar{y})$$</div>
+              Similarly, adding $t'$ preserves indifference:
+              <div class="math-display">$$(t', y') \sim (t' + v(y'), \bar{y})$$</div>
             </div>
+          </div>
 
-            <div class="demo-step">
-              <div class="step-num green">2</div>
-              <div class="step-body">
-                <strong>Because there is no wealth effect:</strong> Adding $t$ and $t'$ preserves indifference:
-                <div class="math-display">$$(t, y) \sim (t + v(y), \bar{y})$$</div>
-                Similarly:
-                <div class="math-display">$$(t', y') \sim (t' + v(y'), \bar{y})$$</div>
-              </div>
+          <div class="demo-step">
+            <div class="step-num green">3</div>
+            <div class="step-body">
+              <strong>Step 3: Compare bundles via Transitivity.</strong><br>
+              By transitivity of $\succeq$, comparing $(t, y)$ and $(t', y')$ is equivalent to comparing their monetary equivalents at $\bar{y}$:
+              <div class="math-display">$$(t, y) \succeq (t', y') \iff (t + v(y), \bar{y}) \succeq (t' + v(y'), \bar{y}) \quad (*)$$</div>
             </div>
+          </div>
 
-            <div class="demo-step">
-              <div class="step-num green">3</div>
-              <div class="step-body">
-                <strong>Equivalence by Transitivity:</strong> Hence:
-                <div class="math-display">$$(t, y) \succeq (t', y') \iff (t + v(y), \bar{y}) \succeq (t' + v(y'), \bar{y}) \quad (*)$$</div>
-              </div>
+          <div class="demo-step">
+            <div class="step-num green">4</div>
+            <div class="step-body">
+              <strong>Step 4: Apply Numéraire is Valuable (Property 1).</strong><br>
+              Because the numéraire good is valuable (Property 1), condition $(*)$ can be rewritten purely in terms of the numéraire amounts:
+              <div class="math-display boxed-green">$$(t, y) \succeq (t', y') \iff t + v(y) \geq t' + v(y')$$</div>
+              Hence $\succeq$ can be represented by the quasi-linear utility function $u(t, y) = t + v(y)$. $\blacksquare$
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="demo-step">
-              <div class="step-num green">4</div>
-              <div class="step-body">
-                <strong>Because the numéraire good is valuable:</strong> Condition $(*)$ can be rewritten as:
-                <div class="math-display boxed-green">$$(t, y) \succeq (t', y') \iff t + v(y) \geq t' + v(y')$$</div>
-                Hence $\succeq$ can be represented by the quasi-linear utility function $u(t, y) = t + v(y)$. $\blacksquare$
-              </div>
+      <!-- PROOF (⇐) -->
+      <div class="collapsible" id="proof-quasi-backward">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="background:rgba(59,130,246,0.08); border-left:3px solid #3b82f6; padding:10px 14px; border-radius:0 8px 8px 0;">
+            <strong style="color:var(--blue-bright);">Starting Point / Hypotheses:</strong><br>
+            We assume preferences are represented by a quasi-linear utility function $u(t, y) = t + v(y)$ for some $v: Y \to \mathbb{R}$.<br>
+            <strong>Goal:</strong> Verify that all 3 Numéraire Properties are strictly satisfied.
+          </div>
+
+          <div class="demo-step">
+            <div class="step-num blue">1</div>
+            <div class="step-body">
+              <strong>Property 1 Verification (Numéraire is valuable):</strong><br>
+              By utility representation:
+              <div class="math-display">$$(t, y) \succeq (t', y) \iff u(t, y) \geq u(t', y) \iff t + v(y) \geq t' + v(y) \iff t \geq t' \quad\checkmark$$</div>
             </div>
+          </div>
 
-            <div>
-              <strong style="color:var(--blue-bright); font-size:0.95rem;">Proof ($\impliedby$):</strong>
+          <div class="demo-step">
+            <div class="step-num blue">2</div>
+            <div class="step-body">
+              <strong>Property 2 Verification (Compensation is possible):</strong><br>
+              For any $y, y' \in Y$, choose $t = v(y) - v(y') \in \mathbb{R}$. Then:
+              <div class="math-display">$$u(t, y') = t + v(y') = [v(y) - v(y')] + v(y') = v(y) = 0 + v(y) = u(0, y)$$</div>
+              Since $u(0, y) = u(t, y')$, it follows immediately that $(0, y) \sim (t, y')$. $\checkmark$
             </div>
+          </div>
 
-            <div class="demo-step">
-              <div class="step-num blue">✓</div>
-              <div class="step-body">
-                <strong>$\impliedby$ is straightforward:</strong>
-                <ul class="bullet-list blue" style="margin-top:6px;">
-                  <li>1. $(t, y) \succeq (t', y) \iff t + v(y) \geq t' + v(y) \iff t \geq t'$.</li>
-                  <li>2. For any $y, y'$, set $t = v(y) - v(y')$; then $u(0, y) = v(y) = t + v(y') = u(t, y')$, so $(0, y) \sim (t, y')$.</li>
-                  <li>3. $(t + d) + v(y) \geq (t' + d) + v(y') \iff t + v(y) \geq t' + v(y')$. $\blacksquare$</li>
-                </ul>
-              </div>
+          <div class="demo-step">
+            <div class="step-num blue">3</div>
+            <div class="step-body">
+              <strong>Property 3 Verification (No wealth effect):</strong><br>
+              For any displacement $d \in \mathbb{R}$:
+              <div class="math-display">$$(t + d, y) \succeq (t' + d, y') \iff (t + d) + v(y) \geq (t' + d) + v(y') \iff t + v(y) \geq t' + v(y') \iff (t, y) \succeq (t', y') \quad\checkmark$$</div>
+              All 3 properties are fully satisfied. $\blacksquare$
             </div>
-
           </div>
         </div>
       </div>

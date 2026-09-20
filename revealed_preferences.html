@@ -136,23 +136,23 @@ body {
 /* ── LAYOUT ── */
 .main-wrap { margin-left: var(--sidebar-width); flex:1; display:flex; flex-direction:column; transition:margin-left .3s; min-width:0; }
 .main-wrap.expanded { margin-left:0; }
-.main-content { padding:40px 44px 70px; max-width:900px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+.main-content { padding:40px 44px 70px; max-width:920px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:44px; }
 
 /* ── PAGE TITLE ── */
 .page-title-block { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
 .page-label { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--red); margin-bottom:8px; }
-.page-title-block h1 { font-size:2rem; font-weight:800; letter-spacing:-0.5px; line-height:1.15; }
-.page-title-block p { color:var(--text-3); font-size:0.95rem; margin-top:7px; }
+.page-title-block h1 { font-size:2.1rem; font-weight:800; letter-spacing:-0.5px; line-height:1.2; }
+.page-title-block p { color:var(--text-3); font-size:0.95rem; margin-top:8px; }
 
 /* ── PART BANNER ── */
 .part-banner {
-  display: flex; align-items: center; gap: 14px; margin-top: 4px;
+  display: flex; align-items: center; gap: 14px; margin-top: 6px;
 }
 .part-pill {
-  font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
-  letter-spacing: 1px; padding: 5px 14px; border-radius: 999px; white-space: nowrap;
+  font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.8px; padding: 6px 15px; border-radius: 999px; white-space: nowrap;
 }
-.part-pill.green { background: rgba(16,185,129,0.1); color: var(--green-bright); border: 1px solid var(--green-border); }
+.part-pill.green { background: rgba(16,185,129,0.12); color: var(--green-bright); border: 1px solid var(--green-border); }
 .part-pill.blue  { background: var(--blue-muted); color: var(--blue-bright); border: 1px solid var(--blue-border); }
 .part-pill.purple{ background: var(--purple-muted); color: var(--purple-bright); border: 1px solid var(--purple-border); }
 .part-pill.amber { background: var(--amber-muted); color: var(--amber-bright); border: 1px solid var(--amber-border); }
@@ -160,13 +160,12 @@ body {
 .part-line { flex: 1; height: 1px; background: var(--border); }
 
 /* ── SUBSECTIONS ── */
-.subsection { display:flex; flex-direction:column; gap:20px; }
-.subsection-title { font-size:1.08rem; font-weight:800; color:var(--text); padding-bottom:8px; border-bottom:1px solid var(--border); }
+.subsection { display:flex; flex-direction:column; gap:22px; }
 
 /* ── KEY NOTE ── */
 .key-note {
-  font-size:0.92rem; color:var(--text-2); line-height:1.65;
-  border-left: 3px solid var(--red); padding: 12px 18px;
+  font-size:0.93rem; color:var(--text-2); line-height:1.68;
+  border-left: 3px solid var(--red); padding: 14px 18px;
   background: var(--red-muted); border-radius: 0 var(--radius) var(--radius) 0;
 }
 .key-note.green  { border-left-color: #10b981; background: var(--green-muted); }
@@ -179,7 +178,7 @@ body {
 .math-display {
   background: var(--bg-card); border:1px solid var(--border);
   border-radius:var(--radius); padding:14px 20px;
-  text-align:center; margin: 6px 0; overflow-x:auto;
+  text-align:center; margin: 8px 0; overflow-x:auto;
 }
 .math-display.boxed        { border-color:var(--red-border);    background:var(--red-muted); }
 .math-display.boxed-blue   { border-color:var(--blue-border);   background:var(--blue-muted); }
@@ -190,38 +189,63 @@ body {
 /* ── PROPERTY ITEM ── */
 .property-item {
   background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
-  padding:18px 22px; display:flex; flex-direction:column; gap:10px;
+  padding:20px 24px; display:flex; flex-direction:column; gap:10px;
 }
-.property-item.red    { border-left:3px solid var(--red); }
-.property-item.blue   { border-left:3px solid #3b82f6; }
-.property-item.green  { border-left:3px solid #10b981; }
-.property-item.purple { border-left:3px solid #a855f7; }
-.property-item.amber  { border-left:3px solid #f59e0b; }
-.property-name { font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; }
+.property-item.red    { border-left:4px solid var(--red); }
+.property-item.blue   { border-left:4px solid #3b82f6; }
+.property-item.green  { border-left:4px solid #10b981; }
+.property-item.purple { border-left:4px solid #a855f7; }
+.property-item.amber  { border-left:4px solid #f59e0b; }
+.property-name { font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.6px; }
 .property-item.red    .property-name { color:var(--red); }
 .property-item.blue   .property-name { color:#60a5fa; }
 .property-item.green  .property-name { color:#34d399; }
 .property-item.purple .property-name { color:#c084fc; }
 .property-item.amber  .property-name { color:#fbbf24; }
-.property-body { font-size:0.91rem; color:var(--text-2); line-height:1.65; }
+.property-body { font-size:0.92rem; color:var(--text-2); line-height:1.68; }
 .property-body .intuition { font-style:italic; color:var(--text-3); font-size:0.86rem; margin-top:8px; display:block; }
 
 /* ── BULLETS ── */
-.bullet-list { list-style:none; display:flex; flex-direction:column; gap:8px; padding:0; }
-.bullet-list li { font-size:0.9rem; color:var(--text-2); line-height:1.6; display:flex; gap:10px; align-items:baseline; }
+.bullet-list { list-style:none; display:flex; flex-direction:column; gap:10px; padding:0; }
+.bullet-list li { font-size:0.91rem; color:var(--text-2); line-height:1.65; display:flex; gap:10px; align-items:baseline; }
 .bullet-list li::before { content:"—"; color:var(--red); font-weight:800; flex-shrink:0; }
 .bullet-list.blue   li::before { color:#60a5fa; }
 .bullet-list.green  li::before { color:#34d399; }
 .bullet-list.purple li::before { color:#c084fc; }
 .bullet-list.amber  li::before { color:#fbbf24; }
 
+/* ── CLEAN DISTINCTION GRID (SOLVES LATEX DÉFILÉ) ── */
+.distinction-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px;
+}
+.distinction-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.distinction-card.blue   { border-top: 4px solid #3b82f6; }
+.distinction-card.purple { border-top: 4px solid #a855f7; }
+.distinction-header {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.distinction-badge {
+  font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.6px; padding: 3px 9px; border-radius: 999px;
+}
+.distinction-card.blue .distinction-badge   { background: var(--blue-muted); color: var(--blue-bright); border: 1px solid var(--blue-border); }
+.distinction-card.purple .distinction-badge { background: var(--purple-muted); color: var(--purple-bright); border: 1px solid var(--purple-border); }
+.distinction-title { font-size: 1.05rem; font-weight: 800; color: var(--text); }
+.distinction-body  { font-size: 0.88rem; color: var(--text-2); line-height: 1.6; }
+
 /* ── TOGGLE & COLLAPSIBLE ── */
 .toggle-btn {
   display:inline-flex; align-items:center; gap:8px;
   background:rgba(255,255,255,0.03); border:1px solid var(--border);
   color:var(--text-2); font-family:var(--font);
-  font-size:0.82rem; font-weight:700;
-  padding:8px 16px; border-radius:999px;
+  font-size:0.84rem; font-weight:700;
+  padding:8px 18px; border-radius:999px;
   cursor:pointer; transition:all .2s; width:fit-content; margin-top:4px;
 }
 .toggle-btn:hover { border-color:var(--red-border); color:var(--red); background:var(--red-muted); }
@@ -232,9 +256,9 @@ body {
 .toggle-btn.open .arrow { transform:rotate(180deg); }
 .collapsible {
   display:none; margin-top:12px;
-  background:rgba(10,11,16,0.75); border:1px solid var(--border);
-  border-radius:var(--radius); padding:20px 22px;
-  font-size:0.89rem; color:var(--text-2); line-height:1.7;
+  background:rgba(10,11,16,0.85); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:22px 24px;
+  font-size:0.9rem; color:var(--text-2); line-height:1.7;
 }
 .collapsible.open { display:block; animation: fadeDown .2s ease; }
 .collapsible strong { color:var(--text); font-weight:700; }
@@ -248,113 +272,60 @@ body {
 }
 .demo-step:last-child { border-bottom: none; }
 .step-num {
-  min-width: 26px; height: 26px; border-radius: 50%;
+  min-width: 28px; height: 28px; border-radius: 50%;
   background: var(--red-gradient); color: #fff;
-  font-size: 0.75rem; font-weight: 800;
+  font-size: 0.78rem; font-weight: 800;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .step-num.blue   { background: linear-gradient(135deg,#3b82f6,#1d4ed8); }
 .step-num.green  { background: linear-gradient(135deg,#10b981,#065f46); }
 .step-num.purple { background: linear-gradient(135deg,#a855f7,#6b21a8); }
-.step-body { font-size: 0.88rem; color: var(--text-2); line-height: 1.65; flex: 1; }
+.step-body { font-size: 0.9rem; color: var(--text-2); line-height: 1.68; flex: 1; }
 .step-body strong { color: var(--text); font-weight: 700; }
 
-/* ── FIGURE UPLOAD ZONE ── */
-.figure-container {
+/* ── COURSE FIGURE CARDS & GALLERY ── */
+.figures-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 6px;
+}
+.course-figure-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 22px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 14px;
 }
-.figure-header {
+.figure-img-frame {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-.figure-badge {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  background: var(--red-muted);
-  color: var(--red-bright);
-  border: 1px solid var(--red-border);
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-.figure-status {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-.figure-box {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.course-figure-img {
+.figure-img-frame img {
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  max-height: 250px;
+  object-fit: contain;
+  display: block;
 }
-.figure-dropzone-preview {
+.figure-caption-box {
   width: 100%;
-  min-height: 180px;
-  border: 2px dashed rgba(255,255,255,0.14);
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.015);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  text-align: center;
-  gap: 8px;
-}
-.dropzone-icon {
-  font-size: 1.8rem;
-  margin-bottom: 2px;
-}
-.dropzone-title {
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: var(--text);
-}
-.dropzone-sub {
-  font-size: 0.85rem;
-  color: var(--text-3);
-  max-width: 500px;
-  line-height: 1.5;
-}
-.dropzone-path {
-  font-size: 0.76rem;
-  color: var(--text-muted);
-  margin-top: 6px;
-  background: rgba(255,255,255,0.04);
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-}
-.dropzone-path code {
-  color: var(--red-bright);
-  font-family: monospace;
-}
-.figure-caption {
-  font-size: 0.85rem;
-  color: var(--text-3);
   border-top: 1px solid var(--border);
   padding-top: 10px;
-  line-height: 1.5;
+  font-size: 0.86rem;
+  color: var(--text-2);
+  line-height: 1.55;
 }
-.figure-caption strong {
-  color: var(--text);
-}
+.figure-caption-box strong { color: var(--text); }
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width:5px; }
@@ -367,6 +338,7 @@ body {
   .sidebar.open { transform:translateX(0); }
   .main-wrap { margin-left:0 !important; }
   .main-content { padding:24px 20px 40px; }
+  .distinction-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -422,7 +394,7 @@ body {
     <div class="page-title-block">
       <div class="page-label">Part I — Choice Theory</div>
       <h1>5. Consumer’s Choices: Revealed Preferences</h1>
-      <p>Weak, Strong, and Generalized Axioms of Revealed Preferences (WARP, SARP, GARP), Afriat’s Theorem, money pump measures of rationality, and experimental consistency.</p>
+      <p>WARP, SARP, GARP, Afriat’s Theorem, money pump measures of rationality, and experimental consistency.</p>
     </div>
 
     <!-- ════════════════════════════════════════════════════
@@ -435,35 +407,52 @@ body {
       </div>
 
       <div class="key-note blue">
-        <strong>The Revealed Preference Logic:</strong><br>
-        Let $(x_1, x_2)$ and $(y_1, y_2)$ be two bundles, and $(p_1, p_2)$ be prevailing prices, such that:
-        <div class="math-display" style="margin:8px 0;">
+        <strong>The Fundamental Inference:</strong><br>
+        Let $(x_1, x_2)$ and $(y_1, y_2)$ be two bundles, and $(p_1, p_2)$ be the prices, such that:
+        <div class="math-display boxed-blue" style="margin:10px 0;">
           $$p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2$$
         </div>
-        We observe that the consumer has chosen to buy $(x_1, x_2)$.<br>
+        We observe that the consumer has chosen to buy $(x_1, x_2)$.<br><br>
         <strong>What can you infer about this consumer’s preferences?</strong><br>
-        She bought $X$, while $X$ was more expensive than $Y$. It means that she had the budget to buy either $X$ or $Y$. Assuming that she is choosing her preferred bundle, we can infer:
+        She bought $X$, while $X$ was at least as expensive as $Y$. It means that she had the budget to buy either $X$ or $Y$. Assuming that she is choosing her preferred bundle, we can infer:
         <div class="math-display boxed-blue" style="margin:8px 0;">
           $$(x_1, x_2) \succeq (y_1, y_2)$$
         </div>
-        If the consumer buys a bundle instead of another affordable one, then the first bundle is <strong>revealed preferred</strong> to the second.
+        <em>Core principle:</em> If the consumer buys a bundle instead of another affordable one, then the first bundle is <strong>revealed preferred</strong> to the second.
       </div>
 
-      <div class="property-item blue">
-        <div class="property-name">Revealed Preferred vs. Strictly Revealed Preferred</div>
-        <div class="property-body">
-          Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$:
-          <ul class="bullet-list blue" style="margin-top:8px;">
-            <li>
-              <strong>Revealed Preferences:</strong> $(x_1, x_2)$ is revealed preferred to $(y_1, y_2)$ iff:
-              <div class="math-display">$$X \text{ is chosen and } p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2$$</div>
-            </li>
-            <li>
-              <strong>Strict Revealed Preferences:</strong> $(x_1, x_2)$ is strictly revealed preferred to $(y_1, y_2)$ iff:
-              <div class="math-display">$$X \text{ is chosen and } p_1 x_1 + p_2 x_2 > p_1 y_1 + p_2 y_2$$</div>
-              Bundle $Y$ was strictly inside the interior of the affordable budget set.
-            </li>
-          </ul>
+      <!-- Distinction Cards -->
+      <div class="distinction-grid">
+        <!-- Revealed Preferred -->
+        <div class="distinction-card blue">
+          <div class="distinction-header">
+            <span class="distinction-badge">Weak Comparison</span>
+          </div>
+          <div class="distinction-title">Revealed Preferences (RP)</div>
+          <div class="distinction-body">
+            Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br><br>
+            $(x_1, x_2)$ is <strong>revealed preferred</strong> to $(y_1, y_2)$ iff:
+            <div class="math-display" style="margin:10px 0; padding:10px;">
+              $$X \text{ is chosen and } p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2$$
+            </div>
+            Bundle $Y$ was within the consumer's affordable budget set when $X$ was purchased.
+          </div>
+        </div>
+
+        <!-- Strictly Revealed Preferred -->
+        <div class="distinction-card purple">
+          <div class="distinction-header">
+            <span class="distinction-badge">Strict Comparison</span>
+          </div>
+          <div class="distinction-title">Strict Revealed Preferences (SRP)</div>
+          <div class="distinction-body">
+            Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br><br>
+            $(x_1, x_2)$ is <strong>strictly revealed preferred</strong> to $(y_1, y_2)$ iff:
+            <div class="math-display" style="margin:10px 0; padding:10px;">
+              $$X \text{ is chosen and } p_1 x_1 + p_2 x_2 > p_1 y_1 + p_2 y_2$$
+            </div>
+            Bundle $Y$ was <em>strictly cheaper</em> (strictly in the interior of the budget set) when $X$ was bought.
+          </div>
         </div>
       </div>
     </div>
@@ -479,14 +468,14 @@ body {
 
       <div class="key-note green">
         <strong>An Example &amp; Motivation:</strong><br>
-        The previous intuition relies on the assumption that the consumer is always choosing the most preferred bundle she can afford, i.e. <strong>maximizing her utility</strong>.<br>
+        The previous intuition relies on the assumption that the consumer is always choosing the most preferred bundle she can afford, i.e. <strong>maximizing her utility</strong>.<br><br>
         <strong>What kind of observation would lead us to conclude that the consumer is not following the utility-maximizing model?</strong><br>
-        An observation where $(x_1, x_2)$ is chosen for one budget, and $(y_1, y_2)$ is chosen for the other budget, even though both were affordable in both situations.
+        An observation where $(x_1, x_2)$ is chosen for one budget, and $(y_1, y_2)$ is chosen for the other budget, even though both bundles were affordable in both price situations.
       </div>
 
-      <!-- Definition 1 -->
+      <!-- WARP Definition -->
       <div class="property-item green">
-        <div class="property-name">Definition — Weak Axiom of Revealed Preference (WARP)</div>
+        <div class="property-name">Weak Axiom of Revealed Preference (WARP)</div>
         <div class="property-body">
           If a consumer’s observed choices come from <strong>maximizing a strictly quasi-concave utility function</strong> under budget constraint, then these observed choices satisfy <strong>WARP</strong>:
           <ul class="bullet-list green" style="margin-top:8px;">
@@ -494,34 +483,35 @@ body {
             <li>And if a different bundle $(y_1, y_2)$ is purchased at prices $(q_1, q_2)$</li>
           </ul>
           then if:
-          <div class="math-display">
+          <div class="math-display boxed-green" style="margin:8px 0;">
             $$p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2 \quad\text{i.e., } X^p \text{ RP } Y^p \tag{1}$$
           </div>
           it must <strong>not be the case</strong> that:
-          <div class="math-display boxed-green">
+          <div class="math-display boxed" style="margin:8px 0;">
             $$q_1 y_1 + q_2 y_2 \geq q_1 x_1 + q_2 x_2 \quad\text{i.e., } Y^q \text{ RP } X^q \tag{2}$$
           </div>
         </div>
       </div>
 
-      <!-- Alternative Definition (bis) -->
+      <!-- WARP Alternative Definition (bis) -->
       <div class="property-item green">
-        <div class="property-name">Alternative Definition — WARP (bis)</div>
+        <div class="property-name">Weak Axiom of Revealed Preference (WARP) (bis)</div>
         <div class="property-body">
-          If a bundle $(x_1, x_2)$ is chosen at prices $(p_1, p_2)$ and a different bundle $(y_1, y_2)$ is chosen at prices $(q_1, q_2)$, then if:
-          <div class="math-display">
+          Equivalently, if $(x_1, x_2)$ is chosen at prices $(p_1, p_2)$ and $(y_1, y_2)$ is chosen at prices $(q_1, q_2)$, then if:
+          <div class="math-display boxed-green" style="margin:6px 0;">
             $$p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2 \tag{3}$$
           </div>
           it must be the case that:
-          <div class="math-display boxed-green">
+          <div class="math-display boxed-green" style="margin:6px 0;">
             $$q_1 y_1 + q_2 y_2 < q_1 x_1 + q_2 x_2 \tag{4}$$
           </div>
+          <span class="intuition">If bundle $X$ was revealed preferred to $Y$ when $X$ was purchased, then at prices $q$ where $Y$ was chosen, bundle $X$ must have been <em>strictly unaffordable</em>.</span>
         </div>
       </div>
 
       <!-- Proof: Utility Maximization and WARP -->
       <div class="property-item blue">
-        <div class="property-name">Theorem &amp; Proof: Utility Maximization and WARP</div>
+        <div class="property-name">Theorem: Utility Maximization and WARP</div>
         <div class="property-body">
           If a consumer’s observed choices come from <strong>maximizing a strictly quasi-concave utility function</strong> under budget constraint, then these observed choices satisfy <strong>WARP</strong>.
         </div>
@@ -537,14 +527,14 @@ body {
             <div class="demo-step">
               <div class="step-num blue">1</div>
               <div class="step-body">
-                <strong>Strictly quasi-concave utility + convex budget set</strong> $\implies$ at most one utility-maximizing bundle for every price.
+                <strong>Strictly quasi-concave utility + convex budget set</strong> $\implies$ at most one utility-maximizing bundle for every price vector.
               </div>
             </div>
 
             <div class="demo-step">
               <div class="step-num blue">2</div>
               <div class="step-body">
-                Let $X^0$ maximize utility facing $p^0$ and $X^1$ maximize utility facing $p^1$, with $X^0 \neq X^1$.
+                Let $X^0$ maximize utility facing prices $p^0$, and let $X^1$ maximize utility facing prices $p^1$, with $X^0 \neq X^1$.
               </div>
             </div>
 
@@ -559,7 +549,7 @@ body {
             <div class="demo-step">
               <div class="step-num blue">4</div>
               <div class="step-body">
-                When $X^1$ is chosen facing prices $p^1$, bundle $X^0$ cannot have been affordable; it must therefore be that:
+                When $X^1$ is chosen facing prices $p^1$, bundle $X^0$ cannot be affordable (otherwise $X^0$ would have been chosen over $X^1$ since $u(X^0) > u(X^1)$). It must therefore be that:
                 <div class="math-display boxed-blue">$$p^1 \cdot X^0 > p^1 \cdot X^1 \iff p^1 \cdot X^1 < p^1 \cdot X^0$$</div>
                 Choices satisfy WARP. $\blacksquare$
               </div>
@@ -568,57 +558,66 @@ body {
         </div>
       </div>
 
-      <!-- Question from course: WARP ⇒ Utility Max? -->
+      <!-- Question from course: Can we say WARP => Utility Max? -->
       <div class="property-item amber">
-        <div class="property-name">Utility Maximization vs. WARP: Does WARP $\implies$ Utility Maximization?</div>
+        <div class="property-name">Can We Say: Choices Satisfy WARP ⇒ Utility Maximization?</div>
         <div class="property-body">
           We have seen that: $\text{Utility Maximization} \implies \text{Choices satisfy WARP}$.<br>
-          <strong>Can we say that: $\text{Choices satisfy WARP} \implies \text{Utility Maximization}$?</strong><br>
+          <strong>Can we say that: $\text{Choices satisfy WARP} \implies \text{Utility Maximization}$?</strong><br><br>
           Under standard consumer-demand assumptions:
           <ul class="bullet-list amber" style="margin-top:6px;">
             <li><strong>Yes, if there are only two goods ($n = 2$).</strong></li>
             <li><strong>No, otherwise ($n \geq 3$).</strong></li>
           </ul>
-          <strong>How must we strengthen WARP to obtain a theory of revealed preference equivalent to utility maximization?</strong><br>
-          We must account for indirect chains of choices through <strong>GARP</strong>!
+          <p style="margin-top:10px;">
+            <strong>How must we strengthen WARP to obtain a theory of revealed preference that is equivalent to the theory of utility maximization?</strong><br>
+            WARP only tests pairwise direct comparisons. To rule out multi-step cycles ($A \text{ RP } B, B \text{ RP } C, C \text{ RP } A$), we must account for indirect preferences through <strong>GARP</strong>!
+          </p>
         </div>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         3. SARP & GARP
+         3. DRP vs. IRP & GARP
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill purple">3. Strong &amp; Generalized Axioms (SARP &amp; GARP)</span>
+        <span class="part-pill purple">3. Generalized Axiom of Revealed Preferences (GARP)</span>
         <div class="part-line"></div>
       </div>
 
-      <div class="property-item purple">
-        <div class="property-name">Directly RP vs. Indirectly RP</div>
-        <div class="property-body">
-          We now make the formal distinction between:
-          <ul class="bullet-list purple" style="margin-top:8px;">
-            <li>
-              <strong>Directly Revealed Preferences (DRP):</strong> Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br>
-              $(x_1, x_2)$ is <em>directly revealed preferred</em> to $(y_1, y_2)$ ($X \text{ DRP } Y$) iff:
-              <div class="math-display">$$p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2$$</div>
-            </li>
-            <li>
-              <strong>Indirectly Revealed Preferences (IRP):</strong> Consider $(z_1, z_2)$, $(y_1, y_2)$, and $(x_1, x_2)$ three different bundles.<br>
-              If $(y_1, y_2)$ is directly revealed preferred to $(z_1, z_2)$, and $(x_1, x_2)$ is directly revealed preferred to $(y_1, y_2)$, then $(x_1, x_2)$ is <strong>indirectly revealed preferred</strong> to $(z_1, z_2)$:
-              <div class="math-display boxed-purple">$$X \text{ DRP } Y \quad\text{and}\quad Y \text{ DRP } Z \implies X \text{ IRP } Z$$</div>
-            </li>
-          </ul>
+      <!-- CLEAN SIDE-BY-SIDE CARDS: DIRECTLY RP VS. INDIRECTLY RP -->
+      <div class="distinction-grid">
+        <!-- Directly RP -->
+        <div class="distinction-card blue">
+          <div class="distinction-header">
+            <span class="distinction-badge">Pairwise Comparison</span>
+          </div>
+          <div class="distinction-title">Directly Revealed Preferences (DRP)</div>
+          <div class="distinction-body">
+            Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br><br>
+            $(x_1, x_2)$ is <strong>directly revealed preferred</strong> to $(y_1, y_2)$ ($X \text{ DRP } Y$) iff:
+            <div class="math-display boxed-blue" style="margin:10px 0; padding:10px;">
+              $$p_1 x_1 + p_2 x_2 \geq p_1 y_1 + p_2 y_2$$
+            </div>
+            $X$ was chosen when $Y$ was available and affordable under the same budget constraint.
+          </div>
         </div>
-      </div>
 
-      <!-- SARP -->
-      <div class="property-item purple">
-        <div class="property-name">Strong Axiom of Revealed Preference (SARP)</div>
-        <div class="property-body">
-          If $x^1 \text{ DRP } x^2, \dots, x^{K-1} \text{ DRP } x^K$ with $x^1 \neq x^K$ ($x^1 \text{ IRP } x^K$), then it must <strong>not be the case</strong> that $x^K \text{ DRP } x^1$.
-          <span class="intuition">SARP extends WARP to indirect sequences. It requires strictly single-valued choices (ruling out indifference / multiple optimal bundles).</span>
+        <!-- Indirectly RP -->
+        <div class="distinction-card purple">
+          <div class="distinction-header">
+            <span class="distinction-badge">Transitive Sequence</span>
+          </div>
+          <div class="distinction-title">Indirectly Revealed Preferences (IRP)</div>
+          <div class="distinction-body">
+            Consider $(z_1, z_2)$, $(y_1, y_2)$, and $(x_1, x_2)$ three different bundles.<br><br>
+            If $(x_1, x_2) \text{ DRP } (y_1, y_2)$ and $(y_1, y_2) \text{ DRP } (z_1, z_2)$, then $(x_1, x_2)$ is <strong>indirectly revealed preferred</strong> to $(z_1, z_2)$:
+            <div class="math-display boxed-purple" style="margin:10px 0; padding:10px;">
+              $$x^1 \text{ DRP } x^2 \text{ DRP } \dots \text{ DRP } x^K \implies x^1 \text{ IRP } x^K$$
+            </div>
+            Forms the transitive closure across multiple price regimes.
+          </div>
         </div>
       </div>
 
@@ -626,15 +625,29 @@ body {
       <div class="property-item purple">
         <div class="property-name">Definition — Generalized Axiom of Revealed Preference (GARP)</div>
         <div class="property-body">
-          For any sequence of bundles $\{x^1, \dots, x^K\}$ chosen at prices $\{p^1, \dots, p^K\}$, if:
-          <div class="math-display">
-            $$x^1 \text{ DRP } x^2, \; x^2 \text{ DRP } x^3, \; \dots, \; x^{K-1} \text{ DRP } x^K \quad (\text{i.e. } x^1 \text{ is IRP to } x^K)$$
+          For any sequence of bundles $\{x^1, \dots, x^K\}$ chosen at prices $\{p^1, \dots, p^K\}$:<br><br>
+          If:
+          <div class="math-display boxed-purple" style="margin:6px 0;">
+            $$x^1 \text{ DRP } x^2, \; x^2 \text{ DRP } x^3, \; \dots, \; x^{K-1} \text{ DRP } x^K \quad\text{(i.e., } x^1 \text{ is IRP to } x^K\text{)}$$
           </div>
           then it must be the case that:
-          <div class="math-display boxed-purple">
-            $$x^K \text{ is NOT strictly revealed preferred (SRP) to } x^1 \quad (\text{i.e. } p^K \cdot x^1 \geq p^K \cdot x^K)$$
+          <div class="math-display boxed-purple" style="margin:6px 0;">
+            $$x^K \text{ is not strictly revealed preferred (SRP) to } x^1$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> This prevents cycles of revealed preferences, including those that arise indirectly through chains of choices. Unlike SARP, GARP allows flat indifference curves and multi-valued choices.</span>
+          which requires:
+          <div class="math-display boxed-green" style="margin:6px 0;">
+            $$p^K \cdot x^1 \geq p^K \cdot x^K$$
+          </div>
+          <span class="intuition"><strong>Intuition:</strong> This prevents cycles of revealed preferences, including those that arise indirectly through chains of choices.</span>
+        </div>
+      </div>
+
+      <!-- Note on SARP -->
+      <div class="property-item blue">
+        <div class="property-name">Strong Axiom of Revealed Preference (SARP)</div>
+        <div class="property-body">
+          If $x^1 \text{ IRP } x^K$ and $x^1 \neq x^K$, then it must <strong>not be the case</strong> that $x^K \text{ DRP } x^1$.
+          <span class="intuition">SARP extends WARP to indirect sequences but requires strictly single-valued choices. GARP weakens SARP by replacing "not DRP" with "not SRP", accommodating flat indifference curves and multi-valued choice correspondences!</span>
         </div>
       </div>
 
@@ -654,10 +667,17 @@ body {
         </div>
       </div>
 
-      <!-- Proof: Utility Max ⇒ GARP -->
+      <!-- Proof: Utility Max => GARP -->
+      <div class="property-item purple">
+        <div class="property-name">Theorem &amp; Proof: Utility Maximization (with LNS) ⟹ GARP</div>
+        <div class="property-body">
+          If a consumer’s observed choices come from <strong>maximizing a locally non-satiated utility function</strong> under budget constraint, then these observed choices satisfy <strong>GARP</strong>.
+        </div>
+      </div>
+
       <div>
         <button class="toggle-btn purple" onclick="toggle(this, 'proof-garp')">
-          Show Demonstration — Utility Maximization (LNS) ⟹ GARP <span class="arrow">▾</span>
+          Show Demonstration — Proof (Contradiction via LNS) <span class="arrow">▾</span>
         </button>
 
         <div class="collapsible" id="proof-garp">
@@ -665,7 +685,7 @@ body {
             <div class="demo-step">
               <div class="step-num purple">1</div>
               <div class="step-body">
-                <strong>From the assumption on utility:</strong> By local non-satiation, every neighborhood of a bundle contains another bundle giving a strictly higher utility.
+                <strong>From the assumption on utility:</strong> Every neighborhood of a bundle contains another bundle giving a strictly higher utility (local non-satiation).
               </div>
             </div>
 
@@ -680,7 +700,8 @@ body {
               <div class="step-num purple">3</div>
               <div class="step-body">
                 Suppose $p^j \cdot x^{j+1} \leq p^j \cdot x^j$, for all $j \leq K - 1$.<br>
-                Deduce: $u(x^1) \geq u(x^2) \geq \dots \geq u(x^K)$.
+                Deduce that:
+                <div class="math-display">$$u(x^1) \geq u(x^2) \geq \dots \geq u(x^K)$$</div>
               </div>
             </div>
 
@@ -690,7 +711,8 @@ body {
                 Suppose that $p^K \cdot x^1 < p^K \cdot x^K$ ($x^K \text{ SRP } x^1$).<br>
                 From local non-satiation, we can find a bundle $\tilde{x}$ close to $x^1$ with:
                 <div class="math-display">$$p^K \cdot \tilde{x} < p^K \cdot x^K \quad\text{and}\quad u(\tilde{x}) > u(x^1) \geq u(x^K)$$</div>
-                $\implies x^K$ cannot maximize utility at $p^K$, which is a contradiction! Therefore choices satisfy GARP. $\blacksquare$
+                This implies that $x^K$ cannot maximize utility at prices $p^K$, which is a contradiction!<br>
+                Therefore, $x^K$ is not SRP to $x^1$. The choices satisfy GARP. $\blacksquare$
               </div>
             </div>
           </div>
@@ -699,7 +721,7 @@ body {
 
       <!-- Afriat's Theorem -->
       <div class="property-item green">
-        <div class="property-name">Afriat’s Theorem (1967)</div>
+        <div class="property-name">Afriat’s Theorem</div>
         <div class="property-body">
           The following statements are <strong>equivalent</strong>:
           <ol style="margin-left:20px; margin-top:8px; display:flex; flex-direction:column; gap:6px;">
@@ -707,7 +729,9 @@ body {
             <li>A finite dataset $D$ can be rationalized by a <strong>locally non-satiated utility function</strong>.</li>
             <li>A finite dataset $D$ can be rationalized by a <strong>continuous, concave, and strictly monotone utility function</strong>.</li>
           </ol>
-          <span class="intuition"><strong>Intuition:</strong> GARP is necessary and sufficient to treat the consumer as if (s)he is maximizing a well-behaved utility function.</span>
+          <div class="key-note green" style="margin-top:12px;">
+            <strong>Intuition:</strong> GARP is necessary and sufficient to treat the consumer as if (s)he is maximizing a well-behaved neoclassical utility function.
+          </div>
         </div>
       </div>
     </div>
@@ -760,72 +784,48 @@ body {
         </div>
       </div>
 
-      <!-- FIGURE 2 UPLOAD ZONE -->
-      <div class="figure-container" id="fig-2">
-        <div class="figure-header">
-          <div class="figure-badge">📸 Figure 2 Upload Zone</div>
-          <span class="figure-status">Screenshot placeholder</span>
-        </div>
-        <div class="figure-box">
-          <img src="images/figure2.png" alt="Figure 2: Violation of GARP" class="course-figure-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="figure-dropzone-preview">
-            <div class="dropzone-icon">📈</div>
-            <div class="dropzone-title">Figure 2: Violation of GARP</div>
-            <div class="dropzone-sub">Graph illustrating the two budget lines and the bundles A and B, showing the revealed-preference cycle.</div>
-            <div class="dropzone-path">Target path: <code>images/figure2.png</code></div>
+      <!-- FIGURES 2, 3, 4 GALLERY -->
+      <div class="figures-gallery">
+        <!-- Figure 2 -->
+        <div class="course-figure-card">
+          <div class="figure-img-frame">
+            <img src="images/figure2.png" alt="Figure 2: Violation of GARP">
+          </div>
+          <div class="figure-caption-box">
+            <strong>Figure 2: Violation of GARP.</strong><br>
+            The graph illustrates the two budget lines ($p_A$ in red, $p_B$ in yellow) and bundles $A$ and $B$, showing the revealed-preference cycle.
           </div>
         </div>
-        <div class="figure-caption">
-          <strong>Figure 2: Violation of GARP.</strong> The graph illustrates the two budget lines and the bundles $A$ and $B$, showing the revealed-preference cycle.
+
+        <!-- Figure 3 -->
+        <div class="course-figure-card">
+          <div class="figure-img-frame">
+            <img src="images/figure3.png" alt="Figure 3: Money pump cost">
+          </div>
+          <div class="figure-caption-box">
+            <strong>Figure 3: Money pump cost.</strong><br>
+            The graph illustrates the monetary cost associated with the revealed-preference inconsistency (dashed budget lines).
+          </div>
+        </div>
+
+        <!-- Figure 4 -->
+        <div class="course-figure-card">
+          <div class="figure-img-frame">
+            <img src="images/figure4.png" alt="Figure 4: Higher money pump cost">
+          </div>
+          <div class="figure-caption-box">
+            <strong>Figure 4: Higher money pump cost.</strong><br>
+            The higher the money-pump cost (wider gap between budget lines), the more severe the violation of rationality.
+          </div>
         </div>
       </div>
 
-      <!-- FIGURE 3 UPLOAD ZONE -->
-      <div class="figure-container" id="fig-3">
-        <div class="figure-header">
-          <div class="figure-badge">📸 Figure 3 Upload Zone</div>
-          <span class="figure-status">Screenshot placeholder</span>
-        </div>
-        <div class="figure-box">
-          <img src="images/figure3.png" alt="Figure 3: Money pump cost" class="course-figure-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="figure-dropzone-preview">
-            <div class="dropzone-icon">💸</div>
-            <div class="dropzone-title">Figure 3: Money pump cost</div>
-            <div class="dropzone-sub">Graph illustrating the monetary cost associated with the revealed-preference inconsistency.</div>
-            <div class="dropzone-path">Target path: <code>images/figure3.png</code></div>
-          </div>
-        </div>
-        <div class="figure-caption">
-          <strong>Figure 3: Money pump cost.</strong> The graph illustrates the monetary cost associated with the revealed-preference inconsistency.
-        </div>
-      </div>
-
-      <!-- FIGURE 4 UPLOAD ZONE -->
-      <div class="figure-container" id="fig-4">
-        <div class="figure-header">
-          <div class="figure-badge">📸 Figure 4 Upload Zone</div>
-          <span class="figure-status">Screenshot placeholder</span>
-        </div>
-        <div class="figure-box">
-          <img src="images/figure4.png" alt="Figure 4: Higher money pump cost" class="course-figure-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="figure-dropzone-preview">
-            <div class="dropzone-icon">📉</div>
-            <div class="dropzone-title">Figure 4: Higher money pump cost</div>
-            <div class="dropzone-sub">Graph showing that the higher the money-pump cost, the more severe the violation of rationality.</div>
-            <div class="dropzone-path">Target path: <code>images/figure4.png</code></div>
-          </div>
-        </div>
-        <div class="figure-caption">
-          <strong>Figure 4: Higher money pump cost.</strong> The higher the money-pump cost, the more severe the violation of rationality.
-        </div>
-      </div>
-
-      <!-- General Definitions: Money Pump Index -->
+      <!-- Money Pump Formulas -->
       <div class="property-item red">
-        <div class="property-name">Money Pump Index (MPI)</div>
+        <div class="property-name">General Formulas: Money Pump Cost &amp; Money Pump Index (MPI)</div>
         <div class="property-body">
           The <strong>money pump index</strong> measures the potential monetary loss a consumer could incur due to violations of GARP (i.e., “cost” of being irrational in purchasing decisions).<br><br>
-          Given a sequence $x_1, x_2, \dots, x_n$ of chosen bundles ($n$ observations), given a violation of GARP such that $x_1 \text{ RP } x_2 \text{ RP } \dots \text{ RP } x_n$ and $x_n \text{ RP } x_1$:
+          Given a sequence $x_1, x_2, \dots, x_n$ of chosen bundles ($n$ observations) with a violation of GARP such that $x_1 \text{ RP } x_2 \text{ RP } \dots \text{ RP } x_n$ and $x_n \text{ RP } x_1$:
           <ul class="bullet-list red" style="margin-top:8px;">
             <li>
               The <strong>money pump cost</strong> is:
@@ -836,7 +836,7 @@ body {
               <div class="math-display boxed-red">$$mpi = \frac{mp}{\sum_{h=1}^n p_h \cdot x_h}$$</div>
             </li>
           </ul>
-          <p style="margin-top:8px;">
+          <p style="margin-top:10px;">
             <strong>MPI provides a measure of the economic impact of irrational consumption behavior.</strong><br>
             Application to household-level food consumption data (panel data):
           </p>
@@ -853,7 +853,7 @@ body {
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill green">5. Experimental Insights: Altruism, Mistakes &amp; Demographics</span>
+        <span class="part-pill green">5. Experimental Applications</span>
         <div class="part-line"></div>
       </div>
 
@@ -873,10 +873,10 @@ body {
           <ul class="bullet-list green" style="margin-top:6px;">
             <li><strong>10% of participants</strong> violated WARP or GARP.</li>
             <li>For the other <strong>90%</strong>: the behavior of about half of participants was consistent with standard utility functions:
-              <div class="math-display" style="margin:6px 0;">
+              <div class="math-display" style="margin:8px 0;">
                 $$u(\pi_s, \pi_o) = \pi_o \quad (\textbf{Selfish})$$
                 $$u(\pi_s, \pi_o) = \min\{\pi_s, \pi_o\} \quad (\textbf{Equal Split / Leontief})$$
-                $$u(\pi_s, \pi_o) = \pi_s + \pi_o \quad (\textbf{Perfect Substitutes: give everything if price } < 1, \text{ keep otherwise})$$
+                $$u(\pi_s, \pi_o) = \pi_s + \pi_o \quad (\textbf{Perfect Substitutes: give all if price } < 1, \text{ keep otherwise})$$
               </div>
             </li>
           </ul>
@@ -888,12 +888,12 @@ body {
       <div class="property-item blue">
         <div class="property-name">Are We Irrational by Mistake?</div>
         <div class="property-body">
-          Studies observe many violations of rationality. <strong>Are these violations intentional deviations from the axioms, or are they simply mistakes?</strong>
+          Studies observe many violations of rationality. <strong>Are these violations intentional deviations from the axioms or are they simply mistakes?</strong>
           <div class="key-note blue" style="margin:8px 0;">
             A violation is a <strong>mistake</strong> when an individual violates an axiom but would not have done so had they known they were violating the axiom.
           </div>
           <strong>Experimental Design:</strong>
-          <ol style="margin-left:20px; margin-top:6px; display:flex; flex-direction:column; gap:4px;">
+          <ol style="margin-left:20px; margin-top:8px; display:flex; flex-direction:column; gap:4px;">
             <li>Present participants with axioms (can choose that the algorithm governs choices, or choose on their own).</li>
             <li>Present participants with choice problems.</li>
             <li>Present participants with inconsistencies in their preferences (can change choice, stop using algorithm, or neither).</li>
@@ -927,7 +927,7 @@ body {
           </ul>
           <em>Intuition:</em> Scaling by $\varepsilon < 1$ reduces the size of the budget set you assume the consumer faced. This makes their chosen bundle look more rational, because fewer alternatives are now affordable.
           <br><br>
-          <strong>Results across age (Sample of 7 yo, 11 yo, and 21 yo):</strong>
+          <strong>Results across age (Sample of 198 children and 101 undergraduates):</strong>
           <ul class="bullet-list purple" style="margin-top:6px;">
             <li>Proportion with zero GARP violations:
               <ul style="margin-left:18px; margin-top:4px; display:flex; flex-direction:column; gap:3px;">
@@ -938,7 +938,7 @@ body {
             </li>
             <li>Afriat CCEI is around <strong>0.95 in all age groups</strong>.</li>
           </ul>
-          <strong>Implications:</strong> Since children’s choices seem rational by age 11, it can be valid to use data from children's decisions to infer preferences. Cognitive development matters for rational choice; cognitive training can improve decision-making in adulthood.
+          <strong>Implications:</strong> Since children’s choices seem rational by age 11, it can be valid to use data from children's decisions to infer their preferences. Cognitive development matters for rational choice; cognitive training can improve decision-making in adulthood.
         </div>
       </div>
 
@@ -946,7 +946,7 @@ body {
       <div class="property-item amber">
         <div class="property-name">Who is More Rational? Socio-Demographic Heterogeneity</div>
         <div class="property-body">
-          Sample of 1,182 individuals (Dutch households) choosing allocations in 25 decision problems under risk.<br>
+          Sample of 1,182 individuals from CentERpanel (Dutch households) choosing allocations in 25 decision problems under risk.<br>
           Consistency measured using Afriat's Critical Cost Efficiency Index.
           <br><br>
           <strong>Results:</strong>
@@ -962,7 +962,7 @@ body {
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         6. SYNTHESIS (END OF CLASS 2)
+         6. SYNTHESIS (STOP CLASS 2)
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
