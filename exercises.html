@@ -557,66 +557,80 @@ body {
 
 
     <!-- ── QUESTION 3 ── -->
-    <div class="question-card">
+    <div class="question-card" id="negative-transitivity">
       <div class="question-header">
         <div class="question-title">3. Negative Transitivity of Weak Preference ($\succeq$)</div>
       </div>
       <div class="question-goal">
-        <strong>Goal:</strong> Suppose $\succeq$ is complete and transitive. Show that:
-        $$x \succeq y \implies \forall z, \quad x \succeq z \text{ or } z \succeq y$$
+        <strong>Goal:</strong> Suppose $\succeq$ is complete and transitive. Given $x\succeq y$, show that for every $z\in X$:
+        $$x\succeq z \quad\text{or}\quad z\succeq y.$$
       </div>
 
       <div>
         <button class="toggle-btn" onclick="toggle(this, 'sol-q3')">
-          Show solution — Question 3 <span class="arrow">▾</span>
+          Show proof — Contradiction <span class="arrow">▾</span>
         </button>
 
         <div class="collapsible" id="sol-q3">
           <div class="sol-block">
-            
             <div>
-              <strong>Goal.</strong> Suppose $\succeq$ is complete and transitive. Show that:
-              <div class="math-display">
-                $$x \succeq y \implies \forall z, \quad x \succeq z \text{ or } z \succeq y$$
+              <strong>Starting point / Hypotheses.</strong> The weak preference relation $\succeq$ is complete and transitive. Fix $x,y\in X$ with $x\succeq y$.<br>
+              <strong>Goal.</strong> Prove that every $z\in X$ satisfies $x\succeq z$ or $z\succeq y$.
+            </div>
+
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">1.</span> Assume the opposite</div>
+              <div class="step-body">
+                <p>Suppose, for a contradiction, that the conclusion is false. Then there exists some $z\in X$ for which <strong>neither</strong> comparison holds:</p>
+                <div class="math-display">
+                  $$\begin{gathered}
+                    x\not\succeq z,\\
+                    z\not\succeq y.
+                  \end{gathered}$$
+                </div>
+                <p>The negation of “$A$ or $B$” is “not $A$ <strong>and</strong> not $B$”. We keep the initial hypothesis $x\succeq y$; only the conclusion is assumed false.</p>
               </div>
             </div>
 
-            <div>
-              Assume:
-              <div class="math-display">$$x \succeq y$$</div>
-              Take any $z \in X$. Since $\succeq$ is <strong>complete</strong>, when comparing $x$ and $z$, we must have:
-              <div class="math-display">
-                $$x \succeq z \quad\text{or}\quad z \succeq x$$
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">2.</span> Use completeness</div>
+              <div class="step-body">
+                <p>Completeness requires that $x$ and $z$ can be compared:</p>
+                <div class="math-display">
+                  $$x\succeq z \quad\text{or}\quad z\succeq x.$$
+                </div>
+                <p>Step 1 rules out $x\succeq z$. Therefore the other comparison must hold:</p>
+                <div class="math-display">$$z\succeq x.$$</div>
               </div>
             </div>
 
-            <div class="sol-subbox">
-              <div class="sol-step-title">Case 1</div>
-              <p>If $x \succeq z$, we already have one of the two required conditions. Done.</p>
-            </div>
-
-            <div class="sol-subbox">
-              <div class="sol-step-title">Case 2</div>
-              <p>If $z \succeq x$, we already know $x \succeq y$.</p>
-              <p>By transitivity:</p>
-              <div class="math-display">
-                $$z \succeq x, \ x \succeq y \implies z \succeq y$$
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">3.</span> Derive the contradiction</div>
+              <div class="step-body">
+                <p>We have $z\succeq x$ from step 2 and $x\succeq y$ from the initial hypothesis. By transitivity:</p>
+                <div class="math-display">
+                  $$\begin{gathered}
+                    z\succeq x,\quad x\succeq y\\
+                    \implies z\succeq y.
+                  \end{gathered}$$
+                </div>
+                <p>But step 1 assumes $z\not\succeq y$. We have obtained a statement and its negation: <strong>this is the contradiction</strong>.</p>
               </div>
             </div>
 
-            <div>
-              <div class="sol-step-title">Conclusion</div>
-              <p>Therefore, in every case:</p>
-              <div class="math-display boxed" style="margin:8px 0;">
-                $$\boxed{x \succeq z \quad\text{or}\quad z \succeq y} \qquad \forall z$$
-              </div>
-              <div class="math-display boxed green" style="margin-top:6px;">
-                $$\boxed{\succeq \text{ is negatively transitive}}$$
+            <div class="sol-subbox demo-step">
+              <div class="sol-step-title"><span class="step-num">4.</span> Conclude</div>
+              <div class="step-body">
+                <p>Our supposition is impossible: there is no $z\in X$ for which both comparisons fail. Hence, for every $z\in X$:</p>
+                <div class="math-display boxed green">
+                  $$x\succeq z \quad\text{or}\quad z\succeq y.$$
+                </div>
+                <p>Thus $\succeq$ is <strong>negatively transitive</strong>. $\blacksquare$</p>
               </div>
             </div>
 
             <div class="key-note" style="margin-top:8px;">
-              <strong>Important intuition:</strong> We do <em>not</em> need to know exactly where $z$ ranks. We only need at least one of these to hold: $x \succeq z$ or $z \succeq y$. And because $\succeq$ is weak preference, both can also hold—for example if some alternatives are indifferent.
+              <strong>Intuition:</strong> If $x$ is at least as good as $y$, any alternative $z$ that is not weakly below $x$ must be weakly above $x$, by completeness, and therefore weakly above $y$, by transitivity. Both comparisons in the conclusion may hold when there is indifference.
             </div>
 
           </div>
