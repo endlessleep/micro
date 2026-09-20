@@ -489,7 +489,7 @@ body {
     <div class="page-title-block">
       <div class="page-label">Part I — Choice Theory</div>
       <h1>4. Consumer’s Preferences: Reasonable Assumptions</h1>
-      <p>Monotonicity, convexity, homotheticity, separability, and numéraire properties — with their formal mathematical links to utility functions.</p>
+      <p>Monotonicity, convexity, homotheticity, separability, and numéraire properties: definitions, economic intuition, and their meaning for utility.</p>
     </div>
 
     <!-- ════════════════════════════════════════════════════
@@ -505,6 +505,12 @@ body {
         <strong>From abstract alternatives to bundles of goods</strong>
         <p>In Chapters 1–3, we studied how an individual ranks alternatives and chooses from a choice set. Consumer theory gives these alternatives a concrete meaning: each $x\in X$ is a <strong>consumption bundle</strong>, specifying a quantity of each good.</p>
         <p>This makes the choice problem more specific. <strong>Preferences</strong> describe which bundles the consumer values more; <strong>prices and the budget</strong> determine which bundles are affordable. The consumer’s choice depends on both.</p>
+      </div>
+
+      <div class="key-note blue">
+        <strong>Two ways to study consumer choice</strong>
+        <p><strong>From preferences to choices:</strong> Specify properties of preferences, then determine which affordable bundles the consumer would choose. Chapter 4 develops the preference assumptions used in this approach.</p>
+        <p><strong>From choices to preferences:</strong> Observe the chosen bundles and the alternatives that were affordable. Then ask which preference rankings could explain those choices. This is the <strong>revealed-preference approach</strong> developed in Chapter 5.</p>
       </div>
 
       <div class="property-item blue">
@@ -523,11 +529,6 @@ body {
         </div>
       </div>
 
-      <div class="key-note blue">
-        <strong>Two ways to study consumer choice</strong>
-        <p><strong>From preferences to choices:</strong> Specify properties of preferences, then determine which affordable bundles the consumer would choose. Chapter 4 develops the preference assumptions used in this approach.</p>
-        <p><strong>From choices to preferences:</strong> Observe the chosen bundles and the alternatives that were affordable. Then ask which preference rankings could explain those choices. This is the <strong>revealed-preference approach</strong> developed in Chapter 5.</p>
-      </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
@@ -539,7 +540,7 @@ body {
         <div class="part-line"></div>
       </div>
 
-      <p class="course-text">Let $X=\mathbb{R}_+^n$ be the consumption set. A bundle $x=(x_1,\ldots,x_n)$ lists quantities of goods. The inequality $x\geq y$ is <strong>componentwise</strong>: $x_i\geq y_i$ for every good $i$. Together with $x\neq y$, it means strictly more of at least one good.</p>
+      <p class="course-text">Let $X=\mathbb{R}_+^n$ be the consumption set. A bundle $x=(x_1,\ldots,x_n)$ lists the nonnegative quantity of each good. To compare quantities, we check <strong>each good separately</strong>. The notation $x\geq y$ means $x_i\geq y_i$ for every good $i$: $x$ contains the same amount or a larger amount of each good, and less of none. Some quantities may be unchanged. Adding $x\neq y$ means that at least one quantity is strictly larger.</p>
 
       <!-- Definition 1: Strict Monotonicity -->
       <div class="property-item green">
@@ -561,7 +562,7 @@ body {
           <div class="math-display">
             $$x \geq y \implies x \succeq y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> More is always at least as good as less. Extra quantities of goods never reduce utility.</span>
+          <span class="intuition"><strong>Intuition:</strong> Receiving more of some goods, without losing any other good, cannot make the consumer worse off. “At least as good” allows two possibilities: the consumer strictly prefers the new bundle, or is indifferent between the two. Weak monotonicity does not require a strict improvement.</span>
         </div>
       </div>
 
@@ -585,40 +586,20 @@ body {
               y &\succ x.
             \end{aligned}$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> For any bundle $x$, there is another bundle $y$ at an arbitrarily small distance $\varepsilon$ that is strictly preferred to $x$. The improvement must be available in <em>every</em> neighbourhood, however small. Ruling out a best bundle somewhere in $X$ would not, by itself, be enough.</span>
+          <span class="intuition"><strong>Intuition:</strong> Starting from any bundle, it is always possible to find a strictly preferred bundle nearby, however small a change we allow. The number $\varepsilon$ specifies how close that bundle must be. LNS requires <em>some</em> nearby improvement; it does not say that every small change is beneficial, or that more of each good is desirable.</span>
         </div>
       </div>
 
-      <!-- Implications under the definitions used above -->
+      <!-- Explain the comparison without adding a formal proof -->
       <div class="key-note green">
-        <strong>What follows from strict monotonicity?</strong>
-        <p>On $\mathbb{R}_+^n$, strict monotonicity implies both weak monotonicity and local non-satiation.</p>
-      </div>
-
-      <div>
-        <button class="toggle-btn green" onclick="toggle(this, 'proof-monotonicity')" aria-controls="proof-monotonicity" aria-expanded="false">
-          Show proof — The two implications <span class="arrow">▾</span>
-        </button>
-        <div class="collapsible" id="proof-monotonicity">
-          <p><strong>Starting point:</strong> Rational, strictly monotone preferences on $\mathbb{R}_+^n$.<br>
-          <strong>Goal:</strong> Establish weak monotonicity and LNS.</p>
-          <div class="demo-step">
-            <div class="step-num green">1</div>
-            <div class="step-body"><strong>Weak monotonicity.</strong> Take $x\geq y$. If $x\neq y$, strict monotonicity gives $x\succ y$, hence $x\succeq y$. If $x=y$, reflexivity gives $x\succeq y$. These two cases cover every $x\geq y$.</div>
-          </div>
-          <div class="demo-step">
-            <div class="step-num green">2</div>
-            <div class="step-body"><strong>Find a nearby improvement.</strong> Fix any $x\in X$ and $\varepsilon&gt;0$. Increase only the first coordinate:
-              <div class="math-display">$$y=(x_1+\varepsilon/2,x_2,\ldots,x_n).$$</div>
-              This bundle remains in $X$. Its Euclidean distance from $x$ is $\varepsilon/2&lt;\varepsilon$. Since $y\geq x$ and $y\neq x$, strict monotonicity gives $y\succ x$. This proves LNS. $\blacksquare$
-            </div>
-          </div>
-        </div>
+        <strong>Monotonicity and LNS: how do the ideas differ?</strong>
+        <p><strong>Weak monotonicity</strong> describes what happens when quantities increase without any decrease elsewhere: the consumer is at least as well off. It places a restriction on all such comparisons, but allows the extra goods to leave the consumer indifferent.</p>
+        <p><strong>Local non-satiation</strong> asks a different question: can the consumer become strictly better off through a change as small as desired? It requires an improvement near every bundle, without specifying which goods must increase or decrease.</p>
+        <p><strong>Strict monotonicity connects the two ideas.</strong> On $\mathbb{R}_+^n$, even a tiny increase in one good, with the others unchanged, is strictly beneficial. This provides the nearby improvement required by LNS. Strict monotonicity therefore implies both weak monotonicity and LNS.</p>
       </div>
 
       <div class="key-note amber">
-        <strong>A qualification to the implication in the slides.</strong>
-        With the weak definition above, <strong>monotonicity alone does not imply LNS</strong>. For instance, $u(x)=0$ is weakly increasing: more goods never lower utility. Yet no bundle has strictly higher utility, so LNS fails. A strict improvement assumption is needed for that implication.
+        <strong>Be careful with “at least as good”.</strong> Under the weak definition above, monotonicity alone does not guarantee LNS: allowing indifference does not guarantee a strictly better nearby bundle. The implication to LNS needs a strict improvement assumption.
       </div>
 
       <!-- REDESIGNED STRUCTURED EXAMPLE CARD -->
@@ -657,23 +638,10 @@ body {
               <span class="status-tag green">Satisfied ✓</span>
             </div>
             <p style="font-size:0.88rem; color:var(--text-2); line-height:1.6;">
-              Take any bundle $(x_1, x_2)$ and any radius $\varepsilon &gt; 0$. Consider the bundle:
+              Keep the amount of coffee unchanged and give the consumer a little more money. The coffee term $-(x_2-1)^2$ stays the same, while the money term $x_1$ increases. Utility therefore increases.
             </p>
-            <div class="math-display" style="margin:4px 0; padding:6px 10px; font-size:0.88rem;">
-              $$y = \left(x_1 + \frac{\varepsilon}{2}, \; x_2\right)$$
-            </div>
             <p style="font-size:0.88rem; color:var(--text-2); line-height:1.6;">
-              Distance is $\|y - x\| = \frac{\varepsilon}{2} &lt; \varepsilon$, and evaluating utility yields:
-            </p>
-            <div class="math-display" style="margin:4px 0; padding:6px 10px; font-size:0.88rem;">
-              $$\begin{aligned}
-                u(y)&=x_1+\frac{\varepsilon}{2}-(x_2-1)^2\\
-                    &=u(x)+\frac{\varepsilon}{2}\\
-                    &&gt;u(x).
-              \end{aligned}$$
-            </div>
-            <p style="font-size:0.85rem; color:var(--text-3);">
-              Adding an arbitrarily small amount to money $x_1$ makes the consumer strictly better off.
+              That extra amount of money can be as small as we wish, so the improved bundle can be arbitrarily close to the original one. This works whatever the initial amount of coffee: money always provides a way to become strictly better off.
             </p>
           </div>
 
@@ -703,7 +671,7 @@ body {
         </div>
 
         <div class="key-note amber" style="margin-top:4px;">
-          <strong>Conclusion:</strong> $u(x_1, x_2) = x_1 - (x_2 - 1)^2$ is <strong>locally non-satiated</strong> but <strong>not weakly monotone</strong>. LNS therefore does not imply weak monotonicity either: an improvement in money is always possible, even though more coffee can be undesirable.
+          <strong>Conclusion:</strong> $u(x_1, x_2) = x_1 - (x_2 - 1)^2$ is <strong>locally non-satiated</strong> but <strong>not weakly monotone</strong>. The distinction is that an improvement in money is always possible, even though more coffee can be undesirable.
         </div>
       </div>
     </div>
@@ -752,8 +720,7 @@ body {
           $$x\succ y \implies tx+(1-t)y\succeq y$$
         </div>
         <p style="margin-top:6px;">
-          <strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of $x$ and $y$ is at least as good as the worse bundle $y$.<br>
-          <em>Argument, for any $t\in[0,1]$:</em> First, $x\succ y$ implies $x\succeq y$. Second, reflexivity gives $y\succeq y$. Thus both endpoints are at least as good as the benchmark $z=y$. Applying convexity gives $tx+(1-t)y\succeq y$.
+          <strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of them, with $t\in[0,1]$, is at least as good as the worse bundle $y$. Think of moving from $y$ towards $x$: the mixture does not fall below $y$ in the ranking. Convexity does not require the mixture to be better than $x$.
         </p>
       </div>
     </div>
@@ -774,17 +741,17 @@ body {
           <div class="math-display boxed-amber">
             $$x \succeq y \iff \lambda x \succeq \lambda y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Multiply <em>every coordinate of both bundles</em> by the same positive number: their ranking is unchanged. If $(5,0)\succeq(0,7)$, then $(500,0)\succeq(0,700)$. The reverse comparison follows by scaling back by $1/\lambda$. This concerns proportional changes in all goods, not an increase in just one good.</span>
+          <span class="intuition"><strong>Intuition:</strong> Multiply <em>every coordinate of both bundles</em> by the same positive number: their ranking is unchanged. If $(5,0)\succeq(0,7)$, then $(500,0)\succeq(0,700)$. The quantities become larger, but each bundle keeps the same proportions of goods. Homotheticity says that this common change of scale does not change which bundle the consumer ranks higher.</span>
         </div>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         4. LINK TO THE UTILITY REPRESENTATION & FIGURE 1
+         LINK TO THE UTILITY REPRESENTATION & FIGURE 1
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill red">4. Link to $u$ Representation</span>
+        <span class="part-pill red">Link to Utility Representation</span>
         <div class="part-line"></div>
       </div>
 
@@ -847,11 +814,11 @@ body {
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         5. SEPARABILITY
+         4. SEPARABILITY
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill green">5. Separability</span>
+        <span class="part-pill green">4. Separability</span>
         <div class="part-line"></div>
       </div>
 
@@ -901,11 +868,11 @@ body {
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         6. NUMÉRAIRE PROPERTIES & TWO SEPARATE PROOFS
+         5. NUMÉRAIRE PROPERTIES & TWO SEPARATE PROOFS
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill blue">6. Numéraire Properties</span>
+        <span class="part-pill blue">5. Numéraire Properties</span>
         <div class="part-line"></div>
       </div>
 
@@ -921,12 +888,12 @@ body {
             <li>
               <strong>1. The numéraire good is valuable:</strong>
               <div class="math-display" style="margin:4px 0;">$$(t, y) \succeq (t', y) \iff t \geq t'$$</div>
-              <em>Intuition:</em> More of $t$ is better.
+              <em>Intuition:</em> When the other goods $y$ are unchanged, the consumer prefers the alternative with more money. The money amount can therefore serve as a scale for comparing otherwise identical alternatives.
             </li>
             <li>
               <strong>2. Compensation is possible:</strong> For every $y,y'\in Y$, there exists $t\in\mathbb{R}$ such that
               <div class="math-display" style="margin:4px 0;">$$(0,y)\sim(t,y')$$</div>
-              <em>Intuition:</em> Every possible alternative has a monetary value for the individual. It implies that the “utility” of different alternatives can be measured by the willingness of the agent to pay for it.
+              <em>Intuition:</em> A change from $y$ to $y'$ can be offset by an appropriate amount of money. The amount $t$ makes the consumer indifferent between the two alternatives. It expresses the value of that change in monetary terms.
             </li>
             <li>
               <strong>3. No wealth effect:</strong>
@@ -934,7 +901,7 @@ body {
                 (t,y)\succeq(t',y')\\
                 \implies (t+d,y)\succeq(t'+d,y')
               \end{gathered}$$</div>
-              <em>Intuition:</em> For every $d\in\mathbb{R}$, adding the <em>same</em> amount to both alternatives preserves their ranking, even when their initial money amounts differ. Applying the property with $-d$ also gives the reverse implication.
+              <em>Intuition:</em> Adding the <em>same</em> amount $d$ to both alternatives preserves their ranking, even when their initial money amounts differ. The consumer’s evaluation of the trade-off between money and the other goods does not change when both alternatives become equally richer or poorer.
             </li>
           </ol>
         </div>
@@ -963,7 +930,7 @@ body {
         </div>
       </div>
 
-      <p class="course-text"><strong>Why this implication holds:</strong> Start with $(t,y)\succeq(t,y')$ and add $d=s-t$ to both alternatives. This gives $(s,y)\succeq(s,y')$. Adding $-d$ gives the converse. Thus the ranking of $y$ and $y'$ is independent of their common money level.</p>
+      <p class="course-text">Separability concerns comparisons made at a common money level. No wealth effect covers those comparisons too, while also covering alternatives with different money amounts. It therefore imposes a stronger restriction.</p>
 
       <!-- Link to Quasi-Linear Utility -->
       <div class="property-item green">
@@ -1002,7 +969,7 @@ body {
               <strong>Step 1: Construct $v(y)$ using Compensation (Property 2).</strong><br>
               Fix an arbitrary reference bundle $\bar{y} \in Y$. Because compensation is possible, for every $y \in Y$, there exists $v(y) \in \mathbb{R}$, the money amount that makes the reference alternative $\bar{y}$ equivalent to $y$:
               <div class="math-display">$$(0, y) \sim (v(y), \bar{y})$$</div>
-              This amount is unique: if two different amounts were equivalent to $(0,y)$, transitivity would make them indifferent at $\bar y$, contradicting the strict value of money. Similarly, for $y'\in Y$:
+              Similarly, for $y'\in Y$:
               <div class="math-display">$$(0, y') \sim (v(y'), \bar{y})$$</div>
             </div>
           </div>

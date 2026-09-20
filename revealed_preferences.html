@@ -435,15 +435,15 @@ body {
     <div class="page-title-block">
       <div class="page-label">Part I — Choice Theory</div>
       <h1>5. Consumer’s Choices: Revealed Preferences</h1>
-      <p>From observed budgets to WARP, SARP and GARP, with proofs, a money-pump example, and the main experimental lessons.</p>
+      <p>From observed choices to WARP, SARP and GARP, followed by the money-pump example and experimental applications.</p>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         1. FOUNDATIONS: HOW REVEALED PREFERENCE WORKS
+         PREAMBLE: HOW REVEALED PREFERENCE WORKS
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill blue">1. How Does It Work?</span>
+        <span class="part-pill blue">Preamble: How Does It Work?</span>
         <div class="part-line"></div>
       </div>
 
@@ -457,16 +457,14 @@ body {
         </div>
         We observe that the consumer has chosen to buy $(x_1, x_2)$.<br><br>
         <strong>What can you infer about this consumer’s preferences?</strong><br>
-        She bought $X$, while $X$ was at least as expensive as $Y$. It means that she had the budget to buy either $X$ or $Y$. Assuming that she is choosing her preferred bundle, we can infer:
+        She bought $x$, and $y$ would have cost no more than $x$ at those same prices. She could therefore have bought $y$ instead. Assuming that she chooses a most preferred affordable bundle, her choice tells us:
         <div class="math-display boxed-blue" style="margin:8px 0;">
           $$(x_1, x_2) \succeq (y_1, y_2)$$
         </div>
         <em>Core principle:</em> If the consumer buys a bundle instead of another affordable one, then the first bundle is <strong>revealed preferred</strong> to the second.
       </div>
 
-      <p class="course-text"><strong>Notation.</strong> Write $p\cdot x=p_1x_1+p_2x_2$ for expenditure; the same notation applies to any number of goods. An observation $(p^k,x^k)$ records positive prices and the chosen bundle. Its expenditure budget is</p>
-      <div class="math-display">$$B^k=\{z\in\mathbb R_+^n:p^k\cdot z\leq p^k\cdot x^k\}.$$</div>
-      <p class="course-text">Under local non-satiation, an optimum spends the available budget: if money were left over, a sufficiently small preferred change would still be affordable. We therefore use observed expenditure as the budget in the comparisons below.</p>
+      <p class="course-text"><strong>Reading the expenditure comparisons.</strong> The expression $p\cdot x=p_1x_1+p_2x_2$ is the total cost of bundle $x$: multiply each quantity by its price, then add the costs. When comparing $x$ and $y$, use the <em>same</em> prices for both. Later, $(p^k,x^k)$ denotes observation $k$: the prices faced and the bundle chosen. The comparisons below use observed expenditure as the budget.</p>
 
       <!-- Distinction Cards -->
       <div class="distinction-grid">
@@ -498,18 +496,18 @@ body {
             <div class="math-display" style="margin:10px 0; padding:10px;">
               $$p\cdot x&gt;p\cdot y$$
             </div>
-            Bundle $y$ was <em>strictly cheaper</em> when $x$ was chosen. With LNS, this implies $u(x)&gt;u(y)$: if they were indifferent, a nearby improvement on $y$ would remain affordable and beat $x$.
+            Bundle $y$ was <em>strictly cheaper</em> when $x$ was chosen: buying $y$ would have left some of the expenditure on $x$ unspent. Under utility maximization and local non-satiation, this reveals a strict preference for $x$ over $y$.
           </div>
         </div>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         2. WEAK AXIOM OF REVEALED PREFERENCES (WARP)
+         1. WEAK AXIOM OF REVEALED PREFERENCES (WARP)
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill green">2. Weak Axiom of Revealed Preferences (WARP)</span>
+        <span class="part-pill green">1. Weak Axiom of Revealed Preferences (WARP)</span>
         <div class="part-line"></div>
       </div>
 
@@ -552,9 +550,7 @@ body {
           <strong>Goal:</strong> For $x\neq y$, show that $p\cdot x\geq p\cdot y$ implies $q\cdot y&lt;q\cdot x$.</p>
           <div class="demo-step">
             <div class="step-num blue">1</div>
-            <div class="step-body"><strong>Why the maximizer is unique.</strong> Suppose two distinct bundles $a$ and $b$ both maximize utility in one budget. Then $u(a)=u(b)=M$. Their midpoint $c=(a+b)/2$ is feasible because expenditure is linear:
-              <div class="math-display">$$p\cdot c=\frac{p\cdot a+p\cdot b}{2}\leq m.$$</div>
-              Strict quasiconcavity gives $u(c)&gt;\min\{u(a),u(b)\}=M$. This contradicts maximality, so two distinct maximizers cannot exist.
+            <div class="step-body"><strong>Use uniqueness of the optimum.</strong> Strict quasiconcavity on a convex budget set ensures that the utility-maximizing bundle, when it exists, is unique. Thus a chosen bundle gives strictly higher utility than any distinct affordable bundle.
             </div>
           </div>
           <div class="demo-step">
@@ -591,11 +587,11 @@ body {
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         3. DRP vs. IRP & GARP
+         2. STRONG AXIOM: DIRECT AND INDIRECT REVEALED PREFERENCE
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill purple">3. Strong Axiom of Revealed Preference (SARP)</span>
+        <span class="part-pill purple">2. Strong Axiom of Revealed Preference (SARP)</span>
         <div class="part-line"></div>
       </div>
 
@@ -645,14 +641,14 @@ body {
             \implies p^K\cdot x^K&lt;p^K\cdot x^1.
           \end{gathered}$$</div>
           <p>SARP applies the logic of WARP to an entire chain. The starting bundle must be unaffordable at the end, so the chain cannot close into a cycle between distinct bundles.</p>
-          <span class="intuition"><strong>Why SARP implies WARP:</strong> A direct comparison is a chain with one link. Applying SARP to that chain gives exactly the WARP inequality.</span>
+          <span class="intuition"><strong>Relation to WARP:</strong> SARP includes the pairwise consistency required by WARP and extends it to comparisons connected through intermediate choices.</span>
         </div>
       </div>
     </div>
 
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill purple">4. Generalized Axiom of Revealed Preference (GARP)</span>
+        <span class="part-pill purple">3. Generalized Axiom of Revealed Preference (GARP)</span>
         <div class="part-line"></div>
       </div>
 
@@ -695,7 +691,6 @@ body {
       </div>
       <div class="key-note blue">
         <strong>Keep the conventions consistent.</strong> SARP implies WARP and GARP. With the unique-choice definition of WARP used above, <strong>GARP need not imply WARP</strong>: it permits ties that WARP excludes. Conversely, WARP alone need not imply GARP with three or more goods, because it does not test longer chains.
-        <p>Some presentations call the pairwise version of GARP “WARP”; with that weaker convention, GARP does imply WARP. The difference is the strict versus weak inequality in the reverse comparison.</p>
       </div>
 
       <!-- Proof: Utility Max => GARP -->
@@ -712,7 +707,7 @@ body {
         </button>
 
         <div class="collapsible" id="proof-garp">
-          <p><strong>Starting point:</strong> Each $x^k$ maximizes the same locally non-satiated utility $u$ in $B^k$, with positive prices $p^k$.<br>
+          <p><strong>Starting point:</strong> Each $x^k$ maximizes the same locally non-satiated utility $u$ in its observed expenditure budget, with positive prices $p^k$.<br>
           <strong>Goal:</strong> Given a chain from $x^1$ to $x^K$, prove $p^K\cdot x^1\geq p^K\cdot x^K$.</p>
           <div class="demo-step">
             <div class="step-num purple">1</div>
@@ -722,27 +717,24 @@ body {
           </div>
           <div class="demo-step">
             <div class="step-num purple">2</div>
-            <div class="step-body"><strong>Suppose the GARP inequality fails.</strong> Then $x^1$ is strictly cheaper than the last chosen bundle. Define the positive amount of budget left over:
-              <div class="math-display">$$\Delta=p^K\cdot x^K-p^K\cdot x^1&gt;0.$$</div>
-              This slack is why a sufficiently small change from $x^1$ can still be affordable.
+            <div class="step-body"><strong>Suppose the GARP inequality fails.</strong> Then the first bundle is strictly cheaper than the last chosen bundle:
+              <div class="math-display">$$p^K\cdot x^1&lt;p^K\cdot x^K.$$</div>
+              Buying $x^1$ at the last prices would leave some money unspent. There is therefore room for a sufficiently small change in quantities while staying within that budget.
             </div>
           </div>
           <div class="demo-step">
             <div class="step-num purple">3</div>
-            <div class="step-body"><strong>Make “sufficiently small” precise.</strong> Let $P=\sum_{i=1}^n p_i^K&gt;0$ and choose $\varepsilon=\Delta/(2P)$. If $\|z-x^1\|&lt;\varepsilon$, each coordinate changes by less than $\varepsilon$, so
-              <div class="math-display">$$\begin{aligned}
-                p^K\cdot z
-                  &\leq p^K\cdot x^1+\sum_i p_i^K|z_i-x_i^1|\\
-                  &&lt;p^K\cdot x^1+P\varepsilon\\
-                  &=p^K\cdot x^1+\Delta/2\\
-                  &&lt;p^K\cdot x^K.
-              \end{aligned}$$</div>
-              Thus every such $z\in X$ is affordable in the last budget.
+            <div class="step-body"><strong>Apply local non-satiation.</strong> LNS provides a strictly preferred bundle $\tilde{x}$ as close to $x^1$ as needed. Because $x^1$ costs strictly less than the budget, we can choose this improvement close enough to remain affordable:
+              <div class="math-display">$$\begin{gathered}
+                p^K\cdot\tilde{x}&lt;p^K\cdot x^K,\\
+                u(\tilde{x})&gt;u(x^1)\geq u(x^K).
+              \end{gathered}$$</div>
+              The last comparison uses the utility ranking obtained in step 1.
             </div>
           </div>
           <div class="demo-step">
             <div class="step-num purple">4</div>
-            <div class="step-body"><strong>Apply LNS and obtain a contradiction.</strong> LNS supplies a bundle $\tilde x\in X$ within this neighbourhood with $u(\tilde x)&gt;u(x^1)$. Step 1 gives $u(x^1)\geq u(x^K)$, hence $u(\tilde x)&gt;u(x^K)$. Step 3 shows that $\tilde x$ is affordable. This contradicts the optimality of $x^K$, so GARP holds. $\blacksquare$</div>
+            <div class="step-body"><strong>Obtain the contradiction.</strong> At the last observation, $\tilde{x}$ is affordable and gives strictly higher utility than the chosen bundle $x^K$. This contradicts utility maximization. The assumed violation is therefore impossible, so GARP holds. $\blacksquare$</div>
           </div>
         </div>
       </div>
@@ -769,7 +761,7 @@ body {
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill red">5. Research Focus: Violations &amp; Money Pump</span>
+        <span class="part-pill red">4. Research Focus: Violations &amp; Money Pump</span>
         <div class="part-line"></div>
       </div>
 
@@ -871,7 +863,7 @@ body {
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill green">6. Experimental Applications</span>
+        <span class="part-pill green">Research Focus: Experimental Applications</span>
         <div class="part-line"></div>
       </div>
 
@@ -908,9 +900,8 @@ body {
       <div class="property-item purple">
         <div class="property-name">Age &amp; the Critical Cost Efficiency Index (CCEI)</div>
         <div class="property-body">
-          <p>The <strong>CCEI</strong> measures how much the expenditure comparisons must be relaxed to remove GARP violations. For an efficiency level $e\in[0,1]$, compare alternatives with $e$ times observed expenditure:</p>
-          <div class="math-display">$$p^k\cdot z\leq e\,p^k\cdot x^k.$$</div>
-          <p>The index measures how close $e$ can be to 1 while the adjusted comparisons satisfy GARP. At $e=1$, comparisons use the full observed budgets. Reducing $e$ makes fewer alternatives count as affordable, which can remove a revealed-preference cycle. A score of 0.9 corresponds to a 10% relaxation of the expenditure comparisons. The observed choices are kept fixed; we are adjusting the consistency test.</p>
+          <p>The <strong>CCEI</strong> measures how much the expenditure comparisons must be relaxed to remove GARP violations. It ranges from 0 to 1. A score of 1 means that the original observations satisfy GARP; a score close to 1 means that only a small adjustment is needed.</p>
+          <p>To understand the adjustment, imagine reducing the spending threshold used to decide which alternatives count as affordable. Fewer alternatives then enter the revealed-preference comparisons, which can remove an inconsistency. A score of 0.9 corresponds to a 10% relaxation of those comparisons. The observed choices stay fixed: the adjustment concerns the consistency test.</p>
           <p><strong>Results.</strong> In the course’s sample of children and undergraduates, about 25% of seven-year-olds, 60% of eleven-year-olds and 65% of young adults have no GARP violations. Yet CCEI is around 0.95 in all three groups.</p>
           <span class="intuition"><strong>Lesson:</strong> The frequency of violations differs across ages, while their economic size can remain small. Counting violations and measuring their severity answer different questions.</span>
         </div>
