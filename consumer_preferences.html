@@ -41,8 +41,6 @@
   --amber-bright: #fbbf24;
   --amber-muted: rgba(245,158,11,0.09);
   --amber-border: rgba(245,158,11,0.3);
-  --orange-muted: rgba(245,158,11,0.08);
-  --orange-border: rgba(245,158,11,0.3);
   --text: #f8fafc;
   --text-2: #cbd5e1;
   --text-3: #94a3b8;
@@ -138,7 +136,7 @@ body {
 /* ── LAYOUT ── */
 .main-wrap { margin-left: var(--sidebar-width); flex:1; display:flex; flex-direction:column; transition:margin-left .3s; min-width:0; }
 .main-wrap.expanded { margin-left:0; }
-.main-content { padding:40px 44px 70px; max-width:880px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+.main-content { padding:40px 44px 70px; max-width:900px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
 
 /* ── PAGE TITLE ── */
 .page-title-block { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
@@ -168,7 +166,7 @@ body {
 /* ── KEY NOTE ── */
 .key-note {
   font-size:0.92rem; color:var(--text-2); line-height:1.65;
-  border-left: 3px solid var(--red); padding: 10px 16px;
+  border-left: 3px solid var(--red); padding: 12px 18px;
   background: var(--red-muted); border-radius: 0 var(--radius) var(--radius) 0;
 }
 .key-note.green  { border-left-color: #10b981; background: var(--green-muted); }
@@ -181,7 +179,7 @@ body {
 .math-display {
   background: var(--bg-card); border:1px solid var(--border);
   border-radius:var(--radius); padding:14px 20px;
-  text-align:center; margin: 4px 0; overflow-x:auto;
+  text-align:center; margin: 6px 0; overflow-x:auto;
 }
 .math-display.boxed        { border-color:var(--red-border);    background:var(--red-muted); }
 .math-display.boxed-blue   { border-color:var(--blue-border);   background:var(--blue-muted); }
@@ -192,21 +190,21 @@ body {
 /* ── PROPERTY ITEM ── */
 .property-item {
   background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
-  padding:16px 20px; display:flex; flex-direction:column; gap:8px;
+  padding:18px 22px; display:flex; flex-direction:column; gap:10px;
 }
 .property-item.red    { border-left:3px solid var(--red); }
 .property-item.blue   { border-left:3px solid #3b82f6; }
 .property-item.green  { border-left:3px solid #10b981; }
 .property-item.purple { border-left:3px solid #a855f7; }
 .property-item.amber  { border-left:3px solid #f59e0b; }
-.property-name { font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; }
+.property-name { font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; }
 .property-item.red    .property-name { color:var(--red); }
 .property-item.blue   .property-name { color:#60a5fa; }
 .property-item.green  .property-name { color:#34d399; }
 .property-item.purple .property-name { color:#c084fc; }
 .property-item.amber  .property-name { color:#fbbf24; }
-.property-body { font-size:0.9rem; color:var(--text-2); line-height:1.6; }
-.property-body .intuition { font-style:italic; color:var(--text-3); font-size:0.85rem; margin-top:6px; display:block; }
+.property-body { font-size:0.91rem; color:var(--text-2); line-height:1.65; }
+.property-body .intuition { font-style:italic; color:var(--text-3); font-size:0.86rem; margin-top:8px; display:block; }
 
 /* ── BULLETS ── */
 .bullet-list { list-style:none; display:flex; flex-direction:column; gap:8px; padding:0; }
@@ -219,12 +217,12 @@ body {
 
 /* ── TOGGLE & COLLAPSIBLE ── */
 .toggle-btn {
-  display:inline-flex; align-items:center; gap:7px;
-  background:none; border:1px solid var(--border);
-  color:var(--text-3); font-family:var(--font);
-  font-size:0.8rem; font-weight:700;
-  padding:6px 14px; border-radius:999px;
-  cursor:pointer; transition:.2s; width:fit-content; margin-top:2px;
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,0.03); border:1px solid var(--border);
+  color:var(--text-2); font-family:var(--font);
+  font-size:0.82rem; font-weight:700;
+  padding:8px 16px; border-radius:999px;
+  cursor:pointer; transition:all .2s; width:fit-content; margin-top:4px;
 }
 .toggle-btn:hover { border-color:var(--red-border); color:var(--red); background:var(--red-muted); }
 .toggle-btn.blue:hover   { border-color:var(--blue-border); color:var(--blue-bright); background:var(--blue-muted); }
@@ -233,10 +231,10 @@ body {
 .toggle-btn .arrow { font-size:0.65rem; transition:transform .25s; display:inline-block; }
 .toggle-btn.open .arrow { transform:rotate(180deg); }
 .collapsible {
-  display:none; margin-top:10px;
-  background:rgba(10,11,16,0.7); border:1px solid var(--border);
-  border-radius:var(--radius); padding:18px 20px;
-  font-size:0.88rem; color:var(--text-2); line-height:1.7;
+  display:none; margin-top:12px;
+  background:rgba(10,11,16,0.75); border:1px solid var(--border);
+  border-radius:var(--radius); padding:20px 22px;
+  font-size:0.89rem; color:var(--text-2); line-height:1.7;
 }
 .collapsible.open { display:block; animation: fadeDown .2s ease; }
 .collapsible strong { color:var(--text); font-weight:700; }
@@ -246,7 +244,7 @@ body {
 /* ── DEMO STEPS ── */
 .demo-step {
   display: flex; gap: 14px; align-items: flex-start;
-  padding: 10px 0; border-bottom: 1px solid var(--border);
+  padding: 12px 0; border-bottom: 1px solid var(--border);
 }
 .demo-step:last-child { border-bottom: none; }
 .step-num {
@@ -278,27 +276,108 @@ body {
 .impl-arrow { color: var(--text-3); font-size: 1rem; font-weight: 700; }
 
 /* ── COMPARISON TABLE ── */
-.comparison-table { width:100%; border-collapse:collapse; font-size:0.88rem; }
-.comparison-table th { background:var(--bg-card); color:var(--text-3); font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; padding:10px 14px; border-bottom:1px solid var(--border); text-align:left; }
-.comparison-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:var(--text-2); line-height:1.5; vertical-align:top; }
+.comparison-table { width:100%; border-collapse:collapse; font-size:0.88rem; margin-top:8px; }
+.comparison-table th { background:rgba(255,255,255,0.03); color:var(--text-3); font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; padding:12px 16px; border-bottom:1px solid var(--border); text-align:left; }
+.comparison-table td { padding:12px 16px; border-bottom:1px solid var(--border); color:var(--text-2); line-height:1.55; vertical-align:top; }
 .comparison-table tr:last-child td { border-bottom:none; }
 .comparison-table tr:hover td { background:rgba(255,255,255,0.02); }
 
-/* ── GRAPH PLACEHOLDER ── */
-.graph-placeholder {
-  border: 2px dashed rgba(255,255,255,0.15);
+/* ── FIGURE UPLOAD ZONE ── */
+.figure-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 44px 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.figure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.figure-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: var(--red-muted);
+  color: var(--red-bright);
+  border: 1px solid var(--red-border);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.figure-status {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.figure-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-figure-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.figure-dropzone-preview {
+  width: 100%;
+  min-height: 180px;
+  border: 2px dashed rgba(255,255,255,0.14);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.015);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
   text-align: center;
-  background: rgba(255,255,255,0.02);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  gap: 8px;
 }
-.graph-badge {
-  font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
-  letter-spacing: 1px; color: var(--text-muted);
+.dropzone-icon {
+  font-size: 1.8rem;
+  margin-bottom: 2px;
 }
-.graph-title { font-size: 1rem; font-weight: 700; color: var(--text); }
-.graph-desc { font-size: 0.84rem; color: var(--text-3); max-width: 540px; line-height: 1.5; }
+.dropzone-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.dropzone-sub {
+  font-size: 0.85rem;
+  color: var(--text-3);
+  max-width: 500px;
+  line-height: 1.5;
+}
+.dropzone-path {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  background: rgba(255,255,255,0.04);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.dropzone-path code {
+  color: var(--red-bright);
+  font-family: monospace;
+}
+.figure-caption {
+  font-size: 0.85rem;
+  color: var(--text-3);
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  line-height: 1.5;
+}
+.figure-caption strong {
+  color: var(--text);
+}
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width:5px; }
@@ -330,9 +409,9 @@ body {
       <a href="lecture1.html" class="sidebar-sublink">1 · Preferences</a>
       <a href="utility.html" class="sidebar-sublink">2 · Utility</a>
       <a href="choice.html" class="sidebar-sublink">3 · Choice</a>
+      <a href="exercises.html" class="sidebar-sublink" style="color:#f59e0b;">✦ Exercises</a>
       <a href="consumer_preferences.html" class="sidebar-sublink active">4 · Consumer Preferences</a>
       <a href="revealed_preferences.html" class="sidebar-sublink">5 · Revealed Preferences</a>
-      <a href="exercises.html" class="sidebar-sublink" style="color:#f59e0b;">✦ Exercises</a>
     </div>
   </nav>
   <div class="sidebar-footer">
@@ -379,19 +458,20 @@ body {
       </div>
 
       <div class="key-note blue">
-        <strong>From General Choice to Consumer Theory:</strong><br>
-        We started with the most general notion of rational choice over an abstract set of alternatives $X$. Now, we specialize to <strong>consumer theory</strong>, where the setting consists of bundles of goods, market prices, and budget constraints. This concrete environment motivates additional, highly structured assumptions on preferences:
-        <ul style="margin-top:8px; margin-left:16px; display:flex; flex-direction:column; gap:4px;">
-          <li><strong>Approach 1:</strong> Make <em>reasonable assumptions</em> about preferences and derive optimal choice behavior.</li>
-          <li><strong>Approach 2:</strong> Observe market choices and <em>infer</em> underlying preference relations — the <strong>revealed-preferences approach</strong> (developed in Chapter 5).</li>
+        <strong>From General Rational Choice to Consumer Theory:</strong><br>
+        We started with the most general notion of rational choice over an abstract set of alternatives $X$. Now let us specialize to <strong>consumer theory</strong>, where the setting consists of bundles of goods, market prices, and budget constraints.<br>
+        This concrete setting motivates additional assumptions on preferences and opens the door to revealed-preference analysis:
+        <ul style="margin-top:8px; margin-left:16px; display:flex; flex-direction:column; gap:6px;">
+          <li><strong>Approach 1:</strong> Make <em>reasonable assumptions</em> about preferences and derive choice behavior.</li>
+          <li><strong>Approach 2:</strong> Observe choices and <em>infer</em> underlying preference relations — the <strong>revealed-preferences approach</strong> (developed in Chapter 5).</li>
         </ul>
       </div>
 
       <div class="property-item blue">
         <div class="property-name">Recall &amp; Motivation</div>
         <div class="property-body">
-          Recall that a rational and continuous preference relation $\succeq$ is representable by a continuous utility function $u$. Consequently, preferences can be represented graphically by <strong>indifference curves</strong>.
-          <span class="intuition">Yet, to make progress in economic modeling and empirical analysis, general rationality and continuity are rarely enough: it is almost always necessary to make <em>additional assumptions</em> that restrict the shape of indifference curves. We investigate the five canonical assumptions: <strong>Monotonicity</strong>, <strong>Convexity</strong>, <strong>Homotheticity</strong>, <strong>Separability</strong>, and <strong>Numéraire properties</strong>.</span>
+          Recall that a rational continuous preference relation $\succeq$ is representable by a continuous utility function $u$. In other words, preferences can be represented by <strong>indifference curves</strong>.
+          <span class="intuition">Yet, to make progress in economic research, it is almost always necessary to make <em>additional assumptions</em> that restrict preferences. Let us examine the most commonly used assumptions: <strong>Monotonicity</strong>, <strong>Convexity</strong>, <strong>Homotheticity</strong>, <strong>Separability</strong>, and <strong>Numéraire properties</strong>.</span>
         </div>
       </div>
     </div>
@@ -409,11 +489,11 @@ body {
       <div class="property-item green">
         <div class="property-name">Strict Monotonicity</div>
         <div class="property-body">
-          A preference relation $\succeq$ on $X \subseteq \mathbb{R}^n_+$ is <strong>strictly monotone</strong> if, for any two bundles $x, y \in X$:
+          A preference relation $\succeq$ on $X \subseteq \mathbb{R}^n_+$ is <strong>strictly monotone</strong> if:
           <div class="math-display boxed-green">
             $$x \geq y \quad\text{and}\quad x \neq y \implies x \succ y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> More is always strictly better. If bundle $x$ contains at least as much of every good as bundle $y$, and strictly more of at least one good, the consumer strictly prefers $x$ to $y$.</span>
+          <span class="intuition"><strong>Intuition:</strong> More is always better. If bundle $x$ contains at least as much of every good as $y$, and strictly more of at least one good, then $x$ is strictly preferred to $y$.</span>
         </div>
       </div>
 
@@ -421,11 +501,11 @@ body {
       <div class="property-item green">
         <div class="property-name">Monotonicity (Weak Monotonicity)</div>
         <div class="property-body">
-          A preference relation $\succeq$ on $X$ is <strong>monotone</strong> (or weakly monotone) if, for any two bundles $x, y \in X$:
+          A preference relation $\succeq$ on $X$ is <strong>monotone</strong> if:
           <div class="math-display">
             $$x \geq y \implies x \succeq y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> More is always at least as good as less. Free disposal of surplus goods ensures that additional quantities never harm the consumer.</span>
+          <span class="intuition"><strong>Intuition:</strong> More is always at least as good as less. Extra quantities never harm the consumer (free disposal).</span>
         </div>
       </div>
 
@@ -433,11 +513,11 @@ body {
       <div class="property-item blue">
         <div class="property-name">Local Non-Satiation (LNS)</div>
         <div class="property-body">
-          A preference relation $\succeq$ on $X$ is <strong>locally non-satiated</strong> if, for every bundle $x \in X$ and every radius $\varepsilon > 0$:
+          A preference relation $\succeq$ on $X$ is <strong>locally non-satiated</strong> if, for all $x \in X$ and all $\varepsilon > 0$:
           <div class="math-display boxed-blue">
             $$\exists y \in X \quad\text{such that}\quad \|x - y\| < \varepsilon \quad\text{and}\quad y \succ x$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> For any consumption bundle $x$, no matter how wealthy the consumer already is, there exists another bundle $y$ at an arbitrarily small Euclidean distance $\varepsilon$ that is strictly preferred to $x$. This strictly rules out the existence of a "bliss point" (a global optimum where the consumer is completely satiated and refuses any change).</span>
+          <span class="intuition"><strong>Intuition:</strong> For any bundle $x$, there is another bundle $y$ at a small Euclidean distance $\varepsilon$ that is strictly preferred to $x$. This rules out a "best bundle" (bliss point) beyond which you do not want more of anything.</span>
         </div>
       </div>
 
@@ -449,41 +529,38 @@ body {
           <span class="impl-arrow">⇒</span>
           <span class="impl-box green">Monotonicity</span>
           <span class="impl-arrow">⇒</span>
-          <span class="impl-box blue">Local Non-Satiation (LNS)</span>
+          <span class="impl-box blue">Local Non-Satiation</span>
         </div>
       </div>
 
       <!-- Economic Intuition for Implication -->
       <div class="property-item blue">
-        <div class="property-name">Economic Intuition for: Monotonicity ⇒ Local Non-Satiation</div>
+        <div class="property-name">Intuition for: Monotonicity ⇒ Local Non-Satiation</div>
         <div class="property-body">
           <ul class="bullet-list blue">
-            <li><strong>Weak monotonicity:</strong> If we give you more of at least one good and no less of any other good, the new bundle is always at least as good as the old one. If preferences are continuous and strictly positive marginal utility exists in at least one direction, adding a tiny amount $\varepsilon / 2$ to any coordinate immediately produces a strictly preferred bundle within the $\varepsilon$-ball.</li>
-            <li><strong>Local non-satiation:</strong> Guarantees only that it is <em>always possible to find some nearby bundle</em> that is strictly preferred. It does <strong>not</strong> require that giving you more of any given good improves utility. The better bundle could involve giving up a little of one good to obtain another.</li>
+            <li><strong>Weak monotonicity:</strong> If I give you more of at least one good and no less of any other good, the new bundle is always at least as good as the old one.</li>
+            <li><strong>Local non-satiation:</strong> It is always possible to find a nearby bundle (combination of goods) that is better. But it does not guarantee that giving you more of any good is always better.</li>
           </ul>
         </div>
       </div>
 
       <!-- Example: LNS but NOT Weakly Monotone -->
       <div class="property-item amber">
-        <div class="property-name">Counter-Example: Locally Non-Satiated but NOT Weakly Monotone</div>
+        <div class="property-name">Example: Locally Non-Satiated but NOT Weakly Monotone</div>
         <div class="property-body">
-          Let $x_1$ represent money (numéraire good) and $x_2$ represent cups of coffee consumed in a morning. Consider the utility function:
+          Think of $x_1$ as money and $x_2$ as cups of coffee, with utility function:
           <div class="math-display boxed-amber">
             $$u(x_1, x_2) = x_1 - (x_2 - 1)^2$$
           </div>
-          <p>Here, the consumer's ideal coffee intake is exactly 1 cup. Let us verify both properties:</p>
+          <p>Here, more coffee is not always better (ideal intake is 1 cup):</p>
           <ul class="bullet-list amber" style="margin-top:8px;">
             <li>
-              <strong>Locally non-satiated:</strong> Take any bundle $(x_1, x_2)$ and any $\varepsilon > 0$. Consider the bundle $y = (x_1 + \frac{\varepsilon}{2}, x_2)$. The Euclidean distance is $\|x - y\| = \frac{\varepsilon}{2} < \varepsilon$, and:
-              $$u(y) = x_1 + \frac{\varepsilon}{2} - (x_2 - 1)^2 = u(x) + \frac{\varepsilon}{2} > u(x)$$
-              Thus $y \succ x$. Local non-satiation holds everywhere.
+              <strong>Locally non-satiated:</strong> From any $(x_1, x_2)$, adding an arbitrarily small amount $\frac{\varepsilon}{2} > 0$ to $x_1$ yields $u(x_1 + \frac{\varepsilon}{2}, x_2) = u(x_1, x_2) + \frac{\varepsilon}{2} > u(x_1, x_2)$, making the consumer strictly better off.
             </li>
             <li>
-              <strong>Not weakly monotone:</strong> Compare bundle $A = (1, 1)$ and bundle $B = (1, 2)$. Clearly $B \geq A$ since $1 \geq 1$ and $2 \geq 1$. However:
-              $$u(1, 1) = 1 - (1 - 1)^2 = 1$$
-              $$u(1, 2) = 1 - (2 - 1)^2 = 0$$
-              Since $u(1, 2) = 0 < 1 = u(1, 1)$, we have $A \succ B$. Giving more coffee strictly harms the consumer, so weak monotonicity fails!
+              <strong>Not weakly monotone:</strong> Notice that $(1, 2) \geq (1, 1)$, but:
+              <div class="math-display" style="margin:4px 0;">$$u(1, 2) = 1 - (2 - 1)^2 = 0 < 1 = 1 - (1 - 1)^2 = u(1, 1)$$</div>
+              Hence $(1, 2) \succeq (1, 1)$ does not hold! More coffee reduces satisfaction.
             </li>
           </ul>
         </div>
@@ -502,36 +579,32 @@ body {
       <div class="property-item purple">
         <div class="property-name">Convex Preferences</div>
         <div class="property-body">
-          A preference relation $\succeq$ is <strong>convex</strong> if and only if, for any bundles $x, y, z \in X$ and any weight $t \in [0, 1]$:
+          $\succeq$ is <strong>convex</strong> if and only if, for any $t \in [0, 1]$:
           <div class="math-display boxed-purple">
             $$x \succeq z \quad\text{and}\quad y \succeq z \implies t x + (1 - t) y \succeq z$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Individuals prefer "diversity", or prefer <em>averages to extremes</em>. If an agent considers both bundle $x$ and bundle $y$ to be at least as good as a baseline bundle $z$, then any weighted average (convex combination) of $x$ and $y$ is also at least as good as $z$.</span>
+          <span class="intuition"><strong>Intuition:</strong> Individuals prefer “diversity”, or prefer averages to extremes. If a consumer likes $x$ at least as much as $z$, and $y$ at least as much as $z$, then any mixture (weighted average) between $x$ and $y$ is at least as good as $z$.</span>
         </div>
       </div>
 
       <div class="property-item purple">
         <div class="property-name">Strict Convexity</div>
         <div class="property-body">
-          A preference relation $\succeq$ is <strong>strictly convex</strong> if and only if, for any two distinct bundles $x \neq y$ and any $t \in (0, 1)$:
+          Preferences are <strong>strictly convex</strong> if and only if, for any $t \in (0, 1)$:
           <div class="math-display">
             $$x \succeq z \quad\text{and}\quad y \succeq z \quad\text{and}\quad x \neq y \implies t x + (1 - t) y \succ z$$
           </div>
-          <span class="intuition">Strict convexity rules out flat linear segments on indifference curves. Any strict mixture between two distinct indifferent bundles is strictly preferred to the endpoints.</span>
         </div>
       </div>
 
       <!-- Implication of Convexity -->
       <div class="key-note purple">
-        <strong>Direct Implication of Convexity:</strong><br>
-        If a consumer strictly prefers $x$ to $y$ ($x \succ y$), then for any $t \in [0, 1]$:
+        <strong>An Implication of Convexity:</strong><br>
+        If the consumer strictly prefers $x$ to $y$, then for any $t \in [0, 1]$:
         <div class="math-display boxed-purple" style="margin:8px 0;">
           $$x \succ y \implies t x + (1 - t) y \succeq y$$
         </div>
-        <p style="font-size:0.88rem; color:var(--text-2); margin-top:6px;">
-          <strong>Proof:</strong> Since $x \succ y \implies x \succeq y$, and by reflexivity $y \succeq y$, setting $z = y$ in the definition of convexity immediately yields $t x + (1 - t) y \succeq y$.<br>
-          <em>Intuition:</em> Any weighted mixture between an attractive bundle $x$ and a worse bundle $y$ remains at least as good as the worse bundle $y$.
-        </p>
+        <span class="intuition"><strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of $x$ and $y$ is at least as good as the worse bundle $y$. (Proof: $x \succ y \implies x \succeq y$, and by reflexivity $y \succeq y$; setting $z = y$ in the convexity definition immediately yields the result).</span>
       </div>
     </div>
 
@@ -547,11 +620,11 @@ body {
       <div class="property-item amber">
         <div class="property-name">Homothetic Preferences</div>
         <div class="property-body">
-          A preference relation $\succeq$ is <strong>homothetic</strong> if, for any two bundles $x, y \in X$ and for every positive scalar $\lambda > 0$:
+          $\succeq$ is <strong>homothetic</strong> if, for any $\lambda > 0$:
           <div class="math-display boxed-amber">
             $$x \succeq y \iff \lambda x \succeq \lambda y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Preferences are <em>scalable</em>. The relative ranking between two bundles does not depend on the scale of consumption. If you prefer 5 Olives to 7 Pretzels, scaling up your budget implies you also prefer 500 Olives to 700 Pretzels. Geometrically, the marginal rate of substitution (MRS) is constant along any ray originating from the origin.</span>
+          <span class="intuition"><strong>Intuition:</strong> Preferences are scalable. If you prefer 5 Olives to 7 Pretzels, you also prefer 500 Olives to 700 Pretzels. Geometrically, the marginal rate of substitution is invariant along rays originating from the origin.</span>
         </div>
       </div>
     </div>
@@ -561,49 +634,62 @@ body {
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill red">4. Translation into Utility Representation $u$</span>
+        <span class="part-pill red">4. Link to $u$ Representation</span>
         <div class="part-line"></div>
       </div>
 
-      <!-- Graph Placeholder Figure 1 -->
-      <div class="graph-placeholder">
-        <span class="graph-badge">[ LEAVE SPACE FOR ORIGINAL GRAPH ]</span>
-        <div class="graph-title">Figure 1: Representation of an indifference curve</div>
-        <p class="graph-desc">The graph illustrates an indifference curve in $(x_1, x_2)$ space, showing how monotonicity dictates downward slope, convexity creates curvature towards the origin, and homotheticity scales curves radially.</p>
+      <!-- FIGURE 1 UPLOAD ZONE -->
+      <div class="figure-container" id="fig-1">
+        <div class="figure-header">
+          <div class="figure-badge">📸 Figure 1 Upload Zone</div>
+          <span class="figure-status">Screenshot placeholder</span>
+        </div>
+        <div class="figure-box">
+          <img src="images/figure1.png" alt="Figure 1: Representation of an indifference curve" class="course-figure-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="figure-dropzone-preview">
+            <div class="dropzone-icon">📊</div>
+            <div class="dropzone-title">Figure 1: Representation of an indifference curve</div>
+            <div class="dropzone-sub">Graph illustrating how monotonicity, convexity, and homotheticity translate geometrically into the shape of indifference curves.</div>
+            <div class="dropzone-path">Target path: <code>images/figure1.png</code></div>
+          </div>
+        </div>
+        <div class="figure-caption">
+          <strong>Figure 1: Representation of an indifference curve.</strong> Explains how the monotonicity, convexity, and homotheticity assumptions translate into this graph.
+        </div>
       </div>
 
-      <!-- Formal Equivalences Table -->
+      <!-- Link to u Equivalences -->
       <div class="property-item red">
-        <div class="property-name">Exact Correspondence: Preference Axiom $\iff$ Functional Property of $u$</div>
+        <div class="property-name">Equivalences between Axioms and Utility Function Properties</div>
         <div class="property-body">
-          <table class="comparison-table" style="margin-top:8px;">
+          <table class="comparison-table">
             <thead>
               <tr>
-                <th style="width:30%;">Preference Axiom on $\succeq$</th>
-                <th style="width:35%;">Property of Utility Function $u$</th>
+                <th style="width:32%;">Assumption on $\succeq$</th>
+                <th style="width:34%;">Property of $u$</th>
                 <th>Geometric Meaning on Indifference Curves</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Local Non-Satiation (LNS)</strong></td>
+                <td><strong>Local Non-Satiation</strong></td>
                 <td>$u$ has <strong>no local maximum</strong> on $\mathrm{Int}(X)$</td>
-                <td>Rules out "thick" indifference curves (indifference bands with non-empty interior).</td>
+                <td>Thick indifference curves are ruled out.</td>
               </tr>
               <tr>
                 <td><strong>Strict Monotonicity</strong></td>
-                <td>$u$ is <strong>strictly increasing</strong>:<br>$x \geq y, x \neq y \implies u(x) > u(y)$</td>
-                <td>Indifference curves are strictly downward sloping. Strictly better sets are strictly above/to the right of indifference curves.</td>
+                <td>$u$ is <strong>strictly increasing</strong></td>
+                <td>Indifference curves are strictly decreasing; better sets must be entirely above indifference sets, and worse sets must be entirely below indifference sets.</td>
               </tr>
               <tr>
                 <td><strong>Convexity</strong></td>
-                <td>$u$ is <strong>quasiconcave</strong>:<br>$u(tx + (1-t)y) \geq \min\{u(x), u(y)\}$</td>
-                <td>Indifference curves are convex to the origin. The upper contour set $\{y \in X : u(y) \geq u(x)\}$ is a convex set.</td>
+                <td>$u$ is <strong>quasiconcave</strong></td>
+                <td>Indifference curves are convex toward the origin.</td>
               </tr>
               <tr>
                 <td><strong>Homotheticity + Strict Monotonicity + Convexity</strong></td>
-                <td>$u$ is <strong>homogeneous of degree 1</strong>:<br>$\forall t > 0, \; u(t x) = t \, u(x)$</td>
-                <td>All indifference curves can be obtained by a radial homothetic expansion of a single base indifference curve. The slope (MRS) is identical along any ray from $(0,0)$.</td>
+                <td>$u$ is <strong>homogeneous of degree 1</strong>:<br>$\forall t > 0, \; f(tx) = t f(x)$</td>
+                <td>All the indifference curves can be obtained by a homothetic transformation of a single one of them.</td>
               </tr>
             </tbody>
           </table>
@@ -623,41 +709,29 @@ body {
       <div class="property-item green">
         <div class="property-name">Definition of Separability</div>
         <div class="property-body">
-          Partition the universe of goods into two subsets $X$ and $Y$. The preference relation $\succeq$ on $X \times Y$ is <strong>separable</strong> if, for every $x, x' \in X$ and every $y, y' \in Y$:
+          $\succeq$ is <strong>separable</strong> if, for every $x, x' \in X$ and every $y, y' \in Y$:
           <div class="math-display boxed-green">
             $$(x, y) \succeq (x', y) \iff (x, y') \succeq (x', y')$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Preferences over goods in set $X$ can be analyzed completely independently of the consumption levels of goods in set $Y$. This is a crucial foundational assumption in empirical work: it allows an econometrician to estimate consumer demand for food or cars without having to simultaneously observe the consumer's labor supply, retirement savings, or leisure time.</span>
+          <span class="intuition"><strong>Intuition:</strong> Preferences over goods $X$ can be studied independently from the levels of goods on other sets. This is a key assumption in empirical research on consumer behavior. It implies that you can study consumers’ choices independently of their labor/leisure choices.</span>
         </div>
       </div>
 
-      <!-- Why is the following preference relation non-separable? -->
+      <!-- Non-separable Question from Course -->
       <div class="property-item amber">
-        <div class="property-name">Course Problem: Why is this preference relation non-separable?</div>
+        <div class="property-name">Course Problem: Why is the following preference relation non-separable?</div>
         <div class="property-body">
-          Consider the observed ranking:
+          Consider the preference relation:
           <div class="math-display">
             $$(\text{wine}; \text{cheese}) \succ (\text{wine}; \text{pretzels}) \succ (\text{beer}; \text{pretzels}) \succ (\text{beer}; \text{cheese})$$
           </div>
-          <p>Let $X = \{\text{cheese}, \text{pretzels}\}$ (food) and $Y = \{\text{wine}, \text{beer}\}$ (beverage). Test the separability condition:</p>
-          <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
-            <div>
-              <strong>1. Evaluate under $y = \text{wine}$ ($y \in Y$):</strong>
-              <div class="math-display" style="margin:4px 0;">
-                $$(\text{wine}; \text{cheese}) \succ (\text{wine}; \text{pretzels}) \implies \text{cheese} \succ \text{pretzels}$$
-              </div>
-              When drinking wine, the consumer strictly prefers cheese over pretzels.
-            </div>
-            <div>
-              <strong>2. Evaluate under $y' = \text{beer}$ ($y' \in Y$):</strong>
-              <div class="math-display" style="margin:4px 0;">
-                $$(\text{beer}; \text{pretzels}) \succ (\text{beer}; \text{cheese}) \implies \text{pretzels} \succ \text{cheese}$$
-              </div>
-              When drinking beer, the consumer strictly prefers pretzels over cheese!
-            </div>
+          <p>Let $X = \{\text{cheese}, \text{pretzels}\}$ and $Y = \{\text{wine}, \text{beer}\}$.</p>
+          <div style="margin-top:8px; display:flex; flex-direction:column; gap:6px;">
+            <div>• With $y = \text{wine}$: $(y; \text{cheese}) \succ (y; \text{pretzels}) \implies \text{cheese} \succ \text{pretzels}$.</div>
+            <div>• With $y' = \text{beer}$: $(y'; \text{pretzels}) \succ (y'; \text{cheese}) \implies \text{pretzels} \succ \text{cheese}$.</div>
           </div>
           <p style="margin-top:8px; color:var(--text);">
-            <strong>Conclusion:</strong> Because the preference ranking over food items $X$ reverses depending on which beverage $y$ is consumed, the ranking over $X$ is <strong>not independent</strong> of $Y$. The preference relation is <strong>non-separable</strong>.
+            <strong>Answer:</strong> The preference ranking over food $X$ reverses depending on the beverage $Y$ consumed. Therefore, preferences over $X$ are not independent of $Y$, which violates separability!
           </p>
         </div>
       </div>
@@ -673,28 +747,28 @@ body {
       </div>
 
       <div class="key-note blue">
-        <strong>The Numéraire Good:</strong> Fix good $t \in \mathbb{R}$ as the <em>numéraire</em> (a designated benchmark good against which all other goods are priced, typically interpreted as money or liquid wealth). Let $y \in Y$ represent the vector of all other consumption goods.
+        <strong>The Numéraire Good:</strong> Let us fix $t$ as the <strong>numéraire good</strong>. The numéraire is just a good you can measure everything else against. Think of it as money.
       </div>
 
       <div class="property-item blue">
-        <div class="property-name">The Three Numéraire Axioms</div>
+        <div class="property-name">The 3 Numéraire Properties</div>
         <div class="property-body">
-          A preference relation $\succeq$ satisfies the <strong>numéraire properties</strong> if:
+          A preference relation $\succeq$ is said to satisfy the <strong>numéraire properties</strong> if the following hold:
           <ol style="margin-left:20px; margin-top:8px; display:flex; flex-direction:column; gap:12px;">
             <li>
               <strong>1. The numéraire good is valuable:</strong>
               <div class="math-display" style="margin:4px 0;">$$(t, y) \succeq (t', y) \iff t \geq t'$$</div>
-              <em>Intuition:</em> Holding other goods $y$ constant, having strictly more money $t$ is strictly better.
+              <em>Intuition:</em> More of $t$ is better.
             </li>
             <li>
               <strong>2. Compensation is possible:</strong>
-              <div class="math-display" style="margin:4px 0;">$$\forall y, y' \in Y, \quad \exists t \in \mathbb{R} \quad\text{such that}\quad (0, y) \sim (t, y')$$</div>
-              <em>Intuition:</em> Every possible non-monetary alternative $y$ has a well-defined monetary equivalent for the individual. The utility difference between alternatives can be fully measured by the consumer's Willingness to Pay (WTP).
+              <div class="math-display" style="margin:4px 0;">$$\text{For every } y, y', \quad \exists t \in \mathbb{R} \quad\text{such that}\quad (0, y) \sim (t, y')$$</div>
+              <em>Intuition:</em> Every possible alternative has a monetary value for the individual. It implies that the “utility” of different alternatives can be measured by the willingness of the agent to pay for it.
             </li>
             <li>
               <strong>3. No wealth effect:</strong>
-              <div class="math-display" style="margin:4px 0;">$$(t, y) \succeq (t', y') \iff (t + d, y) \succeq (t' + d, y') \quad \forall d \in \mathbb{R}$$</div>
-              <em>Intuition:</em> Adding or subtracting an identical amount of wealth $d$ to both bundles leaves their relative ranking completely unchanged. Income shocks do not distort relative preferences over $y$.
+              <div class="math-display" style="margin:4px 0;">$$(t, y) \succeq (t', y') \implies (t + d, y) \succeq (t' + d, y') \quad \forall d \in \mathbb{R}$$</div>
+              <em>Intuition:</em> Changes in $t$ do not affect preferences over $y$.
             </li>
           </ol>
         </div>
@@ -702,106 +776,91 @@ body {
 
       <!-- No Wealth Effect vs Separability -->
       <div class="property-item purple">
-        <div class="property-name">Comparison: No Wealth Effect vs. Separability</div>
+        <div class="property-name">No Wealth Effect &amp; Separability: What is the difference?</div>
         <div class="property-body">
           <ul class="bullet-list purple">
-            <li>
-              <strong>Separability:</strong> The internal ranking over goods $y$ does not depend on the level of $t$. However, the <em>trade-off (marginal rate of substitution)</em> between money $t$ and good $y$ might still vary with wealth $t$. Geometrically, indifference curves do not cross, but they are not necessarily parallel vertical shifts.
-            </li>
-            <li>
-              <strong>No wealth effect:</strong> Adding the same amount of wealth $t$ to two bundles preserves their exact ordering. The marginal willingness to pay for $y$ is entirely independent of wealth. Geometrically, indifference curves are <em>exact parallel vertical shifts</em> along the $t$-axis.
-            </li>
+            <li><strong>Separability:</strong> The ranking over $y$ does not depend on $t$, but the trade-off between $t$ and $y$ may depend on the level of $t$. The indifference curves do not cross but are not necessarily parallel.</li>
+            <li><strong>No wealth effect:</strong> Adding the same amount of $t$ to two alternatives does not change their ranking. The indifference curves are parallel shifts in $t$.</li>
           </ul>
           <div class="math-display boxed-purple" style="margin-top:12px;">
             $$\boxed{\text{No wealth effect} \implies \text{Separability}}$$
           </div>
-          <span class="intuition">"No wealth effect" is the strictly stronger assumption. It implies separability, but separability does not imply absence of wealth effects.</span>
         </div>
       </div>
 
-      <!-- Link to Quasi-Linear Utility -->
+      <!-- Link to u: Quasi-Linear Utility -->
       <div class="property-item green">
-        <div class="property-name">Equivalence with Quasi-Linear Utility</div>
+        <div class="property-name">Link to $u$ representation: Quasi-Linear Utility</div>
         <div class="property-body">
           A preference relation $\succeq$ satisfies the numéraire properties:
           <div class="math-display boxed-green">
             $$\succeq \text{ satisfies the numéraire properties} \iff u(t, y) = t + v(y) \quad\text{for some } v: Y \to \mathbb{R}$$
           </div>
-          The consumer's preferences are representable by a <strong>quasi-linear utility function</strong> (linear in money $t$, nonlinear in other goods $y$).
+          The utility function $u : \mathbb{R} \times Y \to \mathbb{R}$ is <strong>quasi-linear</strong>.
         </div>
       </div>
 
-      <!-- Formal Proof: Step-by-Step Toggle -->
+      <!-- Proof of Quasi-Linear Utility -->
       <div>
-        <button class="toggle-btn" onclick="toggle(this, 'proof-quasilinear')">
-          Show Complete Demonstration — Quasi-Linear Utility Equivalence (⇒ and ⇐) <span class="arrow">▾</span>
+        <button class="toggle-btn" onclick="toggle(this, 'proof-quasi')">
+          Show Demonstration — Proof (⇒ and ⇐) <span class="arrow">▾</span>
         </button>
 
-        <div class="collapsible" id="proof-quasilinear">
+        <div class="collapsible" id="proof-quasi">
           <div style="display:flex; flex-direction:column; gap:14px;">
             <div>
-              <strong style="color:var(--green-bright); font-size:0.95rem;">Proof (⇒): Assuming the 3 Numéraire Properties</strong>
+              <strong style="color:var(--green-bright); font-size:0.95rem;">Proof ($\implies$):</strong>
             </div>
 
-            <!-- Step 1 -->
             <div class="demo-step">
               <div class="step-num green">1</div>
               <div class="step-body">
-                <strong>Step 1: Construct the valuation function $v(y)$ using Compensation (Property 2).</strong><br>
-                Fix an arbitrary benchmark bundle $\bar{y} \in Y$. By Property 2 (Compensation is possible), for any bundle $y \in Y$, there exists a real number $v(y) \in \mathbb{R}$ representing the amount of numéraire that exactly compensates the agent for receiving $y$ instead of $\bar{y}$:
+                <strong>Because compensation is possible:</strong> There exists $v(y)$, the amount of the numéraire good that compensates the agent for getting $y$ instead of a benchmark $\bar{y}$:
                 <div class="math-display">$$(0, y) \sim (v(y), \bar{y})$$</div>
-                Similarly, for any other bundle $y' \in Y$, there exists $v(y') \in \mathbb{R}$ such that:
+                Similarly, for any other bundle $y'$:
                 <div class="math-display">$$(0, y') \sim (v(y'), \bar{y})$$</div>
               </div>
             </div>
 
-            <!-- Step 2 -->
             <div class="demo-step">
               <div class="step-num green">2</div>
               <div class="step-body">
-                <strong>Step 2: Apply No Wealth Effect (Property 3).</strong><br>
-                By Property 3, adding any amount of money $t$ to both sides of the indifference $(0, y) \sim (v(y), \bar{y})$ preserves indifference:
+                <strong>Because there is no wealth effect:</strong> Adding $t$ and $t'$ preserves indifference:
                 <div class="math-display">$$(t, y) \sim (t + v(y), \bar{y})$$</div>
-                Likewise, adding $t'$ to $(0, y') \sim (v(y'), \bar{y})$ yields:
+                Similarly:
                 <div class="math-display">$$(t', y') \sim (t' + v(y'), \bar{y})$$</div>
               </div>
             </div>
 
-            <!-- Step 3 -->
             <div class="demo-step">
               <div class="step-num green">3</div>
               <div class="step-body">
-                <strong>Step 3: Establish the preference relation using Transitivity.</strong><br>
-                By transitivity of $\succeq$, comparing $(t, y)$ and $(t', y')$ is strictly equivalent to comparing their monetary equivalents at the benchmark $\bar{y}$:
-                <div class="math-display">$$(t, y) \succeq (t', y') \iff (t + v(y), \bar{y}) \succeq (t' + v(y'), \bar{y})$$</div>
+                <strong>Equivalence by Transitivity:</strong> Hence:
+                <div class="math-display">$$(t, y) \succeq (t', y') \iff (t + v(y), \bar{y}) \succeq (t' + v(y'), \bar{y}) \quad (*)$$</div>
               </div>
             </div>
 
-            <!-- Step 4 -->
             <div class="demo-step">
               <div class="step-num green">4</div>
               <div class="step-body">
-                <strong>Step 4: Conclude using Numéraire is Valuable (Property 1).</strong><br>
-                By Property 1, since the non-monetary good is fixed at $\bar{y}$, preferences are strictly monotone in money:
-                <div class="math-display">$$(t + v(y), \bar{y}) \succeq (t' + v(y'), \bar{y}) \iff t + v(y) \geq t' + v(y')$$</div>
-                Combining this with Step 3 gives:
+                <strong>Because the numéraire good is valuable:</strong> Condition $(*)$ can be rewritten as:
                 <div class="math-display boxed-green">$$(t, y) \succeq (t', y') \iff t + v(y) \geq t' + v(y')$$</div>
-                This proves that the numerical assignment $u(t, y) = t + v(y)$ represents the preference relation $\succeq$. $\blacksquare$
+                Hence $\succeq$ can be represented by the quasi-linear utility function $u(t, y) = t + v(y)$. $\blacksquare$
               </div>
             </div>
 
             <div>
-              <strong style="color:var(--blue-bright); font-size:0.95rem;">Proof (⇐): Assuming $u(t, y) = t + v(y)$</strong>
+              <strong style="color:var(--blue-bright); font-size:0.95rem;">Proof ($\impliedby$):</strong>
             </div>
 
             <div class="demo-step">
               <div class="step-num blue">✓</div>
               <div class="step-body">
-                <strong>Straightforward Verification of the 3 Properties:</strong>
+                <strong>$\impliedby$ is straightforward:</strong>
                 <ul class="bullet-list blue" style="margin-top:6px;">
-                  <li><strong>Property 1:</strong> $(t, y) \succeq (t', y) \iff u(t, y) \geq u(t', y) \iff t + v(y) \geq t' + v(y) \iff t \geq t'$.</li>
-                  <li><strong>Property 2:</strong> Given $y, y'$, choose $t = v(y) - v(y')$. Then $u(0, y) = v(y) = t + v(y') = u(t, y')$, so $(0, y) \sim (t, y')$.</li>
-                  <li><strong>Property 3:</strong> $(t + d, y) \succeq (t' + d, y') \iff (t + d) + v(y) \geq (t' + d) + v(y') \iff t + v(y) \geq t' + v(y') \iff (t, y) \succeq (t', y')$. $\blacksquare$</li>
+                  <li>1. $(t, y) \succeq (t', y) \iff t + v(y) \geq t' + v(y) \iff t \geq t'$.</li>
+                  <li>2. For any $y, y'$, set $t = v(y) - v(y')$; then $u(0, y) = v(y) = t + v(y') = u(t, y')$, so $(0, y) \sim (t, y')$.</li>
+                  <li>3. $(t + d) + v(y) \geq (t' + d) + v(y') \iff t + v(y) \geq t' + v(y')$. $\blacksquare$</li>
                 </ul>
               </div>
             </div>
@@ -814,15 +873,19 @@ body {
   </div><!-- /main-content -->
 </div><!-- /main-wrap -->
 
-<script src="script.js"></script>
 <script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('main-wrap').classList.toggle('expanded');
+}
+
 function toggle(btn, id) {
   const box = document.getElementById(id);
   const isOpen = box.classList.contains('open');
   box.classList.toggle('open', !isOpen);
   btn.classList.toggle('open', !isOpen);
-  if (!isOpen) {
-    MathJax.typesetPromise([box]).catch(err => console.log(err));
+  if (!isOpen && window.MathJax) {
+    MathJax.typesetPromise([box]);
   }
 }
 </script>
