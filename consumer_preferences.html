@@ -282,6 +282,35 @@ body {
 .status-tag.green { background: rgba(16,185,129,0.15); color: var(--green-bright); }
 .status-tag.red   { background: rgba(225,29,72,0.15); color: var(--red-bright); }
 
+/* ── SEPARABILITY: SAME COMPARISON, DIFFERENT DRINK ── */
+.separability-case { gap:14px; }
+.separability-case h3 { font-size:1rem; line-height:1.4; }
+.separability-row {
+  border:1px solid var(--border); border-radius:8px; padding:12px;
+  background:rgba(255,255,255,0.025);
+}
+.separability-row-label {
+  display:block; margin-bottom:12px; color:var(--text-2);
+  font-size:0.8rem; font-weight:700;
+}
+.separability-ranking {
+  display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center; gap:8px; text-align:center;
+}
+.separability-bundle { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.separability-bundle strong { color:var(--text); font-size:0.92rem; }
+.separability-bundle span { color:var(--text-3); font-size:0.78rem; }
+.separability-reversal { background:var(--red-muted); border-color:var(--red-border); }
+.separability-reversal .separability-row-label { color:var(--red-bright); }
+.separability-verdict {
+  margin-top:auto; padding-top:12px; border-top:1px solid var(--border);
+  font-size:0.86rem; line-height:1.6; color:var(--text-2);
+}
+.separability-verdict strong { display:block; margin-top:6px; }
+.separability-case.pass .separability-verdict strong { color:var(--green-bright); }
+.separability-case.fail .separability-verdict strong { color:var(--red-bright); }
+.separability-answers { display:flex; flex-wrap:wrap; gap:8px 24px; margin-top:8px; }
+
 /* ── TOGGLE & COLLAPSIBLE ── */
 .toggle-btn {
   display:inline-flex; align-items:center; gap:8px;
@@ -858,7 +887,7 @@ body {
     <!-- ════════════════════════════════════════════════════
          4. SEPARABILITY
     ════════════════════════════════════════════════════ -->
-    <div class="subsection">
+    <div class="subsection" id="separability">
       <div class="part-banner">
         <span class="part-pill green">4. Separability</span>
         <div class="part-line"></div>
@@ -874,37 +903,79 @@ body {
               \iff (x,y')\succeq(x',y').
             \end{gathered}$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Compare $x$ with $x'$ while holding the other goods fixed at a common level $y$. Replacing that common level by $y'$ must leave the ranking unchanged. For example, separability can make the ranking of consumption bundles independent of a fixed level of leisure; it does not remove the consumer’s budget constraint.</span>
+          <span class="intuition"><strong>Intuition:</strong> Compare $x$ with $x'$ while holding the other component fixed. Then change that common component for both bundles. If preferences are separable, the ranking between $x$ and $x'$ must remain unchanged.</span>
         </div>
       </div>
 
-      <!-- Problem: Why is this preference relation non-separable? -->
-      <div class="property-item amber">
-        <div class="property-name">Course Problem: Why is the following preference relation non-separable?</div>
+      <div class="example-card" id="separability-example">
+        <div class="example-header">
+          <span class="example-badge">Very simple example</span>
+        </div>
+        <div class="example-statement">Same comparison, different environment</div>
         <div class="property-body">
-          Consider the observed ranking:
-          <div class="math-display">
-            $$\begin{aligned}
-              (\text{cheese},\text{wine})
-                &\succ(\text{pretzels},\text{wine})\\
-                &\succ(\text{pretzels},\text{beer})\\
-                &\succ(\text{cheese},\text{beer}).
-            \end{aligned}$$
-          </div>
-          <p>Let $X = \{\text{cheese}, \text{pretzels}\}$ (food) and $Y = \{\text{wine}, \text{beer}\}$ (beverages):</p>
-          <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
-            <div style="background:rgba(255,255,255,0.025); padding:10px 14px; border-radius:8px; border-left:3px solid #3b82f6;">
-              <strong>1. When drinking wine ($y = \text{wine}$):</strong><br>
-              The first comparison gives $(\text{cheese},y)\succ(\text{pretzels},y)$. The consumer prefers cheese to pretzels when the beverage is wine.
+          <p><strong>Food:</strong> $X=\{\text{cheese},\text{pretzels}\}$.<br>
+          <strong>Drink:</strong> $Y=\{\text{wine},\text{beer}\}$.</p>
+          <p>Does the ranking between <strong>cheese</strong> and <strong>pretzels</strong> depend on the drink?</p>
+          <p>In each row, both foods come with the <strong>same drink</strong>. Read $\succ$ as “is preferred to”.</p>
+        </div>
+
+        <div class="proof-duo-grid">
+          <div class="proof-duo-card pass separability-case">
+            <h3>Case A — Separable</h3>
+            <div class="separability-row">
+              <span class="separability-row-label">1. With wine</span>
+              <div class="separability-ranking" role="img" aria-label="Cheese with wine is preferred to pretzels with wine">
+                <div class="separability-bundle"><strong>Cheese</strong><span>+ wine</span></div>
+                <span aria-hidden="true">$\succ$</span>
+                <div class="separability-bundle"><strong>Pretzels</strong><span>+ wine</span></div>
+              </div>
             </div>
-            <div style="background:rgba(255,255,255,0.025); padding:10px 14px; border-radius:8px; border-left:3px solid var(--red);">
-              <strong>2. When drinking beer ($y' = \text{beer}$):</strong><br>
-              The last comparison gives $(\text{pretzels},y')\succ(\text{cheese},y')$. The consumer now prefers pretzels, so the same food ranking is not preserved.
+            <div class="separability-row">
+              <span class="separability-row-label">2. With beer</span>
+              <div class="separability-ranking" role="img" aria-label="Cheese with beer is preferred to pretzels with beer">
+                <div class="separability-bundle"><strong>Cheese</strong><span>+ beer</span></div>
+                <span aria-hidden="true">$\succ$</span>
+                <div class="separability-bundle"><strong>Pretzels</strong><span>+ beer</span></div>
+              </div>
+            </div>
+            <div class="separability-verdict">
+              The consumer prefers cheese to pretzels with either drink. The food ranking is unchanged.
+              <strong>Unchanged ranking → Separable</strong>
             </div>
           </div>
-          <p style="margin-top:10px; color:var(--text);">
-            <strong>Conclusion:</strong> The ranking over food $X$ reverses depending on the beverage $Y$ chosen. Preferences over $X$ cannot be studied independently of $Y$: the relation is <strong>non-separable</strong>.
-          </p>
+
+          <div class="proof-duo-card fail separability-case">
+            <h3>Case B — Non-separable</h3>
+            <div class="separability-row">
+              <span class="separability-row-label">1. With wine</span>
+              <div class="separability-ranking" role="img" aria-label="Cheese with wine is preferred to pretzels with wine">
+                <div class="separability-bundle"><strong>Cheese</strong><span>+ wine</span></div>
+                <span aria-hidden="true">$\succ$</span>
+                <div class="separability-bundle"><strong>Pretzels</strong><span>+ wine</span></div>
+              </div>
+            </div>
+            <div class="separability-row separability-reversal">
+              <span class="separability-row-label">2. With beer — ranking reverses</span>
+              <div class="separability-ranking" role="img" aria-label="Ranking reversed: pretzels with beer are preferred to cheese with beer">
+                <div class="separability-bundle"><strong>Pretzels</strong><span>+ beer</span></div>
+                <span aria-hidden="true">$\succ$</span>
+                <div class="separability-bundle"><strong>Cheese</strong><span>+ beer</span></div>
+              </div>
+            </div>
+            <div class="separability-verdict">
+              The consumer prefers cheese with wine, but pretzels with beer. The food ranking depends on the drink.
+              <strong>Reversed ranking → Non-separable</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="key-note blue">
+          <strong>Quick test</strong>
+          <p>For these foods and drinks, does the food ranking change when the common drink changes?</p>
+          <div class="separability-answers">
+            <span><strong>No</strong> → Separable.</span>
+            <span><strong>Yes</strong> → Non-separable.</span>
+          </div>
         </div>
       </div>
     </div>
