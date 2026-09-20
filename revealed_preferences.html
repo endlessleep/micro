@@ -285,19 +285,19 @@ body {
 /* ── COURSE FIGURE CARDS & GALLERY ── */
 .figures-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
   margin-top: 6px;
 }
 .course-figure-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 .figure-img-frame {
   background: #ffffff;
@@ -325,6 +325,8 @@ body {
   line-height: 1.55;
 }
 .figure-caption-box strong { color: var(--text); }
+.figures-gallery .course-figure-card { min-width:0; }
+.figures-gallery .figure-caption-box { overflow-wrap:anywhere; }
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width:5px; }
@@ -350,11 +352,14 @@ body {
 .part-line { min-width:16px; }
 .proof-duo-head, .example-header { flex-wrap:wrap; gap:8px; }
 .property-item, .collapsible, .proof-duo-card, .distinction-card { min-width:0; }
-.figures-gallery { grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); }
 @media (min-width:901px) and (max-width:1150px) {
   .example-setup, .proof-duo-grid, .distinction-grid { grid-template-columns:1fr; }
 }
 @media (max-width:600px) {
+  .figures-gallery { gap:6px; }
+  .figures-gallery .course-figure-card { padding:6px; gap:8px; }
+  .figures-gallery .figure-img-frame { padding:4px; }
+  .figures-gallery .figure-caption-box { font-size:0.7rem; line-height:1.45; }
   .main-content { padding:24px 14px 40px; gap:32px; }
   .topbar { padding:0 14px; gap:10px; }
   .topbar-breadcrumb { display:block; font-size:0.75rem; min-width:0; }
