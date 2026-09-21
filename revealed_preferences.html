@@ -475,266 +475,213 @@ body {
 
   <div class="main-content">
 
-    <!-- PAGE TITLE -->
+    <!-- Content checked against transcript 4-5.docx and
+         M1_AdvancedMicro_Slides_12.pdf, printed slides 14–48.
+         Keep the source order and develop only arguments given in the course. -->
     <div class="page-title-block">
       <div class="page-label">Part I — Choice Theory</div>
       <h1>5. Consumer’s Choices: Revealed Preferences</h1>
-      <p>From observed choices to WARP, SARP and GARP, followed by the money-pump example and experimental applications.</p>
+      <p>Inferring preferences from choices: WARP, GARP, and the applications developed in the course.</p>
     </div>
 
-    <!-- ════════════════════════════════════════════════════
-         PREAMBLE: HOW REVEALED PREFERENCE WORKS
-    ════════════════════════════════════════════════════ -->
-    <div class="subsection">
+    <!-- Source: printed slides 14–15. -->
+    <div class="subsection" id="revealed-preference-introduction">
       <div class="part-banner">
         <span class="part-pill blue">Preamble: How Does It Work?</span>
         <div class="part-line"></div>
       </div>
-
-      <p class="course-text">Chapter 4 starts from preferences and imposes assumptions on them. Here we work in the other direction: <strong>observe what the consumer chooses when other bundles are affordable</strong>, then ask whether these choices can come from one stable preference relation.</p>
+      <p class="course-text">Chapter 4 starts from assumptions about preferences. Here we observe <strong>which bundle the consumer buys and which other bundles were affordable</strong>. We use this information to infer a preference comparison. The price information matters: choosing one bundle tells us something about another only if that other bundle could have been chosen.</p>
 
       <div class="key-note blue">
-        <strong>The Fundamental Inference:</strong><br>
-        Let $(x_1, x_2)$ and $(y_1, y_2)$ be two bundles, and $(p_1, p_2)$ be the prices, such that:
-        <div class="math-display boxed-blue" style="margin:10px 0;">
-          $$p\cdot x\geq p\cdot y$$
-        </div>
-        We observe that the consumer has chosen to buy $(x_1, x_2)$.<br><br>
-        <strong>What can you infer about this consumer’s preferences?</strong><br>
-        She bought $x$, and $y$ would have cost no more than $x$ at those same prices. She could therefore have bought $y$ instead. Assuming that she chooses a most preferred affordable bundle, her choice tells us:
-        <div class="math-display boxed-blue" style="margin:8px 0;">
-          $$(x_1, x_2) \succeq (y_1, y_2)$$
-        </div>
-        <em>Core principle:</em> If the consumer buys a bundle instead of another affordable one, then the first bundle is <strong>revealed preferred</strong> to the second.
+        <strong>How does it work?</strong>
+        <p>Let $(x_1,x_2)$ and $(y_1,y_2)$ be two bundles, and $(p_1,p_2)$ be the prices, such that:</p>
+        <div class="math-display boxed-blue">$$p_1x_1+p_2x_2\geq p_1y_1+p_2y_2.$$</div>
+        <p>We observe that the consumer has chosen to buy $(x_1,x_2)$.</p>
+        <p><strong>What can you infer about this consumer’s preferences?</strong> The left-hand side is the cost of $X=(x_1,x_2)$; the right-hand side is the cost of $Y=(y_1,y_2)$. She bought $X$, and $Y$ costs no more than $X$ at these same prices. She therefore had enough money to buy $Y$ as well.</p>
+        <p>Assuming that she chooses her preferred affordable bundle, choosing $X$ tells us that:</p>
+        <div class="math-display boxed-blue">$$(x_1,x_2)\succeq(y_1,y_2).$$</div>
+        <p>If the consumer buys a bundle instead of another affordable one, then the first bundle is <strong>revealed preferred</strong> to the second.</p>
       </div>
 
-      <p class="course-text"><strong>Reading the expenditure comparisons.</strong> The expression $p\cdot x=p_1x_1+p_2x_2$ is the total cost of bundle $x$: multiply each quantity by its price, then add the costs. When comparing $x$ and $y$, use the <em>same</em> prices for both. Later, $(p^k,x^k)$ denotes observation $k$: the prices faced and the bundle chosen. The comparisons below use observed expenditure as the budget.</p>
-
-      <!-- Distinction Cards -->
       <div class="distinction-grid">
-        <!-- Revealed Preferred -->
         <div class="distinction-card blue">
-          <div class="distinction-header">
-            <span class="distinction-badge">Weak Comparison</span>
-          </div>
+          <div class="distinction-header"><span class="distinction-badge">Revealed Preferred</span></div>
           <div class="distinction-title">Revealed Preferences (RP)</div>
           <div class="distinction-body">
-            Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br><br>
-            $(x_1, x_2)$ is <strong>revealed preferred</strong> to $(y_1, y_2)$ iff:
-            <div class="math-display" style="margin:10px 0; padding:10px;">
-              $$p\cdot x\geq p\cdot y$$
-            </div>
-            The choice of $x$ is part of the definition: $y$ was affordable when $x$ was chosen. Maximization implies $u(x)\geq u(y)$; it does not by itself exclude indifference.
+            <p>Consider a different bundle $(y_1,y_2)$. Bundle $(x_1,x_2)$ is <strong>revealed preferred</strong> to $(y_1,y_2)$ iff:</p>
+            <div class="math-display boxed-blue">$$\begin{gathered}
+              X\text{ is chosen and}\\
+              p_1x_1+p_2x_2\geq p_1y_1+p_2y_2.
+            \end{gathered}$$</div>
+            <p>The alternative $Y$ was affordable when $X$ was chosen. It may cost the same as $X$ or less. Both the observed choice and the cost comparison are needed.</p>
           </div>
         </div>
-
-        <!-- Strictly Revealed Preferred -->
         <div class="distinction-card purple">
-          <div class="distinction-header">
-            <span class="distinction-badge">Strict Comparison</span>
-          </div>
+          <div class="distinction-header"><span class="distinction-badge">Strictly Revealed Preferred</span></div>
           <div class="distinction-title">Strict Revealed Preferences (SRP)</div>
           <div class="distinction-body">
-            Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br><br>
-            $(x_1, x_2)$ is <strong>strictly revealed preferred</strong> to $(y_1, y_2)$ iff:
-            <div class="math-display" style="margin:10px 0; padding:10px;">
-              $$p\cdot x&gt;p\cdot y$$
-            </div>
-            Bundle $y$ was <em>strictly cheaper</em> when $x$ was chosen: buying $y$ would have left some of the expenditure on $x$ unspent. Under utility maximization and local non-satiation, this reveals a strict preference for $x$ over $y$.
+            <p>Consider a different bundle $(y_1,y_2)$. Bundle $(x_1,x_2)$ is <strong>strictly revealed preferred</strong> to $(y_1,y_2)$ iff:</p>
+            <div class="math-display boxed-purple">$$\begin{gathered}
+              X\text{ is chosen and}\\
+              p_1x_1+p_2x_2&gt;p_1y_1+p_2y_2.
+            \end{gathered}$$</div>
+            <p>The alternative $Y$ was strictly cheaper when $X$ was chosen. Buying $Y$ would have left some of the amount spent on $X$ unspent. The strict sign refers to this cost difference.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ════════════════════════════════════════════════════
-         1. WEAK AXIOM OF REVEALED PREFERENCES (WARP)
-    ════════════════════════════════════════════════════ -->
-    <div class="subsection">
+    <!-- Source: printed slides 16–20. -->
+    <div class="subsection" id="warp">
       <div class="part-banner">
         <span class="part-pill green">1. Weak Axiom of Revealed Preferences (WARP)</span>
         <div class="part-line"></div>
       </div>
-
       <div class="key-note green">
-        <strong>An Example &amp; Motivation:</strong><br>
-        The previous intuition relies on the assumption that the consumer is always choosing the most preferred bundle she can afford, i.e. <strong>maximizing her utility</strong>.<br><br>
-        <strong>What kind of observation would lead us to conclude that the consumer is not following the utility-maximizing model?</strong><br>
-        If choices are unique, choosing distinct bundles $x$ and $y$ while both are affordable on both occasions is inconsistent: each choice would have to be strictly better than the other. If utility maximization allows ties, however, mutual affordability alone need not be a contradiction. This distinction matters when we compare WARP and GARP.
+        <strong>An example</strong>
+        <p>The previous inference assumes that the consumer always chooses the most preferred bundle she can afford, i.e. <strong>maximizes her utility</strong>. We now compare choices under two different budgets.</p>
+        <p><strong>What kind of observation would contradict this model?</strong> In the course graph, $(x_1,x_2)$ is chosen under one budget and $(y_1,y_2)$ under the other, although each alternative is affordable when the other is chosen. Under the unique-maximizer assumption used below, the two choices cannot both be optimal.</p>
       </div>
-
-      <!-- WARP: the single-valued-choice convention used in the course -->
-      <div class="property-item green">
-        <div class="property-name">Weak Axiom of Revealed Preference (WARP)</div>
-        <div class="property-body">
-          Let $x$ be chosen at prices $p$, and a <strong>different</strong> bundle $y$ at prices $q$. WARP requires:
-          <div class="math-display boxed-green">
-            $$p\cdot x\geq p\cdot y
-              \implies q\cdot y&lt;q\cdot x.$$
-          </div>
-          <p>The premise says that $y$ was affordable when $x$ was chosen. The conclusion says that $x$ must be outside the expenditure budget when $y$ is chosen. Equivalently, the reverse inequality $q\cdot y\geq q\cdot x$ is forbidden.</p>
-          <span class="intuition">WARP checks consistency between two observed choices. We use the convention for unique choices: even equality in the reverse expenditure comparison is excluded when $x\neq y$.</span>
+      <div class="course-figure-card" style="max-width:540px; margin:20px auto;">
+        <div class="figure-img-frame">
+          <img src="images/warp-budget-example.jpg" alt="Original course graph: two crossing budget lines, with each chosen bundle affordable under the other budget">
         </div>
+        <div class="figure-caption-box"><strong>The course example.</strong> Each chosen point lies on its own budget line and below the other budget line. Thus both observations allow the comparison with the other bundle.</div>
       </div>
 
-      <!-- Proof: Utility Maximization and WARP -->
       <div class="property-item blue">
-        <div class="property-name">Theorem: Utility Maximization and WARP</div>
+        <div class="property-name">Utility Maximization and WARP</div>
+        <div class="property-body">If a consumer’s observed choices come from <strong>maximizing a strictly quasi-concave utility function</strong> under budget constraint, then these observed choices satisfy <strong>WARP</strong>.</div>
+      </div>
+
+      <div class="property-item green">
+        <div class="property-name">Definition — Weak Axiom of Revealed Preference (WARP)</div>
         <div class="property-body">
-          If a consumer’s observed choices come from <strong>maximizing a strictly quasi-concave utility function</strong> under budget constraint, then these observed choices satisfy <strong>WARP</strong>.
+          <p><strong>If</strong> a bundle $(x_1,x_2)$ is purchased at prices $(p_1,p_2)$,</p>
+          <p><strong>and if</strong> a different bundle $(y_1,y_2)$ is purchased at prices $(q_1,q_2)$,</p>
+          <p><strong>then if</strong></p>
+          <div class="math-display boxed-green">$$p_1x_1+p_2x_2\geq p_1y_1+p_2y_2,$$</div>
+          <p>i.e., $X^p\;\mathrm{RP}\;Y^p$,</p>
+          <p><strong>it must not be the case that</strong></p>
+          <div class="math-display">$$q_1y_1+q_2y_2\geq q_1x_1+q_2x_2,$$</div>
+          <p>i.e., $Y^q\;\mathrm{RP}\;X^q$.</p>
+          <p><strong>Read the two observations separately.</strong> At prices $p$, $Y$ costs no more than the chosen $X$: the choice reveals $X$ over $Y$. At prices $q$, WARP rules out choosing $Y$ while $X$ is again affordable. The superscripts $p$ and $q$ identify the prices used for the comparison; they are not powers.</p>
         </div>
       </div>
 
-      <div>
-        <button class="toggle-btn blue" onclick="toggle(this, 'proof-warp')" aria-controls="proof-warp" aria-expanded="false">
-          Show Demonstration — Proof (⇒) <span class="arrow">▾</span>
-        </button>
+      <div class="property-item green">
+        <div class="property-name">Alternative Definition — WARP (bis)</div>
+        <div class="property-body">
+          <p>For the same two observed choices, <strong>if</strong></p>
+          <div class="math-display">$$p_1x_1+p_2x_2\geq p_1y_1+p_2y_2,$$</div>
+          <p><strong>it must be the case that</strong></p>
+          <div class="math-display boxed-green">$$q_1y_1+q_2y_2&lt;q_1x_1+q_2x_2.$$</div>
+          <p>This is the same requirement written positively. Ruling out “greater than or equal to” leaves “strictly less than”. At prices $q$, buying $X$ must cost more than the amount spent on the chosen $Y$, so $X$ is outside that expenditure budget.</p>
+        </div>
+      </div>
 
-        <div class="collapsible" id="proof-warp">
-          <p><strong>Starting point:</strong> The same strictly quasiconcave utility function $u$ is maximized on each convex budget set, and the observed maximizers exist.<br>
-          <strong>Goal:</strong> For $x\neq y$, show that $p\cdot x\geq p\cdot y$ implies $q\cdot y&lt;q\cdot x$.</p>
-          <div class="demo-step">
-            <div class="step-num blue">1</div>
-            <div class="step-body"><strong>Use uniqueness of the optimum.</strong> Strict quasiconcavity on a convex budget set ensures that the utility-maximizing bundle, when it exists, is unique. Thus a chosen bundle gives strictly higher utility than any distinct affordable bundle.
-            </div>
+      <button class="toggle-btn blue" onclick="toggle(this, 'proof-warp')" aria-controls="proof-warp" aria-expanded="false">
+        Show the course proof — Utility maximization ⇒ WARP <span class="arrow">▾</span>
+      </button>
+      <div class="collapsible" id="proof-warp">
+          <p><strong>Starting point:</strong> Choices maximize the same <strong>strictly quasi-concave utility function</strong> on convex budget sets.<br>
+          <strong>Goal:</strong> Show that these choices satisfy WARP. The proof follows the course notation $X^0,X^1$ and $p^0,p^1$: the superscripts identify the two observations.</p>
+        <div class="demo-step">
+          <div class="step-num blue">1</div>
+          <div class="step-body"><strong>Strictly quasi-concave utility + convex budget set ⇒ at most one utility-maximizing bundle.</strong> This is the uniqueness property used in the proof. Whenever a bundle is chosen as the maximizer, no different affordable bundle can give the same maximum utility.</div>
+        </div>
+        <div class="demo-step">
+          <div class="step-num blue">2</div>
+          <div class="step-body"><strong>Let $X^0$ maximize utility facing $p^0$, and $X^1$ maximize utility facing $p^1$, with $X^0\neq X^1$.</strong> These are two different bundles chosen under two sets of prices. We compare their costs using the first prices, then the second prices.</div>
+        </div>
+        <div class="demo-step">
+          <div class="step-num blue">3</div>
+          <div class="step-body"><strong>Suppose $X^0\;\mathrm{RP}\;X^1$.</strong> This means:
+            <div class="math-display">$$p^0\cdot X^0\geq p^0\cdot X^1.$$</div>
+            The dot means total expenditure: multiply each quantity by its price and add the results. At the first prices, $X^1$ costs no more than $X^0$, so $X^1$ was affordable when $X^0$ was chosen.
           </div>
-          <div class="demo-step">
-            <div class="step-num blue">2</div>
-            <div class="step-body"><strong>Use the first choice.</strong> Since $p\cdot y\leq p\cdot x$, $y$ belongs to the first budget. Optimality gives $u(x)\geq u(y)$. Equality would make $y$ a second maximizer, so uniqueness and $x\neq y$ give $u(x)&gt;u(y)$.</div>
-          </div>
-          <div class="demo-step">
-            <div class="step-num blue">3</div>
-            <div class="step-body"><strong>Use the second choice.</strong> If $q\cdot x\leq q\cdot y$, then $x$ is affordable when $y$ is chosen. Optimality would give $u(y)\geq u(x)$, contradicting step 2. Consequently,
-              <div class="math-display boxed-blue">$$q\cdot x&gt;q\cdot y.$$</div>
-              This is exactly WARP. $\blacksquare$
-            </div>
+        </div>
+        <div class="demo-step">
+          <div class="step-num blue">4</div>
+          <div class="step-body"><strong>Hence, $u(X^0)&gt;u(X^1)$.</strong> Choosing $X^0$ as a maximizer gives at least as much utility as the affordable $X^1$. The inequality is strict because the bundles differ and the maximum is unique: equal utility would make both bundles maximizers.</div>
+        </div>
+        <div class="demo-step">
+          <div class="step-num blue">5</div>
+          <div class="step-body"><strong>When $X^1$ is chosen, it must therefore be that</strong>
+            <div class="math-display boxed-blue">$$p^1\cdot X^0&gt;p^1\cdot X^1.$$</div>
+            If $X^0$ were affordable at the second observation, the consumer could buy a bundle with strictly higher utility than $X^1$, contradicting the choice of $X^1$ as a maximizer. Therefore $X^0$ must cost more than the amount spent on $X^1$. This is the WARP conclusion. $\blacksquare$
           </div>
         </div>
       </div>
 
-      <!-- Question from course: Can we say WARP => Utility Max? -->
       <div class="property-item amber">
         <div class="property-name">Can We Say: Choices Satisfy WARP ⇒ Utility Maximization?</div>
         <div class="property-body">
-          We have shown that <strong>strictly quasiconcave</strong> utility maximization implies WARP.<br>
-          <strong>Does satisfying WARP guarantee utility rationalization?</strong><br><br>
-          Under standard consumer-demand assumptions:
-          <ul class="bullet-list amber" style="margin-top:6px;">
-            <li><strong>Yes, if there are only two goods ($n = 2$).</strong></li>
-            <li><strong>Not in general with three or more goods ($n \geq 3$).</strong></li>
+          <p>We have just established one direction: the utility maximization considered above implies WARP. The course now asks about the <strong>reverse direction</strong>: is WARP enough to explain observed choices by utility maximization?</p>
+          <p>Under standard consumer-demand assumptions:</p>
+          <ul class="bullet-list amber">
+            <li><strong>Yes, if there are only two goods.</strong></li>
+            <li><strong>No, not in general otherwise.</strong></li>
           </ul>
-          <p style="margin-top:10px;">
-            <strong>How must we strengthen WARP to obtain a theory of revealed preference that is equivalent to the theory of utility maximization?</strong><br>
-            WARP tests pairs directly. With more goods, a chain can return to its starting bundle without any pair violating WARP. <strong>SARP</strong> rules out these longer cycles between distinct bundles; <strong>GARP</strong> allows indifference while excluding cycles with a strict revealed comparison.
-          </p>
+          <p><strong>How must we strengthen WARP to obtain a theory of revealed preference that is equivalent to the theory of utility maximization?</strong> The next step in the course is to distinguish direct comparisons from comparisons obtained through a chain of choices.</p>
         </div>
       </div>
     </div>
 
-    <!-- ════════════════════════════════════════════════════
-         2. STRONG AXIOM: DIRECT AND INDIRECT REVEALED PREFERENCE
-    ════════════════════════════════════════════════════ -->
-    <div class="subsection">
+    <!-- Source: printed slides 21–25. Direct/indirect preference introduces GARP. -->
+    <div class="subsection" id="garp">
       <div class="part-banner">
-        <span class="part-pill purple">2. Strong Axiom of Revealed Preference (SARP)</span>
+        <span class="part-pill purple">2. Generalized Axiom of Revealed Preferences (GARP)</span>
         <div class="part-line"></div>
       </div>
-
-      <!-- CLEAN SIDE-BY-SIDE CARDS: DIRECTLY RP VS. INDIRECTLY RP -->
       <div class="distinction-grid">
-        <!-- Directly RP -->
         <div class="distinction-card blue">
-          <div class="distinction-header">
-            <span class="distinction-badge">Pairwise Comparison</span>
-          </div>
-          <div class="distinction-title">Directly Revealed Preferences (DRP)</div>
+          <div class="distinction-header"><span class="distinction-badge">Directly RP</span></div>
+          <div class="distinction-title">Directly Revealed Preferences</div>
           <div class="distinction-body">
-            Consider $(y_1, y_2)$ a different bundle from $(x_1, x_2)$.<br><br>
-            $(x_1, x_2)$ is <strong>directly revealed preferred</strong> to $(y_1, y_2)$ ($X \text{ DRP } Y$) iff:
-            <div class="math-display boxed-blue" style="margin:10px 0; padding:10px;">
-              $$p\cdot x\geq p\cdot y$$
-            </div>
-            $X$ was chosen when $Y$ was available and affordable under the same budget constraint.
+            <p>Bundle $(x_1,x_2)$ is <strong>directly revealed preferred</strong> to a different bundle $(y_1,y_2)$ when $X$ is chosen and:</p>
+            <div class="math-display boxed-blue">$$p_1x_1+p_2x_2\geq p_1y_1+p_2y_2.$$</div>
+            <p>A <strong>single observation</strong> supplies the comparison: the consumer chooses $X$ while $Y$ is affordable at the same prices.</p>
           </div>
         </div>
-
-        <!-- Indirectly RP -->
         <div class="distinction-card purple">
-          <div class="distinction-header">
-            <span class="distinction-badge">Transitive Sequence</span>
-          </div>
-          <div class="distinction-title">Indirectly Revealed Preferences (IRP)</div>
+          <div class="distinction-header"><span class="distinction-badge">Indirectly RP</span></div>
+          <div class="distinction-title">Indirectly Revealed Preferences</div>
           <div class="distinction-body">
-            Suppose $x^1$ is chosen when $x^2$ is affordable, and $x^2$ is chosen on another occasion when $x^3$ is affordable. The two observations form a chain. More generally:
-            <div class="math-display boxed-purple" style="margin:10px 0; padding:10px;">
-              $$\begin{gathered}
-              x^1\ \text{DRP}\ x^2\ \text{DRP}\ \cdots\ \text{DRP}\ x^K\\
-              \implies x^1\ \text{IRP}\ x^K.
-            \end{gathered}$$
-            </div>
-            Each link uses the prices at which its first bundle was chosen. Under utility maximization, the chain gives $u(x^1)\geq\cdots\geq u(x^K)$. Here IRP includes a direct link as the shortest possible chain.
+            <p>Consider three different bundles $X=(x_1,x_2)$, $Y=(y_1,y_2)$ and $Z=(z_1,z_2)$.</p>
+            <p><strong>If</strong> $Y$ is directly revealed preferred to $Z$, <strong>and</strong> $X$ is directly revealed preferred to $Y$, <strong>then</strong> $X$ is indirectly revealed preferred to $Z$.</p>
+            <div class="math-display boxed-purple">$$X\;\mathrm{DRP}\;Y\;\mathrm{DRP}\;Z.$$</div>
+            <p>The intermediate bundle $Y$ connects the two observations. Each direct comparison uses the prices at which its chosen bundle was purchased.</p>
           </div>
         </div>
       </div>
 
-      <div class="property-item purple">
-        <div class="property-name">Strong Axiom of Revealed Preference (SARP)</div>
-        <div class="property-body">
-          If $x^1$ is indirectly revealed preferred to a distinct bundle $x^K$, the last bundle cannot be directly revealed preferred to the first:
-          <div class="math-display boxed-purple">$$\begin{gathered}
-            x^1\ \text{IRP}\ x^K,\quad x^1\neq x^K\\
-            \implies p^K\cdot x^K&lt;p^K\cdot x^1.
-          \end{gathered}$$</div>
-          <p>SARP applies the logic of WARP to an entire chain. The starting bundle must be unaffordable at the end, so the chain cannot close into a cycle between distinct bundles.</p>
-          <span class="intuition"><strong>Relation to WARP:</strong> SARP includes the pairwise consistency required by WARP and extends it to comparisons connected through intermediate choices.</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="subsection">
-      <div class="part-banner">
-        <span class="part-pill purple">3. Generalized Axiom of Revealed Preference (GARP)</span>
-        <div class="part-line"></div>
-      </div>
-
-      <!-- Definition of GARP -->
       <div class="property-item purple">
         <div class="property-name">Definition — Generalized Axiom of Revealed Preference (GARP)</div>
         <div class="property-body">
-          For any sequence of bundles $\{x^1, \dots, x^K\}$ chosen at prices $\{p^1, \dots, p^K\}$:<br><br>
-          If:
-          <div class="math-display boxed-purple" style="margin:6px 0;">
-            $$x^1\ \text{IRP}\ x^K$$
-          </div>
-          then it must be the case that:
-          <div class="math-display boxed-purple" style="margin:6px 0;">
-            $$\text{Not }x^K\ \text{SRP}\ x^1$$
-          </div>
-          which requires:
-          <div class="math-display boxed-green" style="margin:6px 0;">
-            $$p^K \cdot x^1 \geq p^K \cdot x^K$$
-          </div>
-          <span class="intuition"><strong>Intuition:</strong> The reverse comparison may hold with equality, but not strictly. A cycle consisting entirely of ties can be consistent with indifference; a cycle containing a strict revealed comparison cannot.</span>
+          <p>For any sequence of bundles $\{x^1,\ldots,x^K\}$ chosen at prices $\{p^1,\ldots,p^K\}$, <strong>if</strong></p>
+          <div class="math-display boxed-purple">$$\begin{gathered}
+            x^1\;\mathrm{DRP}\;x^2,\\
+            x^2\;\mathrm{DRP}\;x^3,\ \ldots,\\
+            x^{K-1}\;\mathrm{DRP}\;x^K,
+          \end{gathered}$$</div>
+          <p>i.e., $x^1$ is (I)RP to $x^K$, <strong>then it must be the case that</strong></p>
+          <div class="math-display boxed-purple">$$x^K\text{ is not SRP to }x^1.$$</div>
+          <p><strong>Read the chain from first to last.</strong> At each observation, the next bundle was affordable when the current one was chosen. These links connect $x^1$ to $x^K$. GARP requires that the last observation must not strictly reverse that comparison.</p>
+          <p>In expenditure terms, $x^K$ is chosen at prices $p^K$. Saying that it is <em>not strictly</em> revealed preferred to $x^1$ means:</p>
+          <div class="math-display boxed-green">$$p^K\cdot x^1\geq p^K\cdot x^K.$$</div>
+          <span class="intuition"><strong>Intuition:</strong> GARP prevents a chain of revealed preferences from closing with a strict comparison in the opposite direction. The first bundle must not be strictly cheaper than the last chosen bundle at the last prices.</span>
         </div>
       </div>
 
-      <div class="distinction-grid">
-        <div class="distinction-card blue">
-          <div class="distinction-title">SARP: exclude reverse affordability</div>
-          <div class="distinction-body">For distinct endpoints of a revealed-preference chain:
-            <div class="math-display boxed-blue">$$p^K\cdot x^1&gt;p^K\cdot x^K.$$</div>
-            The first bundle must be strictly outside the last expenditure budget.
-          </div>
+      <div class="property-item blue">
+        <div class="property-name">WARP vs. GARP</div>
+        <div class="property-body">
+          <p><strong>WARP considers direct revealed preferences.</strong> It checks the two choices against one another.</p>
+          <p><strong>GARP considers both direct and indirect revealed preferences.</strong> It also follows comparisons through intermediate choices. With only two bundles, there is no additional intermediate bundle to consider. With more than two, a chain may reveal an inconsistency that direct pairwise comparisons miss.</p>
+          <p>The slides summarize this extension as <strong>“GARP ⇒ WARP”</strong>.</p>
+          <div class="key-note amber"><strong>Clarification about equality in the displayed definitions.</strong> WARP above excludes equality in the reverse cost comparison, whereas GARP allows it. The implication written in the slides therefore needs a consistent treatment of equality; as written, the two definitions differ on this point.</div>
         </div>
-        <div class="distinction-card purple">
-          <div class="distinction-title">GARP: allow equality</div>
-          <div class="distinction-body">For the same chain:
-            <div class="math-display boxed-purple">$$p^K\cdot x^1\geq p^K\cdot x^K.$$</div>
-            Equality is allowed, so the two bundles may both maximize utility.
-          </div>
-        </div>
-      </div>
-      <div class="key-note blue">
-        <strong>Keep the conventions consistent.</strong> SARP implies WARP and GARP. With the unique-choice definition of WARP used above, <strong>GARP need not imply WARP</strong>: it permits ties that WARP excludes. Conversely, WARP alone need not imply GARP with three or more goods, because it does not test longer chains.
       </div>
 
       <!-- Proof: Utility Max => GARP -->
@@ -747,7 +694,7 @@ body {
 
       <div>
         <button class="toggle-btn purple" onclick="toggle(this, 'proof-garp')" aria-controls="proof-garp" aria-expanded="false">
-          Show Demonstration — Proof (Contradiction via LNS) <span class="arrow">▾</span>
+          Show the course proof — Utility maximization ⇒ GARP <span class="arrow">▾</span>
         </button>
 
         <div class="collapsible" id="proof-garp">
@@ -794,18 +741,18 @@ body {
             <li>A finite dataset $D$ can be rationalized by a <strong>continuous, concave, and strictly monotone utility function</strong>.</li>
           </ol>
           <div class="key-note green" style="margin-top:12px;">
-            <strong>Intuition:</strong> GARP is both necessary and sufficient for utility rationalization with LNS. The proof above establishes necessity. The converse says that passing the test guarantees the existence of such a utility function; it does not identify a unique utility function or prove that the consumer consciously solves an optimization problem.
+            <strong>Intuition:</strong> GARP is necessary and sufficient to treat the consumer <strong>as if</strong> she maximizes a well-behaved utility function. “Rationalize” means that the utility function makes each observed choice optimal in its budget. The equivalence therefore links a condition we can check in the choices to the existence of a utility explanation. The course states this theorem without developing its proof.
           </div>
         </div>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         4. RESEARCH FOCUS: MEASURING VIOLATIONS OF GARP
+         3. RESEARCH FOCUS: MEASURING VIOLATIONS OF GARP
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
-        <span class="part-pill red">4. Research Focus: Violations &amp; Money Pump</span>
+        <span class="part-pill red">3. Research Focus: Violations &amp; Money Pump</span>
         <div class="part-line"></div>
       </div>
 
@@ -845,7 +792,7 @@ body {
               &=(125-110)+(136-130)\\
               &=15+6=21.
           \end{aligned}$$</div>
-          <span class="intuition">The hypothetical cycle moves from $B$ to $A$ and back to $B$, paying a positive amount at each step. It ends at the starting bundle with 21 less in money. This is a potential cost of the inconsistency, not evidence that a trader actually extracted this amount.</span>
+          <span class="intuition">The consumer is willing to spend 15 more to move from $B$ to $A$ at the first prices, then 6 more to move from $A$ back to $B$ at the second prices. The cycle $B\rightarrow A\rightarrow B$ returns to the same bundle, with a potential monetary loss of 21. This is why the course calls it a “money pump”.</span>
         </div>
       </div>
 
@@ -885,79 +832,129 @@ body {
         </div>
       </div>
 
-      <!-- Money pump formulas -->
+      <!-- Source: printed slides 33–34. No additional numerical MPI example. -->
       <div class="property-item red">
         <div class="property-name">Money Pump Cost &amp; Money Pump Index (MPI)</div>
         <div class="property-body">
-          Consider a cycle of observed bundles $x^1,\ldots,x^n$, with $x^{n+1}=x^1$. At each observation $h$, the next bundle is affordable:
-          <div class="math-display">$$p^h\cdot x^h\geq p^h\cdot x^{h+1}.$$</div>
-          <p>Each expenditure difference is nonnegative. If at least one is strictly positive, the cycle violates GARP and its money-pump cost is positive:</p>
-          <div class="math-display">$$mp=\sum_{h=1}^n p^h\cdot(x^h-x^{h+1}).$$</div>
-          <p>For positive total expenditure, dividing by what was spent across the observations makes costs comparable across different spending levels:</p>
-          <div class="math-display boxed">$$mpi=\frac{mp}{\sum_{h=1}^n p^h\cdot x^h}.$$</div>
-          <p>In the two-bundle example:</p>
-          <div class="math-display boxed-amber">$$mpi=\frac{21}{125+136}=\frac{21}{261}\approx 8.05\%.$$</div>
-          <p><strong>Application in the course:</strong> About 80% of households violate GARP at least once, while the reported average cost is around 6% of food expenditure. Violations can therefore be frequent yet economically small. Their size matters alongside their number.</p>
+          <p>The <strong>money pump index</strong> measures the potential monetary loss associated with a violation of GARP. It expresses the cost of the inconsistency relative to the consumer’s expenditure.</p>
+          <p>Consider a sequence $x_1,x_2,\ldots,x_n$ of chosen bundles forming a revealed-preference cycle that violates GARP:</p>
+          <div class="math-display">$$\begin{gathered}
+            x_1\;\mathrm{RP}\;x_2\;\mathrm{RP}\;\cdots\;\mathrm{RP}\;x_n,\\
+            x_n\;\mathrm{RP}\;x_1.
+          \end{gathered}$$</div>
+          <p>Here the subscript $k$ identifies an <strong>observation</strong>: $x_k$ is a complete chosen bundle, and $p_k$ is the corresponding vector of prices.</p>
+          <p>The <strong>money pump cost</strong> is:</p>
+          <div class="math-display boxed">$$mp=\sum_{k=1}^{n}p_k\cdot(x_k-x_{k+1}).$$</div>
+          <p>We take $x_{n+1}=x_1$ to close the cycle. Each term compares the cost of the chosen bundle $x_k$ with the cost of the next bundle $x_{k+1}$, using the same prices $p_k$. The sum adds these expenditure differences around the cycle, just as the previous example added 15 and 6.</p>
+          <p>The <strong>money pump index</strong> normalizes this cost as a proportion of total expenditure:</p>
+          <div class="math-display boxed">$$mpi=\frac{mp}{\sum_{k=1}^{n}p_k\cdot x_k}.$$</div>
+          <p>The numerator is the potential loss; the denominator is the total amount spent over the observations. Dividing by expenditure tells us how large the loss is relative to spending.</p>
+        </div>
+      </div>
+
+      <div class="property-item red">
+        <div class="property-name">Application to Household Food Consumption</div>
+        <div class="property-body">
+          <p>The study uses household food consumption observed over time and also proposes a statistical test of consumers’ rationality.</p>
+          <ul class="bullet-list red">
+            <li>About <strong>80% of households</strong> violate GARP at least once.</li>
+            <li>The violations represent, on average, about <strong>6% of household food expenditure</strong>.</li>
+          </ul>
+          <p><strong>Interpretation:</strong> A high proportion of households fail the binary test, but the monetary size of their violations is relatively small. The course therefore suggests that these observations could be consistent with rational behavior together with measurement errors. This is why measuring severity adds information to simply counting violations.</p>
         </div>
       </div>
     </div>
 
-    <!-- ════════════════════════════════════════════════════
-         5. EXPERIMENTAL APPLICATIONS
-    ════════════════════════════════════════════════════ -->
-    <div class="subsection">
+    <!-- Source: printed slides 35–48. Preserve design, results, and course implications. -->
+    <div class="subsection" id="experimental-applications">
       <div class="part-banner">
         <span class="part-pill green">Research Focus: Experimental Applications</span>
         <div class="part-line"></div>
       </div>
 
-      <p class="course-text">These applications use the same distinction: a preference describes <em>what</em> someone values; a revealed-preference test asks whether their choices are consistent with those values.</p>
-
-      <!-- Altruism -->
+      <!-- Source: printed slides 35–37. -->
       <div class="property-item green">
         <div class="property-name">Is Altruism Rational?</div>
         <div class="property-body">
-          <p><strong>Design.</strong> Participants allocate a budget between their own payoff $\pi_o$ and a stranger’s payoff $\pi_s$. The price of their own payoff is normalized to 1; the price $p_s$ of the stranger’s payoff varies. Each decision therefore reveals a choice from a different budget.</p>
-          <p><strong>Result.</strong> About 10% violate WARP or GARP; about 90% pass. Several familiar utility functions describe patterns observed among the participants:</p>
-          <div class="math-display">$$\begin{aligned}
-            u(\pi_s,\pi_o)&=\pi_o,\\
-            u(\pi_s,\pi_o)&=\min\{\pi_s,\pi_o\},\\
-            u(\pi_s,\pi_o)&=\pi_s+\pi_o.
-          \end{aligned}$$</div>
-          <p>The first values only one’s own payoff. The second values equal payoffs: increasing only the larger payoff leaves the minimum unchanged. The third values total payoff: allocate to the stranger when $p_s&lt;1$, to oneself when $p_s&gt;1$, and any split is optimal when $p_s=1$.</p>
-          <span class="intuition"><strong>Lesson:</strong> Caring about another person can be consistent with rational choice. Rationality does not require selfishness.</span>
+          <p><strong>Question.</strong> People sometimes give resources to others. Can this non-selfish behavior be rational? In the course, rationality concerns the consistency of preferences and choices. A person can care about someone else’s payoff and still have a well-behaved preference ordering.</p>
+          <p><strong>Experimental design.</strong> Participants allocate a budget between their own account and a stranger’s account. Write $\pi_o$ for their own payoff and $\pi_s$ for the stranger’s payoff. The price of one unit in their own account is 1; the price of one unit in the stranger’s account varies. Changing this price changes the payoff combinations they can afford.</p>
+          <p><strong>What is measured?</strong> The number of WARP and GARP violations, and Afriat’s Critical Cost Efficiency Index (CCEI), introduced below.</p>
+          <p><strong>Results.</strong> About <strong>10%</strong> of participants violate WARP or GARP. Among the other <strong>90%</strong>, the behavior of about half is consistent with the standard utility functions listed in the course:</p>
+          <ol style="margin:12px 0 12px 20px; display:flex; flex-direction:column; gap:14px;">
+            <li><strong>Selfish preferences:</strong>
+              <div class="math-display">$$u(\pi_s,\pi_o)=\pi_o.$$</div>
+              Only the person’s own payoff enters utility. Money given to the stranger does not increase this utility, so this specification describes keeping the resources for oneself.
+            </li>
+            <li><strong>Leontief preferences — equal payoffs:</strong>
+              <div class="math-display">$$u(\pi_s,\pi_o)=\min\{\pi_s,\pi_o\}.$$</div>
+              Utility is determined by the smaller payoff. Increasing only the larger one does not raise the minimum. This explains the preference for an equal split of the payoffs.
+            </li>
+            <li><strong>Perfect substitutes:</strong>
+              <div class="math-display">$$u(\pi_s,\pi_o)=\pi_s+\pi_o.$$</div>
+              A unit of either payoff contributes equally to utility. When giving costs less than 1 per unit, the same budget creates more total payoff in the stranger’s account; when it costs more than 1, it creates more in one’s own account. This explains the pattern of giving everything when giving is cheaper, and keeping the resources when one’s own payoff is cheaper.
+            </li>
+          </ol>
+          <span class="intuition"><strong>Implication:</strong> Altruistic behavior can be consistent with economic rationality. The utility functions make the behavior understandable and predictable within the same framework used for other consumer choices.</span>
         </div>
       </div>
 
-      <!-- Are choices mistakes? -->
+      <!-- Source: printed slides 38–41. -->
       <div class="property-item blue">
-        <div class="property-name">Are Violations Mistakes?</div>
+        <div class="property-name">Are We Irrational by Mistake?</div>
         <div class="property-body">
-          <p>A violation is a <strong>mistake</strong> if the person would have avoided it had they understood that it contradicted an axiom they wanted to follow.</p>
-          <p><strong>Design.</strong> Participants first decide whether to let an axiom-based algorithm guide their choices. They then make choices and are shown inconsistencies. They can revise their choices, stop using the algorithm, or leave both unchanged.</p>
-          <p><strong>Results.</strong> Around 85% initially want an axiom to guide their choices. When shown inconsistencies, 47% revise their choices, 13% stop using the algorithm, and 40% change neither.</p>
-          <span class="intuition"><strong>Lesson:</strong> Some observed violations reflect errors that people wish to correct. An axiom may therefore remain useful as a guide even when it does not describe every observed choice.</span>
+          <p><strong>Question.</strong> When a choice violates a rationality axiom, did the individual intend to depart from that axiom, or make a mistake? A violation is a <strong>mistake</strong> when the individual would not have made it had they known that they were violating the axiom.</p>
+          <p><strong>Experimental design.</strong> The experiment proceeds in three stages:</p>
+          <ol style="margin:12px 0 12px 20px; display:flex; flex-direction:column; gap:10px;">
+            <li><strong>Present the axioms.</strong> Participants decide whether an algorithm following an axiom should govern their choices or whether they should choose on their own.</li>
+            <li><strong>Present the choice problems.</strong> All participants make choices, regardless of their first decision. Which choice is actually implemented depends on whether they selected the algorithm or their own decisions.</li>
+            <li><strong>Show the inconsistencies.</strong> Participants can change their choices, stop using the algorithm, or do neither.</li>
+          </ol>
+          <p><strong>Results.</strong> Around <strong>85%</strong> initially want an axiom to guide choices on their behalf. When inconsistencies are shown:</p>
+          <ul class="bullet-list blue">
+            <li><strong>47%</strong> resolve the inconsistency by changing their choices.</li>
+            <li><strong>13%</strong> resolve it by stopping use of the axiom-based algorithm.</li>
+            <li><strong>40%</strong> keep their choices and continue to let the algorithm choose.</li>
+          </ul>
+          <p><strong>Implication.</strong> The results support the interpretation that violations can be mistakes. This helps explain the distinction in the course between the <strong>normative appeal</strong> of an axiom and its <strong>descriptive accuracy</strong>: a person may want the axiom to guide their decisions even though their observed choices do not always satisfy it.</p>
+          <p>If a violation is intentional, the course suggests looking for other behavioral axioms that the individual agrees with. The question is then which principles the individual wants to follow.</p>
         </div>
       </div>
 
-      <!-- Age and the severity of violations -->
+      <!-- Source: printed slides 43–45. -->
       <div class="property-item purple">
-        <div class="property-name">Age &amp; the Critical Cost Efficiency Index (CCEI)</div>
+        <div class="property-name">Are We More Rational with Age?</div>
         <div class="property-body">
-          <p>The <strong>CCEI</strong> measures how much the expenditure comparisons must be relaxed to remove GARP violations. It ranges from 0 to 1. A score of 1 means that the original observations satisfy GARP; a score close to 1 means that only a small adjustment is needed.</p>
-          <p>To understand the adjustment, imagine reducing the spending threshold used to decide which alternatives count as affordable. Fewer alternatives then enter the revealed-preference comparisons, which can remove an inconsistency. A score of 0.9 corresponds to a 10% relaxation of those comparisons. The observed choices stay fixed: the adjustment concerns the consistency test.</p>
-          <p><strong>Results.</strong> In the course’s sample of children and undergraduates, about 25% of seven-year-olds, 60% of eleven-year-olds and 65% of young adults have no GARP violations. Yet CCEI is around 0.95 in all three groups.</p>
-          <span class="intuition"><strong>Lesson:</strong> The frequency of violations differs across ages, while their economic size can remain small. Counting violations and measuring their severity answer different questions.</span>
+          <p><strong>Sample.</strong> The study includes <strong>198 children</strong> aged 7 or 11 and <strong>101 undergraduates</strong> aged around 21.</p>
+          <p><strong>Experimental design.</strong> Children choose bundles of chips and juice in <strong>11 choice sets</strong>, with choices repeated twice. The outcomes are the number of GARP violations and Afriat’s Critical Cost Efficiency Index.</p>
+
+          <div class="key-note purple">
+            <strong>Afriat’s Critical Cost Efficiency Index (CCEI)</strong>
+            <p>The course describes CCEI as the largest fraction $\varepsilon\in[0,1]$ such that shrinking all observed budgets by this factor makes the revealed-preference comparisons consistent with GARP.</p>
+            <p><strong>Intuition:</strong> With $\varepsilon&lt;1$, fewer alternatives count as affordable in the test. Some comparisons responsible for a violation are therefore removed. The closer the required factor is to 1, the smaller the budget adjustment needed.</p>
+            <ul class="bullet-list purple">
+              <li><strong>CCEI = 1:</strong> The choices already satisfy GARP; no adjustment is needed.</li>
+              <li><strong>CCEI = 0.9:</strong> A budget adjustment of 10% is enough to make the comparisons consistent.</li>
+            </ul>
+            <p>The index measures the adjustment to the affordability comparisons; the recorded choices themselves stay fixed.</p>
+          </div>
+
+          <p><strong>Results.</strong> The proportions with zero GARP violations are about <strong>25% at age 7</strong>, <strong>60% at age 11</strong>, and <strong>65% at age 21</strong>. CCEI is around <strong>0.95 in all three age groups</strong>. Thus the number of individuals with violations differs substantially, while the violations remain relatively small according to the index.</p>
+          <p><strong>Implications.</strong> By age 11, the consistency of children’s choices is close to that of the young adults in the sample. The course therefore considers it meaningful to use children’s decisions to infer preferences. The difference between ages 7 and 11 also suggests that cognitive development matters, motivating interest in cognitive training for decision-making skills.</p>
         </div>
       </div>
 
-      <!-- Heterogeneity -->
+      <!-- Source: printed slides 46–48. -->
       <div class="property-item amber">
-        <div class="property-name">Who Makes More Consistent Choices?</div>
+        <div class="property-name">Who Is More Rational?</div>
         <div class="property-body">
-          <p><strong>Design.</strong> A sample of 1,182 individuals makes 25 allocation decisions under risk. Choice consistency is measured using CCEI.</p>
-          <p><strong>Results.</strong> The reported efficiency gaps are about 3.3 percentage points for lower-income participants, 2.6 for less-educated participants, and 5.1 for older participants, relative to their respective comparison groups.</p>
-          <span class="intuition"><strong>Lesson:</strong> Consistency varies across individuals and is associated with socioeconomic characteristics. These comparisons describe associations; they do not by themselves establish why the differences arise.</span>
+          <p><strong>Sample and design.</strong> The study uses <strong>1,182 individuals</strong> from the CentERpanel of Dutch households. Participants choose allocations between two accounts in <strong>25 decision problems under risk</strong>. Choice consistency is measured using CCEI.</p>
+          <p><strong>Results.</strong> Lower consistency means leaving more potential earnings “on the table”. The reported gaps are:</p>
+          <ul class="bullet-list amber">
+            <li><strong>3.3 percentage points</strong> for lower-income participants relative to higher-income participants.</li>
+            <li><strong>2.6 percentage points</strong> for less-educated participants relative to more-educated participants.</li>
+            <li><strong>5.1 percentage points</strong> for older participants relative to younger participants.</li>
+          </ul>
+          <p><strong>Implications discussed in the course.</strong> Consistency in the experiment is interpreted as reflecting decision-making ability relevant to real-world outcomes. The substantial differences across individuals motivate the discussion of <strong>soft paternalism</strong>: helping people make decisions while leaving them room to choose.</p>
         </div>
       </div>
     </div>

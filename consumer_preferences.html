@@ -558,6 +558,9 @@ body {
 
   <div class="main-content">
 
+    <!-- Content checked against transcript 4-5.docx and
+         M1_AdvancedMicro_Slides_12.pdf, printed slides 2–13.
+         Explain the supplied material; do not add proofs of undeveloped claims. -->
     <!-- PAGE TITLE -->
     <div class="page-title-block">
       <div class="page-label">Part I — Choice Theory</div>
@@ -590,7 +593,7 @@ body {
         <div class="property-name">Why introduce additional assumptions?</div>
         <div class="property-body">
           <p>Rationality requires a <strong>complete and transitive ranking</strong>. With continuity, preferences on the consumption set considered here admit a continuous utility representation $u$. In the two-good case, bundles with the same utility lie on the same <strong>indifference curve</strong>: the consumer is indifferent between them.</p>
-          <p>These properties alone do not tell us whether receiving more of a good is desirable, or whether a mixture of two bundles is preferred to either one. To answer such questions, we need assumptions about <strong>how the ranking responds to changes in quantities</strong>. This chapter studies five:</p>
+          <p>These properties alone do not tell us how the consumer responds to more goods, mixtures of bundles, or changes in scale. We therefore introduce <strong>additional assumptions that restrict preferences</strong>. Each assumption describes a particular way in which bundles are ranked:</p>
           <ul class="bullet-list blue" style="margin-top:10px;">
             <li><strong>Monotonicity:</strong> More of some goods, with no reduction in the others, does not make the consumer worse off.</li>
             <li><strong>Convexity:</strong> If two bundles are each at least as good as a benchmark, any weighted average of them is also at least as good.</li>
@@ -598,7 +601,6 @@ body {
             <li><strong>Separability:</strong> The ranking of alternatives within one group of goods remains unchanged when the common quantities of other goods change.</li>
             <li><strong>Numéraire properties:</strong> One good, interpreted as money, provides a way to express compensation for changes in other goods.</li>
           </ul>
-          <p style="margin-top:10px;">Each assumption restricts preferences in a particular way. <strong>Rationality by itself does not require all five.</strong></p>
         </div>
       </div>
 
@@ -663,16 +665,15 @@ body {
         </div>
       </div>
 
-      <!-- Explain the comparison without adding a formal proof -->
+      <!-- Source: printed slides 4–5. Intuition only; no added formal proof. -->
       <div class="key-note green">
         <strong>Monotonicity and LNS: how do the ideas differ?</strong>
         <p><strong>Weak monotonicity</strong> describes what happens when quantities increase without any decrease elsewhere: the consumer is at least as well off. It places a restriction on all such comparisons, but allows the extra goods to leave the consumer indifferent.</p>
         <p><strong>Local non-satiation</strong> asks a different question: can the consumer become strictly better off through a change as small as desired? It requires an improvement near every bundle, without specifying which goods must increase or decrease.</p>
-        <p><strong>Strict monotonicity connects the two ideas.</strong> On $\mathbb{R}_+^n$, even a tiny increase in one good, with the others unchanged, is strictly beneficial. This provides the nearby improvement required by LNS. Strict monotonicity therefore implies both weak monotonicity and LNS.</p>
       </div>
 
       <div class="key-note amber">
-        <strong>Be careful with “at least as good”.</strong> Under the weak definition above, monotonicity alone does not guarantee LNS: allowing indifference does not guarantee a strictly better nearby bundle. The implication to LNS needs a strict improvement assumption.
+        <strong>Clarification of the implication in the slides.</strong> The slides write “Strict monotonicity ⇒ Monotonicity ⇒ Local non-satiation”. With their weak definition, the second implication needs qualification: “at least as good” allows indifference and does not guarantee a strictly better nearby bundle. Strict monotonicity does guarantee both weak monotonicity and LNS.
       </div>
 
       <!-- REDESIGNED STRUCTURED EXAMPLE CARD -->
@@ -768,20 +769,22 @@ body {
               \implies tx+(1-t)y\succeq z.
             \end{gathered}$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Individuals prefer “diversity”, or prefer averages to extremes. If a consumer likes $x$ at least as much as $z$, and $y$ at least as much as $z$, then any mixture (weighted average) between $x$ and $y$ is at least as good as $z$.</span>
+          <p><strong>Read the definition in order.</strong> First, fix a comparison bundle $z$. Both $x$ and $y$ are at least as good as this same $z$. Then form $tx+(1-t)y$: the weight on $x$ is $t$, the weight on $y$ is $1-t$, and the two weights add up to one. We apply these weights to the quantities of each good.</p>
+          <span class="intuition"><strong>Intuition:</strong> Individuals prefer “diversity”, or prefer averages to extremes. Here this means that mixing two bundles which are each at least as good as $z$ produces a bundle which is still at least as good as $z$. Keep track of the comparison: the conclusion ranks the mixture against $z$.</span>
         </div>
       </div>
 
       <div class="property-item purple">
         <div class="property-name">Strict Convexity</div>
         <div class="property-body">
-          For distinct bundles $x\neq y$ and an interior weight $t\in(0,1)$, <strong>strict convexity</strong> strengthens the conclusion:
+          For distinct bundles $x\neq y$ and a weight $t\in(0,1)$, <strong>strict convexity</strong> strengthens the conclusion:
           <div class="math-display">
             $$\begin{gathered}
               x\succeq z,\quad y\succeq z\\
               \implies tx+(1-t)y\succ z.
             \end{gathered}$$
           </div>
+          The assumptions still compare $x$ and $y$ with the same bundle $z$. The conclusion now uses $\succ$: the mixture is <strong>strictly preferred</strong> to $z$.
         </div>
       </div>
 
@@ -792,7 +795,7 @@ body {
           $$x\succ y \implies tx+(1-t)y\succeq y$$
         </div>
         <p style="margin-top:6px;">
-          <strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of them, with $t\in[0,1]$, is at least as good as the worse bundle $y$. Think of moving from $y$ towards $x$: the mixture does not fall below $y$ in the ranking. Convexity does not require the mixture to be better than $x$.
+          <strong>Intuition:</strong> If the consumer strictly prefers $x$ to $y$, then any weighted average of them, with $t\in[0,1]$, is at least as good as the worse bundle $y$. Think of moving from $y$ towards $x$: the mixture does not fall below $y$ in the ranking.
         </p>
       </div>
     </div>
@@ -813,7 +816,7 @@ body {
           <div class="math-display boxed-amber">
             $$x \succeq y \iff \lambda x \succeq \lambda y$$
           </div>
-          <span class="intuition"><strong>Intuition:</strong> Multiply <em>every coordinate of both bundles</em> by the same positive number: their ranking is unchanged. If $(5,0)\succeq(0,7)$, then $(500,0)\succeq(0,700)$. The quantities become larger, but each bundle keeps the same proportions of goods. Homotheticity says that this common change of scale does not change which bundle the consumer ranks higher.</span>
+          <span class="intuition"><strong>Intuition:</strong> Preferences are scalable. Multiply <em>every quantity in both bundles</em> by the same positive number $\lambda$: their ranking is unchanged. In the course example, if you prefer <strong>5 olives to 7 pretzels</strong>, you also prefer <strong>500 olives to 700 pretzels</strong>. Both quantities have been multiplied by 100. Homotheticity says that this common change of scale preserves the preference comparison.</span>
         </div>
       </div>
     </div>
@@ -837,14 +840,13 @@ body {
           This figure illustrates how monotonicity, convexity, and homotheticity translate into the geometry of indifference curves:
           <ul style="margin-top:6px; margin-left:16px; display:flex; flex-direction:column; gap:3px;">
             <li><strong>Strict monotonicity:</strong> Along an indifference curve, more of one good must be offset by less of the other.</li>
-            <li><strong>Convexity:</strong> The curve bows inward toward the origin, meaning upper contour sets are convex.</li>
-            <li><strong>Homotheticity:</strong> When this additional assumption holds, proportional expansions of one indifference curve generate others; it cannot be inferred from a single curve alone.</li>
+            <li><strong>Convexity:</strong> The indifference curve is convex toward the origin, reflecting the preference for mixtures described above.</li>
+            <li><strong>Homotheticity:</strong> Indifference curves are obtained from one another by scaling all quantities by the same positive factor.</li>
           </ul>
         </div>
       </div>
 
-      <p class="course-text">A utility representation translates rankings into inequalities. Convexity corresponds to <strong>quasiconcavity</strong>: the utility of a mixture is at least the lower of the two endpoint utilities. Homogeneity is a property of a suitably chosen representation; an arbitrary increasing transformation need not preserve it.</p>
-      <div class="math-display boxed-purple">$$u(tx+(1-t)y)\geq\min\{u(x),u(y)\}$$</div>
+      <p class="course-text">The same assumptions can be expressed in terms of the utility function $u$ and the shape of indifference curves. The table follows the links given in the course: the first column describes preferences, the second gives the corresponding utility property, and the third explains how to read it on a graph.</p>
 
       <!-- Table of utility properties -->
       <div class="property-item red">
@@ -861,13 +863,13 @@ body {
             <tbody>
               <tr>
                 <td data-label="Preference assumption"><strong>Local Non-Satiation</strong></td>
-                <td data-label="Utility representation">$u$ has <strong>no local maximum relative to $X$</strong>, including its boundary</td>
-                <td data-label="Geometric intuition">Thick indifference curves are ruled out.</td>
+                <td data-label="Utility representation">$u$ has <strong>no local maximum</strong>. The slides express this on $\operatorname{Int}(X)$, the interior of the consumption set.</td>
+                <td data-label="Geometric intuition">There is always a nearby bundle with higher utility. A “thick” region of indifference would leave no improvement sufficiently close to a point inside it.</td>
               </tr>
               <tr>
                 <td data-label="Preference assumption"><strong>Strict Monotonicity</strong></td>
                 <td data-label="Utility representation">$u$ is <strong>strictly increasing</strong></td>
-                <td data-label="Geometric intuition">Indifference curves are strictly decreasing. Better sets must be entirely above indifference sets, and worse sets must be entirely below.</td>
+                <td data-label="Geometric intuition">Indifference curves are strictly decreasing. Bundles above a curve are better; bundles below it are worse.</td>
               </tr>
               <tr>
                 <td data-label="Preference assumption"><strong>Convexity</strong></td>
@@ -875,12 +877,13 @@ body {
                 <td data-label="Geometric intuition">Indifference curves are convex toward the origin.</td>
               </tr>
               <tr>
-                <td data-label="Preference assumption"><strong>Homotheticity + Strict Monotonicity + Convexity</strong><br>with the standing rationality and continuity assumptions on $\mathbb{R}_+^n$</td>
+                <td data-label="Preference assumption"><strong>Homotheticity + Strict Monotonicity + Convexity</strong></td>
                 <td data-label="Utility representation">A representation can be chosen <strong>homogeneous of degree 1</strong>:<br>$u(tx)=t\,u(x)$ for $t&gt;0$</td>
                 <td data-label="Geometric intuition">All the indifference curves can be obtained by a homothetic transformation of a single one of them.</td>
               </tr>
             </tbody>
           </table>
+          <p><strong>Reading “homogeneous of degree 1”.</strong> In the representation chosen here, multiplying every quantity by $t$ multiplies the utility value by $t$: $u(tx)=t\,u(x)$. This is the utility formulation of the common scaling illustrated above.</p>
         </div>
       </div>
     </div>
@@ -905,6 +908,7 @@ body {
             \end{gathered}$$
           </div>
           <span class="intuition"><strong>Intuition:</strong> Compare $x$ with $x'$ while holding the other component fixed. Then change that common component for both bundles. If preferences are separable, the ranking between $x$ and $x'$ must remain unchanged.</span>
+          <p>The course uses this assumption to explain why choices concerning one group of goods can be studied separately from another group, such as labour and leisure. The relevant restriction is that changing the common level of the other group does not change the ranking being studied.</p>
         </div>
       </div>
 
@@ -918,6 +922,7 @@ body {
           <strong>Drink:</strong> $Y=\{\text{wine},\text{beer}\}$.</p>
           <p>Does the ranking between <strong>cheese</strong> and <strong>pretzels</strong> depend on the drink?</p>
           <p>In each row, both foods come with the <strong>same drink</strong>. Read $\succ$ as “is preferred to”.</p>
+          <p><strong>Case B reproduces the reversal in the course example.</strong> The slides write the drink first, as in “wine; cheese”. The cards below show the food first, as in the definition, so the food comparison is easy to follow.</p>
         </div>
 
         <div class="proof-duo-grid">
@@ -982,7 +987,7 @@ body {
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         5. NUMÉRAIRE PROPERTIES & TWO SEPARATE PROOFS
+         5. NUMÉRAIRE PROPERTIES
     ════════════════════════════════════════════════════ -->
     <div class="subsection">
       <div class="part-banner">
@@ -1000,20 +1005,20 @@ body {
           A preference relation $\succeq$ satisfies the <strong>numéraire properties</strong> if:
           <ol style="margin-left:20px; margin-top:10px; display:flex; flex-direction:column; gap:12px;">
             <li>
-              <strong>1. The numéraire good is valuable:</strong>
+              <strong>The numéraire good is valuable:</strong>
               <div class="math-display" style="margin:4px 0;">$$(t, y) \succeq (t', y) \iff t \geq t'$$</div>
               <em>Intuition:</em> When the other goods $y$ are unchanged, the consumer prefers the alternative with more money. The money amount can therefore serve as a scale for comparing otherwise identical alternatives.
             </li>
             <li>
-              <strong>2. Compensation is possible:</strong> For every $y,y'\in Y$, there exists $t\in\mathbb{R}$ such that
+              <strong>Compensation is possible:</strong> For every $y,y'\in Y$, there exists $t\in\mathbb{R}$ such that
               <div class="math-display" style="margin:4px 0;">$$(0,y)\sim(t,y')$$</div>
-              <em>Intuition:</em> A change from $y$ to $y'$ can be offset by an appropriate amount of money. The amount $t$ makes the consumer indifferent between the two alternatives. It expresses the value of that change in monetary terms.
+              <em>Intuition:</em> A change from $y$ to $y'$ can be offset by an appropriate amount of money. The amount $t$ makes the consumer indifferent between the two alternatives. It expresses the value of that change in monetary terms: how much the consumer is willing to pay, or needs to receive as compensation.
             </li>
             <li>
-              <strong>3. No wealth effect:</strong>
+              <strong>No wealth effect:</strong> For every common money change $d\in\mathbb{R}$,
               <div class="math-display" style="margin:4px 0;">$$\begin{gathered}
                 (t,y)\succeq(t',y')\\
-                \implies (t+d,y)\succeq(t'+d,y')
+                \iff (t+d,y)\succeq(t'+d,y')
               \end{gathered}$$</div>
               <em>Intuition:</em> Adding the <em>same</em> amount $d$ to both alternatives preserves their ranking, even when their initial money amounts differ. The consumer’s evaluation of the trade-off between money and the other goods does not change when both alternatives become equally richer or poorer.
             </li>
@@ -1032,6 +1037,7 @@ body {
                 <strong>If money is equal in both alternatives, does the ranking of $y$ versus $y'$ stay the same when that common money level changes?</strong>
               </div>
               <p>Money is equal <em>within each comparison</em>. We change its common level for both alternatives, keeping $y$ and $y'$ unchanged. The money needed to compensate for a change in $y$ may still depend on wealth.</p>
+              <p><strong>Graphically:</strong> The indifference curves do not cross, but they need not be parallel.</p>
             </div>
             <div class="proof-duo-card" style="border-top:3px solid #a855f7;">
               <strong>No wealth effect</strong>
@@ -1040,6 +1046,7 @@ body {
               </div>
               <p>The initial money amounts can be different. What must be equal is the amount <em>added</em> to each alternative, while $y$ and $y'$ remain unchanged.</p>
               <p>Monetary compensation for a change in $y$ is therefore independent of the initial wealth level.</p>
+              <p><strong>Graphically:</strong> The indifference curves are parallel shifts in the money direction $t$.</p>
             </div>
           </div>
           <div class="math-display boxed-purple" style="margin-top:12px;">
@@ -1065,13 +1072,10 @@ body {
         </div>
       </div>
 
-      <!-- TWO SEPARATE PROOF BUTTONS -->
+      <!-- Source: printed slide 13 develops only the forward direction. -->
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <button class="toggle-btn green" onclick="toggle(this, 'proof-quasi-forward')" aria-controls="proof-quasi-forward" aria-expanded="false">
-          Show proof (⇒) — Construct the utility function <span class="arrow">▾</span>
-        </button>
-        <button class="toggle-btn blue" onclick="toggle(this, 'proof-quasi-backward')" aria-controls="proof-quasi-backward" aria-expanded="false">
-          Show proof (⇐) — Verify the three properties <span class="arrow">▾</span>
+          Show the course proof (⇒) <span class="arrow">▾</span>
         </button>
       </div>
 
@@ -1087,7 +1091,7 @@ body {
           <div class="demo-step">
             <div class="step-num green">1</div>
             <div class="step-body">
-              <strong>Step 1: Construct $v(y)$ using Compensation (Property 2).</strong><br>
+              <strong>Because compensation is possible (Property 2).</strong><br>
               Fix an arbitrary reference bundle $\bar{y} \in Y$. Because compensation is possible, for every $y \in Y$, there exists $v(y) \in \mathbb{R}$, the money amount that makes the reference alternative $\bar{y}$ equivalent to $y$:
               <div class="math-display">$$(0, y) \sim (v(y), \bar{y})$$</div>
               Similarly, for $y'\in Y$:
@@ -1098,7 +1102,7 @@ body {
           <div class="demo-step">
             <div class="step-num green">2</div>
             <div class="step-body">
-              <strong>Step 2: Add wealth using No Wealth Effect (Property 3).</strong><br>
+              <strong>Because there is no wealth effect (Property 3).</strong><br>
               Indifference means that both weak comparisons hold. Apply property 3 to each comparison, adding $t$ to both alternatives:
               <div class="math-display">$$(t, y) \sim (t + v(y), \bar{y})$$</div>
               Similarly, adding $t'$ preserves indifference:
@@ -1109,7 +1113,7 @@ body {
           <div class="demo-step">
             <div class="step-num green">3</div>
             <div class="step-body">
-              <strong>Step 3: Compare bundles via Transitivity.</strong><br>
+              <strong>Hence, compare the monetary equivalents.</strong><br>
               By transitivity of $\succeq$, comparing $(t, y)$ and $(t', y')$ is equivalent to comparing their monetary equivalents at $\bar{y}$:
               <div class="math-display">$$\begin{gathered}
                 (t,y)\succeq(t',y')\\
@@ -1122,7 +1126,7 @@ body {
           <div class="demo-step">
             <div class="step-num green">4</div>
             <div class="step-body">
-              <strong>Step 4: Apply Numéraire is Valuable (Property 1).</strong><br>
+              <strong>Because the numéraire good is valuable (Property 1).</strong><br>
               Because the numéraire good is valuable (Property 1), the last comparison can be rewritten purely in terms of the numéraire amounts:
               <div class="math-display boxed-green">$$\begin{gathered}
                 (t,y)\succeq(t',y')\\
@@ -1134,58 +1138,7 @@ body {
         </div>
       </div>
 
-      <!-- PROOF (⇐) -->
-      <div class="collapsible" id="proof-quasi-backward">
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div style="background:rgba(59,130,246,0.08); border-left:3px solid #3b82f6; padding:10px 14px; border-radius:0 8px 8px 0;">
-            <strong style="color:var(--blue-bright);">Starting Point / Hypotheses:</strong><br>
-            We assume preferences are represented by a quasi-linear utility function $u(t, y) = t + v(y)$ for some $v: Y \to \mathbb{R}$.<br>
-            <strong>Goal:</strong> Verify each of the three numéraire properties.
-          </div>
-
-          <div class="demo-step">
-            <div class="step-num blue">1</div>
-            <div class="step-body">
-              <strong>Property 1 Verification (Numéraire is valuable):</strong><br>
-              By utility representation:
-              <div class="math-display">$$\begin{gathered}
-                (t,y)\succeq(t',y)\\
-                \iff t+v(y)\geq t'+v(y)\\
-                \iff t\geq t'.
-              \end{gathered}$$</div>
-              The last step subtracts the same number $v(y)$ from both sides.
-            </div>
-          </div>
-
-          <div class="demo-step">
-            <div class="step-num blue">2</div>
-            <div class="step-body">
-              <strong>Property 2 Verification (Compensation is possible):</strong><br>
-              For any $y, y' \in Y$, choose $t = v(y) - v(y') \in \mathbb{R}$. Then:
-              <div class="math-display">$$\begin{aligned}
-                u(t,y')&=t+v(y')\\
-                  &=[v(y)-v(y')]+v(y')\\
-                  &=v(y)=u(0,y).
-              \end{aligned}$$</div>
-              Since $u(0, y) = u(t, y')$, it follows immediately that $(0, y) \sim (t, y')$. $\checkmark$
-            </div>
-          </div>
-
-          <div class="demo-step">
-            <div class="step-num blue">3</div>
-            <div class="step-body">
-              <strong>Property 3 Verification (No wealth effect):</strong><br>
-              For any displacement $d \in \mathbb{R}$:
-              <div class="math-display">$$\begin{aligned}
-                u(t+d,y)&=u(t,y)+d,\\
-                u(t'+d,y')&=u(t',y')+d.
-              \end{aligned}$$</div>
-              Adding the same number $d$ to two utility levels preserves their order. Thus $(t,y)\succeq(t',y')$ if and only if $(t+d,y)\succeq(t'+d,y')$.
-              All 3 properties are fully satisfied. $\blacksquare$
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="course-text">For the reverse direction ($\Leftarrow$), the slides state that the result is “straightforward”.</p>
     </div>
 
   </div><!-- /main-content -->
