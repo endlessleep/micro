@@ -537,6 +537,27 @@ body {
 #mixture-comparison-step .inequality-substeps > li > strong { color:var(--text); }
 #mixture-comparison-step .math-display { margin:8px 0; padding:10px 8px; }
 
+/* Keep complete formulas on roomy screens; wrap only at logical boundaries. */
+#solution-convexity mjx-container[display="true"] { margin:0.4em 0; }
+#solution-convexity .equation-reflow { container:exercise-equation / inline-size; }
+#solution-convexity .equation-wide { display:none; }
+@container exercise-equation (min-width:22em) {
+  #solution-convexity .equation-short .equation-wide { display:block; }
+  #solution-convexity .equation-short .equation-stacked { display:none; }
+}
+@container exercise-equation (min-width:24em) {
+  #solution-convexity .equation-chain .equation-wide { display:block; }
+  #solution-convexity .equation-chain .equation-stacked { display:none; }
+}
+@container exercise-equation (min-width:28em) {
+  #solution-convexity .equation-reflow:not(.equation-long) .equation-wide { display:block; }
+  #solution-convexity .equation-reflow:not(.equation-long) .equation-stacked { display:none; }
+}
+@container exercise-equation (min-width:30em) {
+  #solution-convexity .equation-long .equation-wide { display:block; }
+  #solution-convexity .equation-long .equation-stacked { display:none; }
+}
+
 </style>
 </head>
 <body>
@@ -683,14 +704,21 @@ body {
             <h3>Step 2 — Write the utility of the mixture</h3>
             <div class="math-display">$$x=(x_1,x_2),\qquad y=(y_1,y_2).$$</div>
             <p>The mixture is a bundle with <strong>two coordinates</strong>:</p>
-            <div class="math-display">$$\begin{gathered}
-              tx+(1-t)y\\
-              =\Big(
+            <div class="math-display equation-reflow">
+              <div class="equation-wide">$$tx+(1-t)y=\Big(
                 \underbrace{\color{#60a5fa}{tx_1+(1-t)y_1}}_{\color{#60a5fa}{\text{First coordinate}}},
                 \quad
                 \underbrace{\color{#fbbf24}{tx_2+(1-t)y_2}}_{\color{#fbbf24}{\text{Second coordinate}}}
-              \Big).
-            \end{gathered}$$</div>
+                \Big).$$</div>
+              <div class="equation-stacked">$$\begin{gathered}
+                tx+(1-t)y\\
+                =\Big(
+                \underbrace{\color{#60a5fa}{tx_1+(1-t)y_1}}_{\color{#60a5fa}{\text{First coordinate}}},
+                \quad
+                \underbrace{\color{#fbbf24}{tx_2+(1-t)y_2}}_{\color{#fbbf24}{\text{Second coordinate}}}
+                \Big).
+              \end{gathered}$$</div>
+            </div>
             <div class="key-note amber mixture-attention">
               <strong>Attention — How to read the utility function</strong>
               <div class="math-display">$$u(x_1,x_2)={\color{#fbbf24}{x_2}}+g\big({\color{#60a5fa}{x_1}}\big).$$</div>
@@ -701,30 +729,42 @@ body {
               <p>For the mixed bundle, put its coordinates in these same positions.</p>
             </div>
             <p><strong>Substitute the two coordinates:</strong></p>
-            <div class="math-display boxed-amber">$$\begin{gathered}
-              u(tx+(1-t)y)\\
-              ={\color{#fbbf24}{tx_2+(1-t)y_2}}\\
-              \qquad+g\big({\color{#60a5fa}{tx_1+(1-t)y_1}}\big).
-            \end{gathered}$$</div>
+            <div class="math-display boxed-amber equation-reflow">
+              <div class="equation-wide">$$u(tx+(1-t)y)={\color{#fbbf24}{tx_2+(1-t)y_2}}+g\big({\color{#60a5fa}{tx_1+(1-t)y_1}}\big).$$</div>
+              <div class="equation-stacked">$$\begin{gathered}
+                u(tx+(1-t)y)\\
+                ={\color{#fbbf24}{tx_2+(1-t)y_2}}+g\big({\color{#60a5fa}{tx_1+(1-t)y_1}}\big).
+              \end{gathered}$$</div>
+            </div>
           </div>
           <div class="solution-step">
             <h3>Step 3 — Apply concavity of $g$</h3>
             <p>Because $g$ is concave, Hint 1 applied to $x_1$ and $y_1$ gives:</p>
-            <div class="math-display">$$\begin{gathered}
-              g(tx_1+(1-t)y_1)\\
-              \geq t\,g(x_1)+(1-t)g(y_1).
-            \end{gathered}$$</div>
+            <div class="math-display equation-reflow equation-short">
+              <div class="equation-wide">$$g(tx_1+(1-t)y_1)\geq t\,g(x_1)+(1-t)g(y_1).$$</div>
+              <div class="equation-stacked">$$\begin{gathered}
+                g(tx_1+(1-t)y_1)\\
+                \geq t\,g(x_1)+(1-t)g(y_1).
+              \end{gathered}$$</div>
+            </div>
             <p>The two terms outside $g$ stay unchanged. Replace only $g(tx_1+(1-t)y_1)$ by its lower bound, then factor out $t$ from the terms involving $x$ and $1-t$ from those involving $y$:</p>
-            <div class="math-display">$$\begin{gathered}
-              u(tx+(1-t)y)\\
-              \begin{aligned}
+            <div class="math-display equation-reflow equation-long">
+              <div class="equation-wide">$$\begin{aligned}
+                u(tx+(1-t)y)&\geq tx_2+(1-t)y_2+t\,g(x_1)+(1-t)g(y_1)\\
+                &=t[x_2+g(x_1)]+(1-t)[y_2+g(y_1)]\\
+                &=t\,u(x)+(1-t)u(y).
+                \end{aligned}$$</div>
+              <div class="equation-stacked">$$\begin{gathered}
+                u(tx+(1-t)y)\\
+                \begin{aligned}
                 &\geq tx_2+(1-t)y_2\\
                 &\quad+t\,g(x_1)+(1-t)g(y_1)\\
                 &=t[x_2+g(x_1)]\\
                 &\quad+(1-t)[y_2+g(y_1)]\\
                 &=t\,u(x)+(1-t)u(y).
-              \end{aligned}
-            \end{gathered}$$</div>
+                \end{aligned}
+              \end{gathered}$$</div>
+            </div>
             <p>The last equality uses $x_2+g(x_1)=u(x)$ and $y_2+g(y_1)=u(y)$.</p>
           </div>
           <div class="solution-step" id="mixture-comparison-step">
@@ -748,17 +788,23 @@ body {
               <li>
                 <strong>Add the two inequalities.</strong>
                 <p>Add the left-hand sides and the right-hand sides:</p>
-                <div class="math-display">$$\begin{gathered}
-                  t\,u(x)+(1-t)u(y)\\
-                  \geq t\,u(z)+(1-t)u(z).
-                \end{gathered}$$</div>
+                <div class="math-display equation-reflow equation-short">
+                  <div class="equation-wide">$$t\,u(x)+(1-t)u(y)\geq t\,u(z)+(1-t)u(z).$$</div>
+                  <div class="equation-stacked">$$\begin{gathered}
+                    t\,u(x)+(1-t)u(y)\\
+                    \geq t\,u(z)+(1-t)u(z).
+                  \end{gathered}$$</div>
+                </div>
               </li>
               <li>
                 <strong>Factor out $u(z)$ on the right-hand side.</strong>
-                <div class="math-display">$$\begin{gathered}
-                  t\,u(z)+(1-t)u(z)\\
-                  =[t+(1-t)]u(z).
-                \end{gathered}$$</div>
+                <div class="math-display equation-reflow equation-short">
+                  <div class="equation-wide">$$t\,u(z)+(1-t)u(z)=[t+(1-t)]u(z).$$</div>
+                  <div class="equation-stacked">$$\begin{gathered}
+                    t\,u(z)+(1-t)u(z)\\
+                    =[t+(1-t)]u(z).
+                  \end{gathered}$$</div>
+                </div>
               </li>
               <li>
                 <strong>Use the fact that the weights add up to one.</strong>
@@ -769,11 +815,13 @@ body {
               <li>
                 <strong>Combine this result with Step 3.</strong>
                 <p>Step 3 showed that the utility of the mixture is at least the weighted sum. We now know that this sum is at least $u(z)$:</p>
-                <div class="math-display">$$\begin{gathered}
-                  u(tx+(1-t)y)\\
-                  \geq t\,u(x)+(1-t)u(y)\\
-                  \geq u(z).
-                \end{gathered}$$</div>
+                <div class="math-display equation-reflow equation-chain">
+                  <div class="equation-wide">$$u(tx+(1-t)y)\geq t\,u(x)+(1-t)u(y)\geq u(z).$$</div>
+                  <div class="equation-stacked">$$\begin{gathered}
+                    u(tx+(1-t)y)\\
+                    \geq t\,u(x)+(1-t)u(y)\geq u(z).
+                  \end{gathered}$$</div>
+                </div>
               </li>
               <li>
                 <strong>Return to the preference comparison.</strong>
