@@ -525,6 +525,18 @@ body {
   margin:8px 0 10px 20px; display:flex; flex-direction:column; gap:4px;
 }
 
+/* Presentation scoped to the inequality comparison in Exercise 1, Step 4. */
+#mixture-comparison-step .inequality-substeps { margin:12px 0 0; padding-left:24px; }
+#mixture-comparison-step .inequality-substeps > li { padding:0 0 12px 6px; }
+#mixture-comparison-step .inequality-substeps > li + li {
+  padding-top:12px; border-top:1px solid var(--border);
+}
+#mixture-comparison-step .inequality-substeps > li::marker {
+  color:var(--amber-bright); font-weight:800;
+}
+#mixture-comparison-step .inequality-substeps > li > strong { color:var(--text); }
+#mixture-comparison-step .math-display { margin:8px 0; padding:10px 8px; }
+
 </style>
 </head>
 <body>
@@ -715,24 +727,61 @@ body {
             \end{gathered}$$</div>
             <p>The last equality uses $x_2+g(x_1)=u(x)$ and $y_2+g(y_1)=u(y)$.</p>
           </div>
-          <div class="solution-step">
+          <div class="solution-step" id="mixture-comparison-step">
             <h3>Step 4 — Compare the mixture with $z$</h3>
-            <p>Both $u(x)$ and $u(y)$ are at least $u(z)$. Since $t$ and $1-t$ are nonnegative, multiplying by these weights and adding preserves the inequalities:</p>
-            <div class="math-display">$$\begin{aligned}
-              t\,u(x)+(1-t)u(y)
-                &\geq t\,u(z)+(1-t)u(z)\\
-                &=[t+(1-t)]u(z)\\
-                &=u(z).
-            \end{aligned}$$</div>
-            <p>The final expression equals $u(z)$ because the two weights add up to one. Combining the two parts of the calculation:</p>
-            <div class="math-display">$$\begin{gathered}
-              u(tx+(1-t)y)\\
-              \geq t\,u(x)+(1-t)u(y)\\
-              \geq u(z).
-            \end{gathered}$$</div>
-            <p>We have proved the required utility comparison. Since $u$ represents preferences, this means:</p>
-            <div class="math-display boxed-green">$$tx+(1-t)y\succeq z.$$</div>
-            <p><strong>The preference relation is therefore convex.</strong> $\blacksquare$</p>
+            <ol class="inequality-substeps">
+              <li>
+                <strong>Start from the two comparisons obtained in Step 1.</strong>
+                <div class="math-display">$$\begin{gathered}
+                  u(x)\geq u(z),\\
+                  u(y)\geq u(z).
+                \end{gathered}$$</div>
+              </li>
+              <li>
+                <strong>Multiply each inequality by its weight.</strong>
+                <p>Since $t\geq0$ and $1-t\geq0$, multiplying by these nonnegative weights preserves the inequality signs:</p>
+                <div class="math-display">$$\begin{gathered}
+                  t\,u(x)\geq t\,u(z),\\
+                  (1-t)u(y)\geq(1-t)u(z).
+                \end{gathered}$$</div>
+              </li>
+              <li>
+                <strong>Add the two inequalities.</strong>
+                <p>Add the left-hand sides and the right-hand sides:</p>
+                <div class="math-display">$$\begin{gathered}
+                  t\,u(x)+(1-t)u(y)\\
+                  \geq t\,u(z)+(1-t)u(z).
+                \end{gathered}$$</div>
+              </li>
+              <li>
+                <strong>Factor out $u(z)$ on the right-hand side.</strong>
+                <div class="math-display">$$\begin{gathered}
+                  t\,u(z)+(1-t)u(z)\\
+                  =[t+(1-t)]u(z).
+                \end{gathered}$$</div>
+              </li>
+              <li>
+                <strong>Use the fact that the weights add up to one.</strong>
+                <div class="math-display">$$t+(1-t)=1.$$</div>
+                <p>The right-hand side is therefore $u(z)$, so:</p>
+                <div class="math-display">$$t\,u(x)+(1-t)u(y)\geq u(z).$$</div>
+              </li>
+              <li>
+                <strong>Combine this result with Step 3.</strong>
+                <p>Step 3 showed that the utility of the mixture is at least the weighted sum. We now know that this sum is at least $u(z)$:</p>
+                <div class="math-display">$$\begin{gathered}
+                  u(tx+(1-t)y)\\
+                  \geq t\,u(x)+(1-t)u(y)\\
+                  \geq u(z).
+                \end{gathered}$$</div>
+              </li>
+              <li>
+                <strong>Return to the preference comparison.</strong>
+                <p>Since $u$ represents preferences:</p>
+                <div class="math-display boxed-green">$$tx+(1-t)y\succeq z.$$</div>
+                <p><strong>The preference relation is therefore convex.</strong> $\blacksquare$</p>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
