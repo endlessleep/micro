@@ -513,6 +513,18 @@ body {
   .exercise-figure { padding:8px; }
 }
 
+/* Presentation scoped to the mixture substitution in Exercise 1, Step 2. */
+#mixture-utility-step .math-display { margin:10px 0; padding:12px 8px; }
+#mixture-utility-step .coordinate-first { color:#60a5fa; }
+#mixture-utility-step .coordinate-second { color:#fbbf24; }
+#mixture-utility-step .mixture-attention { margin:12px 0; padding:12px 16px; }
+#mixture-utility-step .mixture-attention .math-display {
+  background:transparent; border:0; padding:0;
+}
+#mixture-utility-step .mixture-attention ul {
+  margin:8px 0 10px 20px; display:flex; flex-direction:column; gap:4px;
+}
+
 </style>
 </head>
 <body>
@@ -655,14 +667,32 @@ body {
             <p>Also, because $u$ represents preferences, the conclusion we want is equivalent to:</p>
             <div class="math-display">$$u(tx+(1-t)y)\geq u(z).$$</div>
           </div>
-          <div class="solution-step">
+          <div class="solution-step" id="mixture-utility-step">
             <h3>Step 2 — Write the utility of the mixture</h3>
-            <p>Write $x=(x_1,x_2)$ and $y=(y_1,y_2)$. In $tx+(1-t)y$, the first coordinate is $tx_1+(1-t)y_1$, and the second is $tx_2+(1-t)y_2$.</p>
-            <p>Our utility function is the <strong>second coordinate plus $g$ of the first coordinate</strong>. Substituting the mixture’s coordinates therefore gives:</p>
+            <div class="math-display">$$x=(x_1,x_2),\qquad y=(y_1,y_2).$$</div>
+            <p>The mixture is a bundle with <strong>two coordinates</strong>:</p>
             <div class="math-display">$$\begin{gathered}
+              tx+(1-t)y\\
+              =\Big(
+                \underbrace{\color{#60a5fa}{tx_1+(1-t)y_1}}_{\color{#60a5fa}{\text{First coordinate}}},
+                \quad
+                \underbrace{\color{#fbbf24}{tx_2+(1-t)y_2}}_{\color{#fbbf24}{\text{Second coordinate}}}
+              \Big).
+            \end{gathered}$$</div>
+            <div class="key-note amber mixture-attention">
+              <strong>Attention — How to read the utility function</strong>
+              <div class="math-display">$$u(x_1,x_2)={\color{#fbbf24}{x_2}}+g\big({\color{#60a5fa}{x_1}}\big).$$</div>
+              <ul>
+                <li>The <strong class="coordinate-second">SECOND coordinate</strong> enters directly.</li>
+                <li>The <strong class="coordinate-first">FIRST coordinate</strong> goes inside $g$.</li>
+              </ul>
+              <p>For the mixed bundle, put its coordinates in these same positions.</p>
+            </div>
+            <p><strong>Substitute the two coordinates:</strong></p>
+            <div class="math-display boxed-amber">$$\begin{gathered}
               u(tx+(1-t)y)\\
-              =tx_2+(1-t)y_2\\
-              \qquad+g(tx_1+(1-t)y_1).
+              ={\color{#fbbf24}{tx_2+(1-t)y_2}}\\
+              \qquad+g\big({\color{#60a5fa}{tx_1+(1-t)y_1}}\big).
             \end{gathered}$$</div>
           </div>
           <div class="solution-step">
