@@ -988,43 +988,74 @@ body {
           Show solution — Question 2 <span class="arrow">▾</span>
         </button>
         <div class="collapsible exercise-solution" id="solution-ranking">
-          <p><strong>Starting point:</strong> Alice’s choices $x=(1,3)$ and $x'=(3,1)$, her strict convexity and strict monotonicity, and the prices found above.<br>
-          <strong>Goal:</strong> Compare $a=(2,2)$ with $b=(5,\tfrac12)$.</p>
+          <p>Let $x=(1,3)$ and $x'=(3,1)$, and define:</p>
+          <div class="math-display">$$a=(2,2),\qquad b=\left(5,\frac12\right).$$</div>
+          <p>We want to compare $a$ and $b$.</p>
+
           <div class="solution-step">
-            <h3>Step 1 — Compare Alice’s two observed bundles at the original prices</h3>
-            <p>At prices $(1,1)$, Alice chooses $x=(1,3)$ with income 4. The other bundle $x'=(3,1)$ costs:</p>
+            <h3>Step 1 — Revealed preference at the original prices</h3>
+            <p>At the original prices $p=(1,1)$, Alice chooses $x=(1,3)$. Her income is:</p>
+            <div class="math-display">$$1(1)+1(3)=4.$$</div>
+            <p><strong>Check $x'=(3,1)$.</strong> Its cost at the same prices is:</p>
             <div class="math-display">$$p\cdot x'=1(3)+1(1)=4.$$</div>
-            <p>So $x'$ was also affordable. Alice chose $x$ when she could have chosen $x'$. By revealed preference:</p>
-            <div class="math-display">$$x\succeq x'.$$</div>
+            <p>So $x'$ was also affordable when Alice chose $x$. Therefore, by revealed preference, <strong>$x\succeq x'$</strong>, that is:</p>
+            <div class="math-display boxed-amber">$$\boxed{(1,3)\succeq(3,1).}$$</div>
+            <p><strong>Also check $a=(2,2)$.</strong> Its cost at the same prices is:</p>
+            <div class="math-display">$$p\cdot a=1(2)+1(2)=4.$$</div>
+            <p>So $a$ was also affordable when Alice chose $x$. Therefore, <strong>$x\succeq a$</strong>, that is:</p>
+            <div class="math-display boxed-amber">$$\boxed{(1,3)\succeq(2,2).}$$</div>
           </div>
+
           <div class="solution-step">
-            <h3>Step 2 — Use strict convexity to compare $(2,2)$ with $x'$</h3>
-            <p>The bundle $a=(2,2)$ is the equal-weight mixture of $x$ and $x'$:</p>
-            <div class="math-display">$$\begin{aligned}
-              \frac12x+\frac12x'
-                &=\left(\frac{1+3}{2},\frac{3+1}{2}\right)\\
-                &=(2,2)=a.
-            \end{aligned}$$</div>
-            <p>Use $x'$ as the benchmark in the definition of strict convexity. We have $x\succeq x'$ from step 1, and $x'\succeq x'$ by reflexivity. The two endpoints are distinct and both mixture weights are strictly between 0 and 1. Strict convexity therefore gives:</p>
-            <div class="math-display boxed-purple">$$a=(2,2)\succ x'=(3,1).$$</div>
-          </div>
-          <div class="solution-step">
-            <h3>Step 3 — Compare $x'$ with $(5,\tfrac12)$ at the new prices</h3>
-            <p>At prices $p'=(\tfrac12,\tfrac52)$, Alice chooses $x'=(3,1)$ and spends 4. The bundle $b=(5,\tfrac12)$ costs:</p>
+            <h3>Step 2 — Compare $x'$ and $b$ at the new prices</h3>
+            <p>From Question 1, the new prices are:</p>
+            <div class="math-display">$$p'=\left(\frac12,\frac52\right)=(0.5,2.5).$$</div>
+            <p>At these prices, Alice chooses $x'=(3,1)$ and has income 4. Now calculate the cost of $b=(5,\tfrac12)$:</p>
             <div class="math-display">$$\begin{aligned}
               p'\cdot b&=\frac12(5)+\frac52\left(\frac12\right)\\
-                       &=\frac52+\frac54\\
-                       &=\frac{10}{4}+\frac54\\
-                       &=\frac{15}{4}=3.75&lt;4.
+                       &=2.5+1.25\\
+                       &=3.75&lt;4.
             \end{aligned}$$</div>
-            <p>Thus $b$ was strictly cheaper than the chosen bundle. This is the strict revealed-preference comparison from Chapter 5. With strict monotonicity, $b$ cannot be as good as an optimum: its unspent income could buy a little more of a good and make the consumer strictly better off. Hence:</p>
-            <div class="math-display">$$x'\succ b.$$</div>
+            <p>Therefore, $b$ was <strong>strictly affordable</strong> when Alice chose $x'$. By revealed preference, together with strict monotonicity, <strong>$x'\succ b$</strong>, that is:</p>
+            <div class="math-display boxed-amber">$$\boxed{(3,1)\succ\left(5,\frac12\right).}$$</div>
+            <div class="key-note amber">
+              <strong>Intuition.</strong> Since $b$ costs strictly less than Alice’s income, she would have money left over. Under strict monotonicity, she could use this remaining income to obtain a strictly better bundle, so $b$ cannot be as good as the chosen optimum $x'$.
+            </div>
           </div>
+
           <div class="solution-step">
-            <h3>Step 4 — Combine the comparisons</h3>
-            <p>Step 2 gives $a\succ x'$, and step 3 gives $x'\succ b$. Alice’s preferences are rational, so transitivity gives:</p>
+            <h3>Step 3 — Use strict convexity</h3>
+            <p>Notice that $a=(2,2)$ is exactly the <strong>50–50 mixture</strong> of $x$ and $x'$:</p>
+            <div class="math-display">$$\begin{aligned}
+              \frac12x+\frac12x'&=\frac12(1,3)+\frac12(3,1)\\
+                                &=\left(\frac{1+3}{2},\frac{3+1}{2}\right)\\
+                                &=(2,2).
+            \end{aligned}$$</div>
+            <p>Therefore:</p>
+            <div class="math-display boxed-purple">$$\boxed{a=(2,2)=\frac12x+\frac12x'.}$$</div>
+            <p>From Step 1, $x\succeq x'$. Also, by reflexivity, $x'\succeq x'$. Thus <strong>both bundles are at least as good as the benchmark $x'$</strong>:</p>
+            <div class="math-display">$$x\succeq x',\qquad x'\succeq x'.$$</div>
+            <p>Since preferences are strictly convex, a true mixture of these <strong>two distinct bundles</strong>, with both weights equal to $\frac12$, is strictly better than $x'$. Hence:</p>
+            <div class="math-display">$$\frac12x+\frac12x'\succ x'.$$</div>
+            <p>Since the mixture is $a=(2,2)$:</p>
+            <div class="math-display boxed-purple">$$\boxed{(2,2)\succ(3,1).}$$</div>
+            <div class="key-note purple">
+              <strong>Intuition: mixture of better/worse $\succ$ worse.</strong>
+              <p>Strict convexity implies that a true mixture of a better bundle and a worse bundle is strictly better than the worse bundle.</p>
+            </div>
+          </div>
+
+          <div class="solution-step">
+            <h3>Step 4 — Use transitivity</h3>
+            <p>We now have $(2,2)\succ(3,1)$ from Step 3 and $(3,1)\succ(5,\tfrac12)$ from Step 2:</p>
+            <div class="math-display">$$\begin{gathered}
+              (2,2)\succ(3,1),\\
+              (3,1)\succ\left(5,\frac12\right).
+            \end{gathered}$$</div>
+            <p>Therefore, by transitivity:</p>
             <div class="math-display boxed-green">$$\boxed{(2,2)\succ\left(5,\frac12\right).}$$</div>
-            <p><strong>Alice strictly prefers $(2,2)$ to $(5,\tfrac12)$.</strong></p>
+            <p><strong>Alice strictly prefers $a=(2,2)$ to $b=(5,\tfrac12)$.</strong> The complete comparison is:</p>
+            <div class="math-display boxed-green">$$(2,2)\succ(3,1)\succ\left(5,\frac12\right).$$</div>
           </div>
         </div>
       </div>
